@@ -1,9 +1,15 @@
 import React, { Fragment } from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
 
 function App() {
+  const location = useLocation();
   return (
     <Fragment>
-      <div className="App">Cheese</div>
+      <Routes key={location.pathname} location={location}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </Fragment>
   );
 }

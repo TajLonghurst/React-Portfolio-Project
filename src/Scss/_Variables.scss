@@ -1,1 +1,58 @@
-$colordarkred: red;
+//Colors
+$PrimaryBgColor: #1a1a1a;
+$SecondaryBgColor: #6300ff;
+$PrimaryHeaderColor: #fff;
+$PrimaryTextColor: #bbbbbb;
+$PrimaryNavTextColor: #b8b8b8;
+$PrimaryPurpleLinear: linear-gradient(252deg, #7652b0, #4b08b5, #6300ff);
+
+// Dustin Fonts
+$DustinRegular: "Dustin-Regular";
+$DustinRegularOutline: "Dustin-Regular-Outline";
+$DustinItalicOutline: "Dustin-Italic-OutLine";
+$DustinItalic: "Dustin-Italic";
+//Gudea Fonts
+$GudeaBold: "Gudea-Bold";
+$GudeaItalic: "Gudea-Italic";
+$GudeaRegular: "Gudea-Regular";
+//Hind Fonts
+$HindRegular: "Hind-Regular";
+$HindBold: "Hind-Bold";
+
+//Font-face
+@font-face {
+  font-family: "Dustin-Italic-OutLine";
+  src: url(../Assets/Fonts/Dustin/Dustin-Italic-Outline.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Dustin-Italic";
+  src: url(../Assets/Fonts/Dustin/Dustin-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Dustin-Regular-Outline";
+  src: url(../Assets/Fonts/Dustin/Dustin-Regular-Outline.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Dustin-Regular";
+  src: url(../Assets/Fonts/Dustin/Dustin-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gudea-Bold";
+  src: url(../Assets/Fonts/Gudea/Gudea-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gudea-Italic";
+  src: url(../Assets/Fonts/Gudea/Gudea-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gudea-Regular";
+  src: url(../Assets/Fonts/Gudea/Gudea-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Hind-Regular";
+  src: url(../Assets/Fonts/Hind/Hind-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Hind-Bold";
+  src: url(../Assets/Fonts/Hind/Hind-Bold.ttf) format("truetype");
+}

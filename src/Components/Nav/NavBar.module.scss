@@ -1,0 +1,22 @@
+@import "../../Scss/Mixins";
+@import "../../Scss/Variables";
+
+.nav {
+  padding-inline: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #2b2b2b;
+  .navbar {
+    @include DisplayFlexCenter(row);
+    justify-content: center;
+    height: 65px;
+  }
+  .navlist {
+    @include DisplayFlexCenter(row);
+    margin: 0rem;
+    padding: 0rem;
+  }
+}
