@@ -18,6 +18,8 @@ $GudeaRegular: "Gudea-Regular";
 //Hind Fonts
 $HindRegular: "Hind-Regular";
 $HindBold: "Hind-Bold";
+//GTWalsheimPro Fonts
+$GTWalsheimBold: "GTWalsheimPro-Bold";
 
 //Font-face
 @font-face {
@@ -55,4 +57,8 @@ $HindBold: "Hind-Bold";
 @font-face {
   font-family: "Hind-Bold";
   src: url(../Assets/Fonts/Hind/Hind-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GTWalsheimPro-Bold";
+  src: url(../Assets/Fonts/GTWalsgeim/GTWalsheimPro-Bold.ttf) format("truetype");
 }

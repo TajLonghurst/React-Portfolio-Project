@@ -9,9 +9,16 @@
   left: 0;
   z-index: 1000;
   border-bottom: 1px solid #2b2b2b;
+  .navlogo {
+    position: absolute;
+    padding-inline: 1rem;
+    left: 0;
+    font-family: $GudeaBold;
+    color: $PrimaryNavTextColor;
+    font-size: 16px;
+  }
   .navbar {
     @include DisplayFlexCenter(row);
-    justify-content: center;
     height: 65px;
   }
   .navlist {

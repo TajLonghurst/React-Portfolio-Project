@@ -17,26 +17,26 @@ export const navItems: NavItemModel[] = [
   {
     id: "NavTwo",
     icon: AboutMeIcon,
-    label: "About Me",
-    path: "/",
+    label: "About Me",
+    path: "/AboutMe",
   },
   {
     id: "NavThree",
     icon: ResumeIcon,
     label: "Resume",
-    path: "/",
+    path: "/Resume",
   },
   {
     id: "NavFour",
     icon: ProjectsIcon,
     label: "Projects",
-    path: "/",
+    path: "/Projects",
   },
   {
     id: "NavFive",
     icon: ContactIcon,
     label: "Contact",
-    path: "/",
+    path: "/Contact",
   },
 ];
 
@@ -44,6 +44,7 @@ const NavBar = () => {
   return (
     <nav className={classes.nav}>
       <div className={classes.navbar}>
+        <div className={classes.navlogo}>Taj Longhurst</div>
         <ul className={classes.navlist}>
           {navItems.map((items) => {
             return (

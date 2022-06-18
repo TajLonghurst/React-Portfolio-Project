@@ -1,8 +1,12 @@
-import React from "react";
-import NavBar from "../Components/Nav/NavBar";
+import React, { Fragment } from "react";
+import Hero from "../Components/Home/Hero";
 
 const HomePage = () => {
-  return <NavBar />;
+  return (
+    <Fragment>
+      <Hero />
+    </Fragment>
+  );
 };
 
 export default HomePage;
