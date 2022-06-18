@@ -1,6 +1,7 @@
 //Colors
 $PrimaryBgColor: #1a1a1a;
 $SecondaryBgColor: #6300ff;
+$ThirdBgColor: #7652b0;
 $PrimaryHeaderColor: #fff;
 $PrimaryTextColor: #bbbbbb;
 $PrimaryNavTextColor: #b8b8b8;
@@ -20,6 +21,9 @@ $HindRegular: "Hind-Regular";
 $HindBold: "Hind-Bold";
 //GTWalsheimPro Fonts
 $GTWalsheimBold: "GTWalsheimPro-Bold";
+//PlusJakarta Fonts
+$PlusJakartaBold: "PlusJakarta-Bold";
+$PlusJakartaRegular: "PlusJakarta-Regular";
 
 //Font-face
 @font-face {
@@ -61,4 +65,14 @@ $GTWalsheimBold: "GTWalsheimPro-Bold";
 @font-face {
   font-family: "GTWalsheimPro-Bold";
   src: url(../Assets/Fonts/GTWalsgeim/GTWalsheimPro-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "PlusJakarta-Bold";
+  src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Bold.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "PlusJakarta-Regular";
+  src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Regular.ttf)
+    format("truetype");
 }

@@ -1,0 +1,54 @@
+@import "../../Scss/Variables";
+@import "../../Scss/Mixins";
+
+.headercontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1rem;
+  .header {
+    @include DisplayFlexCenter(row);
+    justify-content: flex-start;
+    .bulletpoint {
+      content: "";
+      width: 30px;
+      height: 5px;
+      background: $PrimaryPurpleLinear;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+    .welcometext {
+      font-size: 20px;
+      font-family: $DustinRegular;
+      color: $PrimaryHeaderColor;
+      margin: 0rem;
+      letter-spacing: 1px;
+      font-weight: lighter;
+    }
+  }
+  .title {
+    font-size: 4.2rem;
+    font-family: $DustinRegular;
+    color: $PrimaryHeaderColor;
+    margin: 0rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: lighter;
+  }
+  .smallheader {
+    font-size: 12px;
+    font-family: $DustinRegular;
+    color: $PrimaryHeaderColor;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+.btnpostion {
+  margin-inline: 1rem;
+}
+.titlecolor {
+  color: $SecondaryBgColor;
+}

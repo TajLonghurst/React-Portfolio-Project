@@ -1,0 +1,22 @@
+@import "../../Scss/Variables";
+@import "../../Scss/Mixins";
+
+.imgcontainer {
+  position: relative;
+  @include DisplayFlexCenter(row);
+  justify-content: flex-end;
+  margin-inline: 1rem;
+  .imgbackground {
+    content: "";
+    background-color: $SecondaryBgColor;
+    width: 12rem;
+    height: 30rem;
+    position: relative;
+  }
+  .img {
+    margin-left: -13rem;
+    width: 25rem;
+    height: 25rem;
+    z-index: 1;
+  }
+}

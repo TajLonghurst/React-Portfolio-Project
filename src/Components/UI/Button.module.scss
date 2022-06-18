@@ -1,0 +1,49 @@
+@import "../../Scss/Variables";
+@import "../../Scss/Mixins";
+
+.btn {
+  border-radius: 3px;
+  padding-inline: 1.3rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  font-family: $GudeaBold;
+  font-size: 14px;
+  color: $PrimaryTextColor;
+  box-shadow: 0 0 0px 0 #9d60d480;
+  border: solid 3px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    $PrimaryPurpleLinear;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 100px 4px $PrimaryBgColor inset;
+  background-size: 200% 1%;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-position: 100% 0;
+    .arrowicon {
+      transform: translateX(20%);
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  .btncontent {
+    @include DisplayFlexCenter(Row);
+    .btntext {
+      @include DisplayFlexCenter(row);
+      height: 30px;
+      margin: 0;
+      padding-inline: 7px;
+      margin-inline: 6px;
+    }
+    .arrowicon {
+      transition: all 0.2s ease-in-out;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
