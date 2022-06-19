@@ -2,8 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./NavItems.module.scss";
 import { NavItemModel } from "../../Models/NavItemModel";
+import useWindowSize from "../../Hooks/use-windowSize";
 
 const NavItems: React.FC<NavItemModel> = (props) => {
+  const { isTabletView } = useWindowSize();
   return (
     <NavLink
       to={`${props.path}`}
@@ -13,7 +15,7 @@ const NavItems: React.FC<NavItemModel> = (props) => {
     >
       <div className={classes.navitem}>
         <img className={classes.icon} src={props.icon} alt="Failed" />
-        <p className={classes.navtext}>{props.label}</p>
+        {!isTabletView && <p className={classes.navtext}>{props.label}</p>}
       </div>
     </NavLink>
   );

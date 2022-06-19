@@ -14,7 +14,6 @@
     padding-bottom: 6px;
   }
   .icon {
-    padding-right: 0.3rem;
     height: 22px;
     width: 22px;
   }
@@ -23,6 +22,7 @@
     margin: 0rem;
     font-family: $GudeaBold;
     color: $PrimaryNavTextColor;
+    padding-left: 0.3rem;
   }
   &:hover {
     background: #ffffff10;

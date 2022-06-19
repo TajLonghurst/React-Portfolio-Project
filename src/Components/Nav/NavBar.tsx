@@ -6,6 +6,8 @@ import HomeIcon from "../../Assets/Icons/HomeIcon.svg";
 import ContactIcon from "../../Assets/Icons/ContactIcon.svg";
 import ProjectsIcon from "../../Assets/Icons/ProjectsIcon.svg";
 import { NavItemModel } from "../../Models/NavItemModel";
+import useWindowSize from "../../Hooks/use-windowSize";
+import { Fragment } from "react";
 
 export const navItems: NavItemModel[] = [
   {
@@ -41,25 +43,38 @@ export const navItems: NavItemModel[] = [
 ];
 
 const NavBar = () => {
+  const { isMobileView } = useWindowSize();
+
+  const navClasses = !isMobileView ? classes.nav : classes.mobilenav;
+
   return (
-    <nav className={classes.nav}>
-      <div className={classes.navbar}>
-        <div className={classes.navlogo}>Taj Longhurst</div>
-        <ul className={classes.navlist}>
-          {navItems.map((items) => {
-            return (
-              <NavItems
-                key={items.id}
-                id={items.id}
-                icon={items.icon}
-                label={items.label}
-                path={items.path}
-              />
-            );
-          })}
-        </ul>
-      </div>
-    </nav>
+    <Fragment>
+      {isMobileView && (
+        <div className={classes.moblienavlogopostion}>
+          <div className={classes.mobilenavbar}>
+            <div className={classes.mobilenavlogo}>Taj Longhurst</div>
+          </div>
+        </div>
+      )}
+      <nav className={navClasses}>
+        <div className={classes.navbar}>
+          <div className={classes.navlogo}>Taj Longhurst</div>
+          <ul className={classes.navlist}>
+            {navItems.map((items) => {
+              return (
+                <NavItems
+                  key={items.id}
+                  id={items.id}
+                  icon={items.icon}
+                  label={items.label}
+                  path={items.path}
+                />
+              );
+            })}
+          </ul>
+        </div>
+      </nav>
+    </Fragment>
   );
 };
 
