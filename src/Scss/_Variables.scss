@@ -1,4 +1,4 @@
-//Colors
+/* -------------------------------- //Colors -------------------------------- */
 $PrimaryBgColor: #1a1a1a;
 $SecondaryBgColor: #6300ff;
 $ThirdBgColor: #7652b0;
@@ -7,6 +7,20 @@ $PrimaryTextColor: #bbbbbb;
 $PrimaryNavTextColor: #b8b8b8;
 $PrimaryPurpleLinear: linear-gradient(252deg, #7652b0, #4b08b5, #6300ff);
 
+/* ------------------------------ //Breakpoints ----------------------------- */
+$breakpoints-xs: 0;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1400px;
+
+/* --------------------------------- //Grid --------------------------------- */
+
+$grid-columns: 12;
+$grid-row-margin: 12%;
+
+/* --------------------------------- //Fonts -------------------------------- */
 // Dustin Fonts
 $DustinRegular: "Dustin-Regular";
 $DustinRegularOutline: "Dustin-Regular-Outline";

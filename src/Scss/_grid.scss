@@ -1,0 +1,196 @@
+@import "../Scss/Variables";
+
+// Container padding
+@mixin make-row() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@mixin make-col($breakpoint, $size) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoints-sm) {
+      @for $num from 1 through $grid-columns {
+        @if $size == $num {
+          flex: 0 0 auto;
+          width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoints-sm) {
+      @for $num from 1 through $grid-columns {
+        @if $size == $num {
+          flex: 0 0 auto;
+          width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $breakpoints-md) {
+      @for $num from 1 through $grid-columns {
+        @if $size == $num {
+          flex: 0 0 auto;
+          width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $breakpoints-xl) {
+      @for $num from 1 through $grid-columns {
+        @if $size == $num {
+          flex: 0 0 auto;
+          width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
+  @if $breakpoint == xxl {
+    @media (min-width: $breakpoints-xxl) {
+      @for $num from 1 through $grid-columns {
+        @if $size == $num {
+          flex: 0 0 auto;
+          width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
+}
+
+// @media (min-width: 576px) {
+//   .col-sm-auto {
+//     flex: 0 0 auto;
+//     width: auto;
+//   }
+
+//   .col-sm-1 {
+//     flex: 0 0 auto;
+//     width: 8.33333333%;
+//   }
+
+//   .col-sm-2 {
+//     flex: 0 0 auto;
+//     width: 16.66666667%;
+//   }
+
+//   .col-sm-3 {
+//     flex: 0 0 auto;
+//     width: 25%;
+//   }
+
+//   .col-sm-4 {
+//     flex: 0 0 auto;
+//     width: 33.33333333%;
+//   }
+
+//   .col-sm-5 {
+//     flex: 0 0 auto;
+//     width: 41.66666667%;
+//   }
+
+//   .col-sm-6 {
+//     flex: 0 0 auto;
+//     width: 50%;
+//   }
+
+//   .col-sm-7 {
+//     flex: 0 0 auto;
+//     width: 58.33333333%;
+//   }
+
+//   .col-sm-8 {
+//     flex: 0 0 auto;
+//     width: 66.66666667%;
+//   }
+
+//   .col-sm-9 {
+//     flex: 0 0 auto;
+//     width: 75%;
+//   }
+
+//   .col-sm-10 {
+//     flex: 0 0 auto;
+//     width: 83.33333333%;
+//   }
+
+//   .col-sm-11 {
+//     flex: 0 0 auto;
+//     width: 91.66666667%;
+//   }
+
+//   .col-sm-12 {
+//     flex: 0 0 auto;
+//     width: 100%;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .col-md-auto {
+//     flex: 0 0 auto;
+//     width: auto;
+//   }
+
+//   .col-md-1 {
+//     flex: 0 0 auto;
+//     width: 8.33333333%;
+//   }
+
+//   .col-md-2 {
+//     flex: 0 0 auto;
+//     width: 16.66666667%;
+//   }
+
+//   .col-md-3 {
+//     flex: 0 0 auto;
+//     width: 25%;
+//   }
+
+//   .col-md-4 {
+//     flex: 0 0 auto;
+//     width: 33.33333333%;
+//   }
+
+//   .col-md-5 {
+//     flex: 0 0 auto;
+//     width: 41.66666667%;
+//   }
+
+//   .col-md-6 {
+//     flex: 0 0 auto;
+//     width: 50%;
+//   }
+
+//   .col-md-7 {
+//     flex: 0 0 auto;
+//     width: 58.33333333%;
+//   }
+
+//   .col-md-8 {
+//     flex: 0 0 auto;
+//     width: 66.66666667%;
+//   }
+
+//   .col-md-9 {
+//     flex: 0 0 auto;
+//     width: 75%;
+//   }
+
+//   .col-md-10 {
+//     flex: 0 0 auto;
+//     width: 83.33333333%;
+//   }
+
+//   .col-md-11 {
+//     flex: 0 0 auto;
+//     width: 91.66666667%;
+//   }
+
+//   .col-md-12 {
+//     flex: 0 0 auto;
+//     width: 100%;
+//   }
+// }

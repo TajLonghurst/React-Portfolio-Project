@@ -5,3 +5,15 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin media-breakpoint-down($breakpoints) {
+  @media (max-width: $breakpoints) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up($breakpoints) {
+  @media (min-width: $breakpoints) {
+    @content;
+  }
+}

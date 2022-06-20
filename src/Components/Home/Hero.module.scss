@@ -1,22 +1,21 @@
 @import "../../Scss/Variables";
 @import "../../Scss/Mixins";
+@import "../../Scss/grid";
 
 .container {
   height: 100vh;
   @include DisplayFlexCenter(row);
-  margin-left: 15%;
-  margin-right: 15%;
+  // margin-left: 15%;
+  // margin-right: 15%;
 }
 .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  @include make-row();
+  align-items: center;
   .col {
-    margin-inline: 1rem;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include make-col(xs, 12);
+    @include make-col(sm, 6);
+    @include make-col(md, 6);
+    @include make-col(xl, 6);
+    @include make-col(xxl, 6);
   }
 }
