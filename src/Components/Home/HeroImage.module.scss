@@ -1,5 +1,4 @@
-@import "../../Scss/Variables";
-@import "../../Scss/Mixins";
+@import "../../Scss/index";
 
 .imgcontainer {
   position: relative;
@@ -14,9 +13,43 @@
     position: relative;
   }
   .img {
-    margin-left: -13rem;
     width: 25rem;
     height: 25rem;
+    margin-left: -13rem;
     z-index: 1;
+  }
+  @include media-breakpoint-min($breakpoints-xs) {
+    & {
+      display: none;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-sm) {
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    & {
+      position: relative;
+      @include DisplayFlexCenter(row);
+      justify-content: flex-end;
+      margin-inline: 1rem;
+      .imgbackground {
+        content: "";
+        background-color: $SecondaryBgColor;
+        width: 12rem;
+        height: 30rem;
+        position: relative;
+      }
+      .img {
+        width: 25rem;
+        height: 25rem;
+        margin-left: -13rem;
+        z-index: 1;
+      }
+    }
+  }
+  @include media-breakpoint-min($breakpoints-lg) {
+  }
+  @include media-breakpoint-min($breakpoints-xl) {
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
   }
 }

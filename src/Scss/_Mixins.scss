@@ -6,13 +6,15 @@
   align-items: center;
 }
 
-@mixin media-breakpoint-down($breakpoints) {
+//Max is down
+@mixin media-breakpoint-max($breakpoints) {
   @media (max-width: $breakpoints) {
     @content;
   }
 }
 
-@mixin media-breakpoint-up($breakpoints) {
+//min is up
+@mixin media-breakpoint-min($breakpoints) {
   @media (min-width: $breakpoints) {
     @content;
   }

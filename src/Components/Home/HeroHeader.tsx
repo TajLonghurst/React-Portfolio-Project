@@ -14,7 +14,9 @@ const HeroHeader = () => {
           I'm <span className={classes.titlecolor}>Taj </span>
           Longhurst
         </h1>
-        <p className={classes.smallheader}>Self modivated Graduate developer</p>
+        <p className={classes.smallheader}>
+          A self modivated Graduate Developer
+        </p>
       </div>
       <div className={classes.btnpostion}>
         <Button>View Projects</Button>

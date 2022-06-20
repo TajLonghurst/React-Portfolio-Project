@@ -1,5 +1,4 @@
-@import "../../Scss/Mixins";
-@import "../../Scss/Variables";
+@import "../../Scss/index";
 
 .moblienavlogopostion {
   padding-inline: 1rem;
@@ -27,11 +26,10 @@
 .mobilenav {
   padding-inline: 1rem;
   position: fixed;
-  bottom: 20px;
+  bottom: 4%;
   left: 50%;
   transform: translate(-50%);
   z-index: 1000;
-  background-color: $PrimaryBgColor;
   .navlogo {
     position: absolute;
     padding-inline: 1rem;
@@ -50,6 +48,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: $PrimaryBgColor;
   }
   .navlist {
     @include DisplayFlexCenter(row);
