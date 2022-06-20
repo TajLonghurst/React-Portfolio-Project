@@ -31,7 +31,6 @@
   &.navlinkactive::after {
     content: "";
     bottom: -18px;
-    left: -6px;
     z-index: 1;
     position: absolute;
     border-radius: 5px;
@@ -41,7 +40,6 @@
     pointer-events: none;
     transform: scalex(1);
     animation: scale-width 300ms;
-    padding-inline: 0.5rem;
   }
 }
 
