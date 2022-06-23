@@ -24,6 +24,8 @@
   }
   .content {
     position: relative;
+    height: 11rem;
+    overflow: hidden;
     .aboutmetext {
       margin: 0rem;
       color: $PrimaryTextColor;
@@ -37,16 +39,23 @@
         height: 100%;
         width: 100%;
         z-index: 1;
-        background-image: $ExtenedText-LinearBefore;
+        background: $ExtenedText-LinearBefore;
       }
     }
   }
-
+  .contentextended {
+    margin: 0rem;
+    color: $PrimaryTextColor;
+    font-size: $PrimaryText-FontSize;
+    line-height: 2.125rem;
+  }
+  .aboutmeextendedtext {
+    position: relative;
+  }
   .btnpostion {
     @include DisplayFlexCenter(row);
     width: 100%;
     margin-bottom: 1rem;
-
     .openicon {
       cursor: pointer;
       align-items: center;
@@ -59,6 +68,20 @@
         transform: translateY(2px);
       }
     }
+    .openiconrotate {
+      cursor: pointer;
+      align-items: center;
+      width: 2.3rem;
+      height: 2.3rem;
+      transform: rotate(180deg);
+      transition: transform 0.2s;
+      &:hover {
+        background: $LinkHover;
+        border-radius: 10px;
+        transform: translateY(2px);
+        transform: rotate(180deg);
+      }
+    }
   }
   .medialinks {
     @include DisplayFlexCenter(row);
@@ -66,11 +89,17 @@
     padding: 0rem;
     list-style: none;
     margin-bottom: 2.3rem;
+    margin-left: -3px;
     .mediaitems {
       margin-right: 1rem;
       .icon {
         width: 31px;
         height: 31px;
+        padding: 3px;
+        &:hover {
+          background-color: $LinkHover;
+          border-radius: 10px;
+        }
       }
     }
   }
