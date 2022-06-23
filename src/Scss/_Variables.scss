@@ -6,6 +6,9 @@ $PrimaryHeaderColor: #fff;
 $PrimaryTextColor: #bbbbbb;
 $PrimaryNavTextColor: #b8b8b8;
 $PrimaryPurpleLinear: linear-gradient(252deg, #7652b0, #4b08b5, #6300ff);
+$ExtenedText-LinearBefore: linear-gradient(0deg, #1a1a1a, #1a1a1a3f);
+$ExtenedText-LinearAfter: linear-gradient(180deg, #1a1a1a, #1a1a1a3f);
+$LinkHover: #ffffff10;
 
 /* ------------------------------ //Breakpoints ----------------------------- */
 $breakpoints-xs: 0;

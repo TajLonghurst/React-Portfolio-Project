@@ -1,9 +1,44 @@
 //Flex Mixin
+@import "./Variables";
+
 @mixin DisplayFlexCenter($direction) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
   align-items: center;
+}
+
+// $breakpoints-xs: 0;
+// $breakpoints-sm: 576px;
+// $breakpoints-md: 768px;
+// $breakpoints-lg: 992px;
+// $breakpoints-xl: 1200px;
+// $breakpoints-xxl: 1400px;
+
+@mixin Container {
+  height: 100vh;
+  margin-left: 20%;
+  margin-right: 20%;
+  @include media-breakpoint-min($breakpoints-xs) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  @include media-breakpoint-min($breakpoints-sm) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  @include media-breakpoint-min($breakpoints-xl) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
 
 //Max is down

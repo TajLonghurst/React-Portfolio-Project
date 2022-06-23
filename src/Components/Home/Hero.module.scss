@@ -1,10 +1,8 @@
 @import "../../Scss/index";
 
 .container {
-  height: 100vh;
   @include DisplayFlexCenter(row);
-  // margin-left: 15%;
-  // margin-right: 15%;
+  @include Container;
 }
 .row {
   @include make-row();

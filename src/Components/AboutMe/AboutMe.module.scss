@@ -1,0 +1,68 @@
+@import "../../Scss/index";
+
+.container {
+  @include DisplayFlexCenter(row);
+  @include Container;
+  .row {
+    @include make-row();
+    align-items: center;
+    @include media-breakpoint-min($breakpoints-xs) {
+      & {
+        flex-direction: column-reverse;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-sm) {
+      & {
+        flex-direction: column-reverse;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-md) {
+      & {
+        flex-direction: column-reverse;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xl) {
+      & {
+        flex-direction: row;
+      }
+    }
+
+    .col_8 {
+      @include make-col(xs, 12);
+      @include make-col(sm, 12);
+      @include make-col(md, 12);
+      @include make-col(xl, 7);
+      @include make-col(xxl, 7);
+      @include DisplayFlexCenter(row);
+      justify-content: flex-end;
+    }
+    .col_4 {
+      @include make-col(xs, 12);
+      @include make-col(sm, 12);
+      @include make-col(md, 12);
+      @include make-col(xl, 5);
+      @include make-col(xxl, 5);
+      @include DisplayFlexCenter(row);
+      justify-content: flex-start;
+      .imgcontainer {
+        position: relative;
+        @include DisplayFlexCenter(row);
+        justify-content: flex-end;
+        margin-inline: 1rem;
+        .imgbackground {
+          content: "";
+          background-color: $SecondaryBgColor;
+          width: 12rem;
+          height: 30rem;
+          position: relative;
+        }
+        .img {
+          width: 25rem;
+          height: 25rem;
+          margin-right: -12.5rem;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

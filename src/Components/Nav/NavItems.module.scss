@@ -24,7 +24,7 @@
     padding-left: 0.3rem;
   }
   &:hover {
-    background: #ffffff10;
+    background: $LinkHover;
     border-radius: 10px;
   }
   &.navlinkactive::after {

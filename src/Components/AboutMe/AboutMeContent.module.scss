@@ -1,0 +1,77 @@
+@import "../../Scss/index";
+
+.contentbody {
+  @include DisplayFlexCenter(column);
+  align-items: flex-start;
+  width: 100%;
+  margin-inline: 1rem;
+  .header {
+    @include DisplayFlexCenter(row);
+    font-size: $Welcome-FontSize;
+    font-family: $DustinRegular;
+    color: $PrimaryHeaderColor;
+    margin: 0rem;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    .bulletpoint {
+      content: "";
+      width: 30px;
+      height: 5px;
+      background: $PrimaryPurpleLinear;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+  }
+  .content {
+    position: relative;
+    .aboutmetext {
+      margin: 0rem;
+      color: $PrimaryTextColor;
+      font-size: $PrimaryText-FontSize;
+      line-height: 2.125rem;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background-image: $ExtenedText-LinearBefore;
+      }
+    }
+  }
+
+  .btnpostion {
+    @include DisplayFlexCenter(row);
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .openicon {
+      cursor: pointer;
+      align-items: center;
+      width: 2.3rem;
+      height: 2.3rem;
+      transition: transform 0.2s;
+      &:hover {
+        background: $LinkHover;
+        border-radius: 10px;
+        transform: translateY(2px);
+      }
+    }
+  }
+  .medialinks {
+    @include DisplayFlexCenter(row);
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+    margin-bottom: 2.3rem;
+    .mediaitems {
+      margin-right: 1rem;
+      .icon {
+        width: 31px;
+        height: 31px;
+      }
+    }
+  }
+}

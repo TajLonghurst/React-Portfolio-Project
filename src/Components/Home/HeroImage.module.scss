@@ -5,6 +5,7 @@
   @include DisplayFlexCenter(row);
   justify-content: flex-end;
   margin-inline: 1rem;
+  margin-right: 7rem;
   .imgbackground {
     content: "";
     background-color: $SecondaryBgColor;
@@ -30,7 +31,6 @@
       position: relative;
       @include DisplayFlexCenter(row);
       justify-content: flex-end;
-      margin-inline: 1rem;
       .imgbackground {
         content: "";
         background-color: $SecondaryBgColor;
