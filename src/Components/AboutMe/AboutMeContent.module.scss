@@ -5,14 +5,30 @@
   align-items: flex-start;
   width: 100%;
   margin-inline: 1rem;
+  margin-inline: 10%;
+  @include media-breakpoint-min($breakpoints-xs) {
+    & {
+      margin-inline: 10%;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-sm) {
+    & {
+      margin-inline: 10%;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    & {
+      margin-inline: 10%;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xl) {
+    & {
+      margin-inline: 0%;
+    }
+  }
   .header {
     @include DisplayFlexCenter(row);
-    font-size: $Welcome-FontSize;
-    font-family: $DustinRegular;
-    color: $PrimaryHeaderColor;
     margin: 0rem;
-    letter-spacing: 1px;
-    font-weight: lighter;
     .bulletpoint {
       content: "";
       width: 30px;
@@ -20,6 +36,13 @@
       background: $PrimaryPurpleLinear;
       border-radius: 5px;
       margin-right: 1rem;
+    }
+    .title {
+      font-family: $DustinRegular;
+      color: $PrimaryHeaderColor;
+      font-size: $PrimaryHeader-FontSize;
+      letter-spacing: 1px;
+      font-weight: lighter;
     }
   }
   .content {
@@ -50,7 +73,10 @@
     line-height: 2.125rem;
   }
   .aboutmeextendedtext {
-    position: relative;
+    margin: 0rem;
+    color: $PrimaryTextColor;
+    font-size: $PrimaryText-FontSize;
+    line-height: 2.125rem;
   }
   .btnpostion {
     @include DisplayFlexCenter(row);

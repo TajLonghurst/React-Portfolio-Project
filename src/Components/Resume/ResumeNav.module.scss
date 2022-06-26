@@ -1,0 +1,17 @@
+@import "../../Scss/index";
+
+.container {
+  @include DisplayFlexCenter(column);
+  .navlist {
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+    .navitems {
+      @include DisplayFlexCenter(row);
+    }
+    .navicon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

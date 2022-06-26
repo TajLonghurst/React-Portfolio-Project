@@ -1,0 +1,42 @@
+@import "../../Scss/index";
+
+.container {
+  @include Container();
+  @include DisplayFlexCenter(column);
+  .header {
+    @include DisplayFlexCenter(row);
+    margin: 0rem;
+    .bulletpoint {
+      content: "";
+      width: 30px;
+      height: 5px;
+      background: $PrimaryPurpleLinear;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+    .title {
+      font-family: $DustinRegular;
+      color: $PrimaryHeaderColor;
+      font-size: $PrimaryHeader-FontSize;
+      letter-spacing: 1px;
+      font-weight: lighter;
+    }
+  }
+  .row {
+    @include make-row();
+    .col_4 {
+      @include make-col(xs, 12);
+      @include make-col(sm, 12);
+      @include make-col(md, 12);
+      @include make-col(xl, 4);
+      @include make-col(xxl, 4);
+    }
+    .col_8 {
+      @include make-col(xs, 12);
+      @include make-col(sm, 12);
+      @include make-col(md, 12);
+      @include make-col(xl, 4);
+      @include make-col(xxl, 4);
+    }
+  }
+}
