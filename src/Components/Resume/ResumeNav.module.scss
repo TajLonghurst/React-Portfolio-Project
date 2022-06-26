@@ -1,17 +1,21 @@
 @import "../../Scss/index";
 
-.container {
-  @include DisplayFlexCenter(column);
-  .navlist {
-    margin: 0rem;
-    padding: 0rem;
-    list-style: none;
-    .navitems {
-      @include DisplayFlexCenter(row);
-    }
-    .navicon {
-      width: 25px;
-      height: 25px;
-    }
+.navitems {
+  @include DisplayFlexCenter(row);
+  justify-content: flex-start;
+  padding: 0.25rem;
+  padding-inline: 1.5rem;
+  padding-right: 3rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #343434;
+  }
+  .navicon {
+    width: 23px;
+    height: 23px;
+  }
+  .navtitle {
+    margin-left: 1rem;
+    color: $PrimaryTextColor;
   }
 }

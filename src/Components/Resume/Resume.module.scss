@@ -24,19 +24,26 @@
   }
   .row {
     @include make-row();
-    .col_4 {
+    .col_3 {
       @include make-col(xs, 12);
       @include make-col(sm, 12);
       @include make-col(md, 12);
-      @include make-col(xl, 4);
-      @include make-col(xxl, 4);
+      @include make-col(xl, 3);
+      @include make-col(xxl, 3);
+      @include DisplayFlexCenter(row);
+      .navlist {
+        margin: 0rem;
+        padding: 0rem;
+        list-style: none;
+        border-left: 2px solid #454545;
+      }
     }
-    .col_8 {
+    .col_9 {
       @include make-col(xs, 12);
       @include make-col(sm, 12);
       @include make-col(md, 12);
-      @include make-col(xl, 4);
-      @include make-col(xxl, 4);
+      @include make-col(xl, 9);
+      @include make-col(xxl, 9);
     }
   }
 }

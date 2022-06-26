@@ -1,21 +1,21 @@
 import React from "react";
 import classes from "./ResumeNav.module.scss";
-import { ResumeNavPropsModel } from "../../Models/ResumeNavModel";
+import { ResumeNavModel } from "../../Models/ResumeNavModel";
 
-const ResumeNav: React.FC<ResumeNavPropsModel> = (props) => {
+const ResumeNav: React.FC<ResumeNavModel> = (props) => {
+  const ResumeNavOnClickHandler = () => {
+    console.log(props.id);
+  };
+
   return (
-    <div className={classes.container}>
-      <ul className={classes.navlist}>
-        {props.ResumeNav.map((item) => {
-          return (
-            <li key={item.id} className={classes.navitems}>
-              <img className={classes.navicon} src={item.icon} alt="Red" />
-              <p className={classes.navtitle}>{item.label}</p>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <li
+      className={classes.navitems}
+      onClick={ResumeNavOnClickHandler}
+      key={props.id}
+    >
+      <img className={classes.navicon} src={props.icon} alt="Red" />
+      <p className={classes.navtitle}>{props.label}</p>
+    </li>
   );
 };
 

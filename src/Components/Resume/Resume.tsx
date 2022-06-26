@@ -7,6 +7,7 @@ import SkilsIcon from "../../Assets/Icons/SkillsIcon.svg";
 import UdemyIcon from "../../Assets/Icons/UdemyIcon.svg";
 import ReferancesIcon from "../../Assets/Icons/ReferancesIcon.svg";
 import { ResumeNavModel } from "../../Models/ResumeNavModel";
+import ResumeContent from "./ResumeContent";
 
 export const ResumeNavItems: ResumeNavModel[] = [
   {
@@ -39,15 +40,28 @@ export const ResumeNavItems: ResumeNavModel[] = [
 const Resume = () => {
   return (
     <div className={classes.container}>
-      <div className={classes.header}>
+      {/* <div className={classes.header}>
         <span className={classes.bulletpoint}></span>
         <h1 className={classes.title}>Resume</h1>
-      </div>
+      </div> */}
       <div className={classes.row}>
-        <div className={classes.col_4}>
-          <ResumeNav ResumeNav={ResumeNavItems} />
+        <div className={classes.col_3}>
+          <ul className={classes.navlist}>
+            {ResumeNavItems.map((item) => {
+              return (
+                <ResumeNav
+                  key={item.id}
+                  icon={item.icon}
+                  id={item.id}
+                  label={item.label}
+                />
+              );
+            })}
+          </ul>
         </div>
-        <div className={classes.col_8}></div>
+        <div className={classes.col_9}>
+          <ResumeContent />
+        </div>
       </div>
     </div>
   );
