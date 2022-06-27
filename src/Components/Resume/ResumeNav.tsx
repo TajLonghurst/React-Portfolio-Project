@@ -1,21 +1,28 @@
-import React from "react";
+import React, { Fragment } from "react";
 import classes from "./ResumeNav.module.scss";
 import { ResumeNavModel } from "../../Models/ResumeNavModel";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../ReduxStore/ui-slice";
 
 const ResumeNav: React.FC<ResumeNavModel> = (props) => {
+  const dispatch = useDispatch();
   const ResumeNavOnClickHandler = () => {
-    console.log(props.id);
+    dispatch(uiActions.ResumeClickHandler({ id: props.id }));
   };
 
+  const isActiveStyle = props.isActive
+    ? classes.navitemsactive
+    : classes.navitems;
+
   return (
-    <li
-      className={classes.navitems}
-      onClick={ResumeNavOnClickHandler}
-      key={props.id}
-    >
-      <img className={classes.navicon} src={props.icon} alt="Red" />
-      <p className={classes.navtitle}>{props.label}</p>
-    </li>
+    <Fragment>
+      <li className={isActiveStyle}>
+        <img src={props.icon} className={classes.navicon} alt="Failed" />
+        <p onClick={ResumeNavOnClickHandler} className={classes.navtitle}>
+          {props.label}
+        </p>
+      </li>
+    </Fragment>
   );
 };
 

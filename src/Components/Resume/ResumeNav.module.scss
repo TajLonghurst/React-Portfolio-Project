@@ -1,21 +1,47 @@
 @import "../../Scss/index";
 
-.navitems {
+.navitemsactive {
+  position: relative;
   @include DisplayFlexCenter(row);
   justify-content: flex-start;
   padding: 0.25rem;
   padding-inline: 1.5rem;
   padding-right: 3rem;
+  flex-wrap: nowrap;
+  position: relative;
+  background-color: $LinkHover;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    content: "";
+    background: $SecondaryBgColor;
+    width: 3px;
+    height: 100%;
+  }
+}
+
+.navitems {
+  position: relative;
+  @include DisplayFlexCenter(row);
+  justify-content: flex-start;
+  padding: 0.25rem;
+  padding-inline: 1.5rem;
+  padding-right: 3rem;
+  flex-wrap: nowrap;
   cursor: pointer;
+}
+
+.navicon {
+  width: 23px;
+  height: 23px;
+  user-select: none;
+}
+.navtitle {
+  margin-left: 1rem;
+  color: $PrimaryTextColor;
+  user-select: none;
   &:hover {
-    background-color: #343434;
-  }
-  .navicon {
-    width: 23px;
-    height: 23px;
-  }
-  .navtitle {
-    margin-left: 1rem;
-    color: $PrimaryTextColor;
+    color: $SecondaryBgColor;
   }
 }
