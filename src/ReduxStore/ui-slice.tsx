@@ -21,7 +21,6 @@ const uiSlice = createSlice({
         }
         return;
       });
-      console.log(state.ResumeList);
     },
   },
 });

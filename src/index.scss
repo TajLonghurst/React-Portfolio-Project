@@ -1,5 +1,4 @@
 @import "./Scss/Variables";
-
 html {
   scroll-behavior: smooth;
 }
@@ -12,7 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $PrimaryBgColor;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
