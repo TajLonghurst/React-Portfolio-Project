@@ -1,8 +1,8 @@
-import EducationIcon from "../Assets/Icons/EducationIcon.svg";
-import WorkIcon from "../Assets/Icons/WorkIcon.svg";
-import SkilsIcon from "../Assets/Icons/SkillsIcon.svg";
-import UdemyIcon from "../Assets/Icons/UdemyIcon.svg";
-import ReferancesIcon from "../Assets/Icons/ReferancesIcon.svg";
+import EducationIcon from "../Assets/Icons/WebIcons/EducationIcon.svg";
+import WorkIcon from "../Assets/Icons/WebIcons/WorkIcon.svg";
+import SkilsIcon from "../Assets/Icons/WebIcons/SkillsIcon.svg";
+import UdemyIcon from "../Assets/Icons/WebIcons/UdemyIcon.svg";
+import ReferancesIcon from "../Assets/Icons/WebIcons/ReferancesIcon.svg";
 import { ResumeNavModel } from "../Models/ResumeNavModel";
 
 export const ResumeNavItems: ResumeNavModel[] = [

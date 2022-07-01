@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./BorderlessBtn.module.scss";
 import { BorderLessBtnModel } from "../../Models/BorderLessBtnModel";
-import RightPurpleArrowIcon from "../../Assets/Icons/RightPurpleArrowIcon.svg";
+import RightPurpleArrowIcon from "../../Assets/Icons/WebIcons/RightPurpleArrowIcon.svg";
 
 const BorderlessBtn: React.FC<BorderLessBtnModel> = (props) => {
   return (

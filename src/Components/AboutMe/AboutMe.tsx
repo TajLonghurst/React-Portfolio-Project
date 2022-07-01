@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./AboutMe.module.scss";
-import AboutMeIcon from "../../Assets/Icons/AboutMeIcon.svg";
+import AboutMeIcon from "../../Assets/Icons/WebIcons/AboutMeIcon.svg";
 import AboutMeContent from "./AboutMeContent";
 
 const AboutMe = () => {

@@ -1,8 +1,8 @@
-import ResumeIcon from "../Assets/Icons/ResumeIcon.svg";
-import AboutMeIcon from "../Assets/Icons/AboutMeIcon.svg";
-import HomeIcon from "../Assets/Icons/HomeIcon.svg";
-import ContactIcon from "../Assets/Icons/ContactIcon.svg";
-import ProjectsIcon from "../Assets/Icons/ProjectsIcon.svg";
+import ResumeIcon from "../Assets/Icons/WebIcons/ResumeIcon.svg";
+import AboutMeIcon from "../Assets/Icons/WebIcons/AboutMeIcon.svg";
+import HomeIcon from "../Assets/Icons/WebIcons/HomeIcon.svg";
+import ContactIcon from "../Assets/Icons/WebIcons/ContactIcon.svg";
+import ProjectsIcon from "../Assets/Icons/WebIcons/ProjectsIcon.svg";
 import { NavItemModel } from "../Models/NavItemModel";
 
 export const navobjectlist: NavItemModel[] = [

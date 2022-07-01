@@ -3,6 +3,7 @@
 .container {
   @include Container();
   @include DisplayFlexCenter(column);
+  position: relative;
   .header {
     @include DisplayFlexCenter(row);
     margin: 0rem;
@@ -24,6 +25,7 @@
   }
   .row {
     @include make-row();
+    position: relative;
     .col_3 {
       @include make-col(xs, 12);
       @include make-col(sm, 12);
@@ -44,6 +46,7 @@
       @include make-col(md, 12);
       @include make-col(xl, 9);
       @include make-col(xxl, 9);
+      position: relative;
     }
   }
 }

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import classes from "./AboutMeContent.module.scss";
-import GithuhIcon from "../../Assets/Icons/GithubIcon.svg";
-import LinkinedIcon from "../../Assets/Icons/LinkedinIcon.svg";
+import GithuhIcon from "../../Assets/Icons/WebIcons/GithubIcon.svg";
+import LinkinedIcon from "../../Assets/Icons/WebIcons/LinkedinIcon.svg";
 import Button from "../UI/Button";
-import ExpandMoreIcon from "../../Assets/Icons/ExpandMoreIcon.svg";
+import ExpandMoreIcon from "../../Assets/Icons/WebIcons/ExpandMoreIcon.svg";
 
 const AboutMeContent = () => {
   const [expanedText, setExpandedText] = useState(false);

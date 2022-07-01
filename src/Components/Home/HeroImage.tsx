@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./HeroImage.module.scss";
-import AboutMeIcon from "../../Assets/Icons/AboutMeIcon.svg";
+import AboutMeIcon from "../../Assets/Icons/WebIcons/AboutMeIcon.svg";
 
 const HeroImage = () => {
   return (

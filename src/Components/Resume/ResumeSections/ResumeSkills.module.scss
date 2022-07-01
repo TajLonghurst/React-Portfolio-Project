@@ -1,0 +1,28 @@
+@import "../../../Scss/index";
+
+.body {
+  position: relative;
+  @include DisplayFlexCenter(row);
+  height: 100%;
+  .row {
+    position: relative;
+    @include make-row();
+    .col {
+      position: relative;
+      @include make-col(xs, 4);
+      @include make-col(sm, 4);
+      @include make-col(md, 4);
+      @include make-col(xl, 4);
+      @include make-col(xxl, 4);
+      @include DisplayFlexCenter(row);
+      .list {
+        position: relative;
+        margin: 0rem;
+        list-style: none;
+        padding: 0rem;
+        .item {
+        }
+      }
+    }
+  }
+}
