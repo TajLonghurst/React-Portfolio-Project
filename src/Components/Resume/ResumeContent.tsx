@@ -5,6 +5,7 @@ import { RootState } from "../../ReduxStore/Index";
 import ResumeEducation from "./ResumeSections/ResumeEducation";
 import ResumeWorkExperience from "./ResumeSections/ResumeWorkExperience";
 import ResumeUdemyCourse from "./ResumeSections/ResumeUdemyCourse";
+import ResumeReferances from "./ResumeSections/ResumeReferances";
 
 const ResumeContent = () => {
   const isActive = useSelector((state: RootState) => state.ui.ResumeList);
@@ -13,6 +14,7 @@ const ResumeContent = () => {
       {isActive[0].isActive && <ResumeEducation />}
       {isActive[1].isActive && <ResumeWorkExperience />}
       {isActive[3].isActive && <ResumeUdemyCourse />}
+      {isActive[4].isActive && <ResumeReferances />}
     </div>
   );
 };
