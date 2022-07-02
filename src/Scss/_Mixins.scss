@@ -31,6 +31,10 @@
     margin-left: 3%;
     margin-right: 3%;
   }
+  @include media-breakpoint-min($breakpoints-lg) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
   @include media-breakpoint-min($breakpoints-xl) {
     margin-left: 10%;
     margin-right: 10%;

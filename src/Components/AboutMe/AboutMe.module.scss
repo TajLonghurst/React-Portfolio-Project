@@ -30,6 +30,7 @@
       @include make-col(xs, 12);
       @include make-col(sm, 12);
       @include make-col(md, 12);
+      @include make-col(lg, 12);
       @include make-col(xl, 7);
       @include make-col(xxl, 7);
       @include DisplayFlexCenter(row);

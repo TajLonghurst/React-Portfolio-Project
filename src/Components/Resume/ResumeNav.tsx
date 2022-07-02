@@ -16,11 +16,9 @@ const ResumeNav: React.FC<ResumeNavModel> = (props) => {
 
   return (
     <Fragment>
-      <li className={isActiveStyle}>
+      <li onClick={ResumeNavOnClickHandler} className={isActiveStyle}>
         <img src={props.icon} className={classes.navicon} alt="Failed" />
-        <p onClick={ResumeNavOnClickHandler} className={classes.navtitle}>
-          {props.label}
-        </p>
+        <p className={classes.navtitle}>{props.label}</p>
       </li>
     </Fragment>
   );

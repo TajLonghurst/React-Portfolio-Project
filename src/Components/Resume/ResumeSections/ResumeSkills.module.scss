@@ -9,18 +9,38 @@
     @include make-row();
     .col {
       position: relative;
-      @include make-col(xs, 4);
-      @include make-col(sm, 4);
+      @include make-col(xs, 12);
+      @include make-col(sm, 12);
       @include make-col(md, 4);
+      @include make-col(lg, 4);
       @include make-col(xl, 4);
       @include make-col(xxl, 4);
       @include DisplayFlexCenter(row);
+      align-items: flex-start;
       .list {
         position: relative;
         margin: 0rem;
         list-style: none;
         padding: 0rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
         .item {
+          width: 8rem;
+          display: flex;
+          justify-content: center;
+          color: $PrimaryTextColor;
+          padding: 0.5rem;
+          padding-inline: 2rem;
+        }
+        .itemtitle {
+          display: flex;
+          justify-content: center;
+          border-left: 1px solid $SecondaryBgColor;
+          border-right: 1px solid $SecondaryBgColor;
+          padding: 0.5rem;
+          color: $PrimaryHeaderColor;
+          font-weight: bold;
+          padding-inline: 2rem;
         }
       }
     }

@@ -38,6 +38,16 @@
       }
     }
   }
+  @if $breakpoint == lg {
+    @media (min-width: $breakpoints-lg) {
+      @for $num from 1 through $grid-columns {
+        @if $size == $num {
+          flex: 0 0 auto;
+          width: percentage($size / $grid-columns);
+        }
+      }
+    }
+  }
   @if $breakpoint == xl {
     @media (min-width: $breakpoints-xl) {
       @for $num from 1 through $grid-columns {

@@ -19,6 +19,23 @@
     width: 3px;
     height: 100%;
   }
+  @include media-breakpoint-max($breakpoints-lg) {
+    & {
+      padding: 1rem;
+    }
+    &::before {
+      display: none;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      content: "";
+      background: $SecondaryBgColor;
+      height: 3px;
+      width: 100%;
+    }
+  }
 }
 
 .navitems {
@@ -30,6 +47,11 @@
   padding-right: 3rem;
   flex-wrap: nowrap;
   cursor: pointer;
+  @include media-breakpoint-max($breakpoints-lg) {
+    & {
+      padding: 1rem;
+    }
+  }
 }
 
 .navicon {
@@ -43,5 +65,8 @@
   user-select: none;
   &:hover {
     color: $SecondaryBgColor;
+  }
+  @include media-breakpoint-max($breakpoints-lg) {
+    display: none;
   }
 }

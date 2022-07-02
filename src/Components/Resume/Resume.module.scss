@@ -3,6 +3,13 @@
 .container {
   @include Container();
   @include DisplayFlexCenter(column);
+  @include media-breakpoint-max($breakpoints-xl) {
+    & {
+      justify-content: flex-start;
+      padding-block: 20%;
+      height: fit-content;
+    }
+  }
   position: relative;
   .header {
     @include DisplayFlexCenter(row);
@@ -30,6 +37,7 @@
       @include make-col(xs, 12);
       @include make-col(sm, 12);
       @include make-col(md, 12);
+      @include make-col(lg, 12);
       @include make-col(xl, 3);
       @include make-col(xxl, 3);
       @include DisplayFlexCenter(row);
@@ -38,12 +46,28 @@
         padding: 0rem;
         list-style: none;
         border-left: 1px solid #2b2b2b;
+        @include media-breakpoint-min($breakpoints-xs) {
+          display: flex;
+          flex-direction: row;
+          border-left: 0px solid #2b2b2b;
+        }
+        @include media-breakpoint-min($breakpoints-sm) {
+          display: flex;
+          flex-direction: row;
+          border-left: 0px solid #2b2b2b;
+        }
+        @include media-breakpoint-min($breakpoints-xl) {
+          display: flex;
+          flex-direction: column;
+          border-left: 1px solid #2b2b2b;
+        }
       }
     }
     .col_9 {
       @include make-col(xs, 12);
       @include make-col(sm, 12);
       @include make-col(md, 12);
+      @include make-col(lg, 12);
       @include make-col(xl, 9);
       @include make-col(xxl, 9);
       position: relative;

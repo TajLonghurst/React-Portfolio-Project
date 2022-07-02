@@ -19,25 +19,33 @@ const ResumeSkills = () => {
       <div className={classes.row}>
         <div className={classes.col}>
           <ul className={classes.list}>
-            <li className={classes.item}>ReactJs</li>
+            <li className={classes.itemtitle}>Frontend</li>
+            <li className={classes.item}>React</li>
             <li className={classes.item}>Javascript</li>
             <li className={classes.item}>Typescript</li>
             <li className={classes.item}>Scss</li>
+            <li className={classes.item}>Bootstrap</li>
+            <li className={classes.item}>Figma</li>
           </ul>
         </div>
         <div className={classes.col}>
           <ul className={classes.list}>
+            <li className={classes.itemtitle}>Libarys</li>
+            <li className={classes.item}>Redux</li>
             <li className={classes.item}>Axois</li>
             <li className={classes.item}>Framer-Motion</li>
             <li className={classes.item}>React-Router</li>
-            <li className={classes.item}>Redux</li>
+            <li className={classes.item}>Email JS</li>
           </ul>
         </div>
         <div className={classes.col}>
           <ul className={classes.list}>
-            <li className={classes.item}>Currently Learning...</li>
-            <li className={classes.item}>NodeJs</li>
+            <li className={classes.itemtitle}>Backend</li>
+            {/* <li className={classes.item}>NodeJs</li>
             <li className={classes.item}>MongoDB</li>
+            <li className={classes.item}>Express</li>
+            <li className={classes.item}>GraphQL</li> */}
+            <li className={classes.item}>None . . .</li>
           </ul>
         </div>
       </div>
