@@ -23,9 +23,7 @@
         list-style: none;
         padding: 0rem;
         margin-bottom: 3rem;
-        margin-top: 2rem;
         .item {
-          width: 8rem;
           display: flex;
           justify-content: center;
           color: $PrimaryTextColor;
@@ -33,6 +31,7 @@
           padding-inline: 2rem;
         }
         .itemtitle {
+          width: 7rem;
           display: flex;
           justify-content: center;
           border-left: 1px solid $SecondaryBgColor;

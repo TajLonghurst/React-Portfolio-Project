@@ -3,6 +3,14 @@
 .container {
   @include DisplayFlexCenter(row);
   @include Container();
+  height: 100%;
+  padding-block: 4rem;
+  @include media-breakpoint-max($breakpoints-md) {
+    & {
+      padding-block: 25%;
+    }
+  }
+
   .row {
     @include make-row();
     align-items: center;

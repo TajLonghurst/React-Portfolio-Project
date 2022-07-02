@@ -4,4 +4,9 @@
   margin-inline: 2rem;
   position: relative;
   height: 100%;
+  @include media-breakpoint-max($breakpoints-xl) {
+    & {
+      margin-top: 2rem;
+    }
+  }
 }
