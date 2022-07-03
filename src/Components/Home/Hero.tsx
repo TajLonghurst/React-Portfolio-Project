@@ -5,7 +5,7 @@ import HeroImage from "./HeroImage";
 
 const Hero = () => {
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       <div className={classes.row}>
         <div className={classes.col}>
           <HeroImage />
@@ -14,7 +14,7 @@ const Hero = () => {
           <HeroHeader />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

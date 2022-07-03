@@ -8,7 +8,7 @@ import { RootState } from "../../ReduxStore/Index";
 const Resume = () => {
   const resumeList = useSelector((state: RootState) => state.ui.ResumeList);
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       {/* <div className={classes.header}>
         <span className={classes.bulletpoint}></span>
         <h1 className={classes.title}>Resume</h1>
@@ -33,7 +33,7 @@ const Resume = () => {
           <ResumeContent />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

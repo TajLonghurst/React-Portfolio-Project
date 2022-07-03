@@ -5,7 +5,7 @@ import AboutMeContent from "./AboutMeContent";
 
 const AboutMe = () => {
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       <div className={classes.row}>
         <div className={classes.col_8}>
           <AboutMeContent />
@@ -21,7 +21,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

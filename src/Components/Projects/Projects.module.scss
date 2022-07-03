@@ -1,0 +1,20 @@
+@import "../../Scss/index";
+
+.container {
+  @include Container();
+  @include DisplayFlexCenter(row);
+  .row {
+    @include make-row();
+    .col {
+      @include make-col(xs, 12);
+      @include make-col(sm, 12);
+      @include make-col(md, 12);
+      @include make-col(lg, 12);
+      @include make-col(xl, 12);
+      @include make-col(xxl, 12);
+      .projectcontent {
+        @include DisplayFlexCenter(row);
+      }
+    }
+  }
+}
