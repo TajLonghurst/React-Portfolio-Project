@@ -1,8 +1,20 @@
 @import "../../Scss/index";
 
 .container {
-  @include Container();
+  position: relative;
   @include DisplayFlexCenter(row);
+  height: 100vh;
+  .bgblock {
+    position: absolute;
+    content: "";
+    background: $SecondaryBgColor;
+    top: 50%;
+    left: 22%;
+    transform: translate(-22%, -50%);
+    width: 14rem;
+    height: 70%;
+    z-index: 0;
+  }
   .row {
     @include make-row();
     .col {
@@ -13,6 +25,7 @@
       @include make-col(xl, 12);
       @include make-col(xxl, 12);
       .projectcontent {
+        position: relative;
         @include DisplayFlexCenter(row);
       }
     }
