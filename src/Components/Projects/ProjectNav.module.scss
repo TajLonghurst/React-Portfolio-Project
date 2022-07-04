@@ -16,22 +16,44 @@
     .navitem {
       position: relative;
       padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover .dot {
+        background-color: #b1b1b1;
+      }
+      &:hover .title {
+        color: #b1b1b1;
+      }
+      .title {
+        padding-left: 1rem;
+        color: $LinkHover;
+        font-family: $GudeaBold;
+        transition: color ease-in-out 0.2s;
+      }
     }
     .navitemactive {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       background-color: $LinkHover;
       padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
       padding-inline: 1rem;
       border-radius: 25px;
       height: 100%;
+      width: fit-content;
+      cursor: default;
       .activedot {
         position: relative;
         content: "";
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         background-color: $SecondaryBgColor;
         border-radius: 25px;
       }
@@ -46,7 +68,8 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: #575757;
+      background: $LinkHover;
+      transition: background-color ease-in-out 0.2s;
     }
   }
 }

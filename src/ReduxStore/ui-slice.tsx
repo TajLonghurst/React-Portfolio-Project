@@ -4,6 +4,10 @@ import { ResumeNavItems } from "../Data/ResumeObjectList";
 
 const initialState: uiSliceModal = {
   ResumeList: ResumeNavItems,
+  UrbanNav: true,
+  KurbNav: false,
+  PortfolioNav: false,
+  Not2SelfNav: false,
 };
 
 const uiSlice = createSlice({
@@ -21,6 +25,32 @@ const uiSlice = createSlice({
         }
         return;
       });
+    },
+    ProjectsClickHandler(state, actions: PayloadAction<{ name: string }>) {
+      if (actions.payload.name === "URBAN") {
+        state.UrbanNav = true;
+        state.KurbNav = false;
+        state.Not2SelfNav = false;
+        state.PortfolioNav = false;
+      }
+      if (actions.payload.name === "KURB") {
+        state.UrbanNav = false;
+        state.KurbNav = true;
+        state.Not2SelfNav = false;
+        state.PortfolioNav = false;
+      }
+      if (actions.payload.name === "NOTE2SELF") {
+        state.UrbanNav = false;
+        state.KurbNav = false;
+        state.Not2SelfNav = true;
+        state.PortfolioNav = false;
+      }
+      if (actions.payload.name === "PORTFOLIO") {
+        state.UrbanNav = false;
+        state.KurbNav = false;
+        state.Not2SelfNav = false;
+        state.PortfolioNav = true;
+      }
     },
   },
 });

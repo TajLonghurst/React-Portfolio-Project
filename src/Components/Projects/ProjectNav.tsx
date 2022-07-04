@@ -1,22 +1,79 @@
 import React from "react";
 import classes from "./ProjectNav.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../ReduxStore/Index";
+import { uiActions } from "../../ReduxStore/ui-slice";
 
 const ProjectNav = () => {
+  const navIsActive = useSelector((state: RootState) => state.ui);
+  const dispatch = useDispatch();
+
+  // Urban
+  const UrbanStyles = navIsActive.UrbanNav
+    ? classes.navitemactive
+    : classes.navitem;
+
+  const UrbanDotStyle = navIsActive.UrbanNav ? classes.activedot : classes.dot;
+
+  //Krub
+  const KurbStyles = navIsActive.KurbNav
+    ? classes.navitemactive
+    : classes.navitem;
+
+  const KurbDotStyle = navIsActive.KurbNav ? classes.activedot : classes.dot;
+
+  //Protfolio
+  const PortfolioStyles = navIsActive.PortfolioNav
+    ? classes.navitemactive
+    : classes.navitem;
+
+  const PortfolioDotStyle = navIsActive.PortfolioNav
+    ? classes.activedot
+    : classes.dot;
+
+  //Note2Self
+  const NoteStyles = navIsActive.Not2SelfNav
+    ? classes.navitemactive
+    : classes.navitem;
+
+  const NoteDotStyle = navIsActive.Not2SelfNav
+    ? classes.activedot
+    : classes.dot;
+
+  const projectBtnOnClickHandler = (name: string) => {
+    dispatch(uiActions.ProjectsClickHandler({ name: name }));
+  };
+
   return (
     <div className={classes.postion}>
       <ul className={classes.navlist}>
-        <li className={classes.navitemactive}>
-          <div className={classes.activedot}></div>
+        <li
+          onClick={() => projectBtnOnClickHandler("URBAN")}
+          className={UrbanStyles}
+        >
+          <div className={UrbanDotStyle}></div>
           <div className={classes.title}>URBAN</div>
         </li>
-        <li className={classes.navitem}>
-          <div className={classes.dot}></div>
+        <li
+          onClick={() => projectBtnOnClickHandler("KURB")}
+          className={KurbStyles}
+        >
+          <div className={KurbDotStyle}></div>
+          <div className={classes.title}>KURB</div>
         </li>
-        <li className={classes.navitem}>
-          <div className={classes.dot}></div>
+        <li
+          onClick={() => projectBtnOnClickHandler("PORTFOLIO")}
+          className={PortfolioStyles}
+        >
+          <div className={PortfolioDotStyle}></div>
+          <div className={classes.title}>PORTFOLIO</div>
         </li>
-        <li className={classes.navitem}>
-          <div className={classes.dot}></div>
+        <li
+          onClick={() => projectBtnOnClickHandler("NOTE2SELF")}
+          className={NoteStyles}
+        >
+          <div className={NoteDotStyle}></div>
+          <div className={classes.title}>NOTE2SELF</div>
         </li>
       </ul>
     </div>

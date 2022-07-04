@@ -17,7 +17,9 @@ const ProjectImgs = () => {
         </li>
         <li className={classes.photoitem}>
           <img className={classes.middlephoto} src={UrbanHome} alt="failed" />
-          <div className={classes.overlaymiddle}></div>
+          <div className={classes.overlaymiddle}>
+            <div className={classes.logo}>URBAN</div>
+          </div>
         </li>
         <li className={classes.photoitem}>
           <img className={classes.rightphoto} src={UrbanLogin} alt="failed" />
