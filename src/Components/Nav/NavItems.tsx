@@ -14,7 +14,7 @@ const NavItems: React.FC<NavItemModel> = (props) => {
       }
     >
       <div className={classes.navitem}>
-        <img className={classes.icon} src={props.icon} alt="Failed" />
+        <img className={classes.icon} src={props.img} alt="Failed" />
         {!isTabletView && <p className={classes.navtext}>{props.label}</p>}
       </div>
     </NavLink>

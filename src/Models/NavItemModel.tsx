@@ -1,6 +1,6 @@
 export type NavItemModel = {
   id: string;
-  icon: string;
+  img: string;
   label: string;
   path: string;
 };

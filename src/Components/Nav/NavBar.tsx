@@ -28,7 +28,7 @@ const NavBar = () => {
                 <NavItems
                   key={items.id}
                   id={items.id}
-                  icon={items.icon}
+                  img={items.img}
                   label={items.label}
                   path={items.path}
                 />

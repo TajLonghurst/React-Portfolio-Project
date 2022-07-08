@@ -8,31 +8,31 @@ import { NavItemModel } from "../Models/NavItemModel";
 export const navobjectlist: NavItemModel[] = [
   {
     id: "NavOne",
-    icon: HomeIcon,
+    img: HomeIcon,
     label: "Home",
     path: "/",
   },
   {
     id: "NavTwo",
-    icon: AboutMeIcon,
+    img: AboutMeIcon,
     label: "About Me",
     path: "/AboutMe",
   },
   {
     id: "NavThree",
-    icon: ResumeIcon,
+    img: ResumeIcon,
     label: "Resume",
     path: "/Resume",
   },
   {
     id: "NavFour",
-    icon: ProjectsIcon,
+    img: ProjectsIcon,
     label: "Projects",
     path: "/Projects",
   },
   {
     id: "NavFive",
-    icon: ContactIcon,
+    img: ContactIcon,
     label: "Contact",
     path: "/Contact",
   },
