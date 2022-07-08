@@ -10,66 +10,20 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
-  .overlaymiddle {
-    z-index: 2;
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #000000cf;
-    border-radius: 4px;
-    transition: opacity ease-in-out 0.5s;
-    .logo {
-      z-index: 3;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: $HindBold;
-      color: $PrimaryHeaderColor;
-      font-size: 3rem;
-      text-transform: uppercase;
-    }
-  }
-  .rightphoto {
-    border-radius: 5px;
+  &:nth-child(1) {
     z-index: 1;
-    width: 45rem;
-    margin-left: -42rem;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-  .overlayright {
-    z-index: 2;
-    top: 0;
-    left: 0;
+    transform: scale(0.9);
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #000000cf;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    transition: opacity ease-in-out 0.5s;
+    margin-right: 12rem;
   }
-  .leftphoto {
-    border-radius: 5px;
+  &:nth-child(2) {
+    z-index: 3;
+    position: relative;
+  }
+  &:nth-child(3) {
+    position: absolute;
     z-index: 1;
-    width: 45rem;
-    margin-right: -42rem;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-  .overlayleft {
-    z-index: 2;
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #000000cf;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    transition: opacity ease-in-out 0.5s;
+    transform: scale(0.9);
+    margin-left: 12rem;
   }
 }

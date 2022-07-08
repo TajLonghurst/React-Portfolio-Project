@@ -13,14 +13,14 @@ const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
   return (
     <div className={classes.container}>
+      <img className={classes.arrowIcon} src={ArrowLeftIcon} alt="failed" />
       <ul className={classes.photolist}>
-        <img className={classes.arrowIcon} src={ArrowLeftIcon} alt="failed" />
         {projectIsActive.KurbNav && <ProjectKurbImgs />}
         {projectIsActive.UrbanNav && <ProjectUrban />}
         {projectIsActive.PortfolioNav && <ProjectProtfolio />}
         {projectIsActive.Not2SelfNav && <ProjectNote2Self />}
-        <img className={classes.arrowIcon} src={ArrowRightIcon} alt="failed" />
       </ul>
+      <img className={classes.arrowIcon} src={ArrowRightIcon} alt="failed" />
     </div>
   );
 };

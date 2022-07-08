@@ -4,23 +4,34 @@ import UrbanAboutUs from "../../../Assets/Images/URBAN-About-Us.png";
 import UrbanHome from "../../../Assets/Images/URBAN-Main.png";
 import UrbanLogin from "../../../Assets/Images/URBAN-Login.png";
 
+const data = [
+  {
+    id: 1,
+    img: UrbanAboutUs,
+  },
+  {
+    id: 2,
+    img: UrbanHome,
+  },
+  {
+    id: 3,
+    img: UrbanLogin,
+  },
+];
+
 const ProjectKurbImgs = () => {
   return (
     <Fragment>
-      <li className={classes.photoitem}>
-        <img className={classes.leftphoto} src={UrbanAboutUs} alt="failed" />
-        <div className={classes.overlayleft}></div>
-      </li>
-      <li className={classes.photoitem}>
-        <img className={classes.middlephoto} src={UrbanHome} alt="failed" />
-        <div className={classes.overlaymiddle}>
-          <div className={classes.logo}>KURB</div>
-        </div>
-      </li>
-      <li className={classes.photoitem}>
-        <img className={classes.rightphoto} src={UrbanLogin} alt="failed" />
-        <div className={classes.overlayright}></div>
-      </li>
+      {/* We make a map() for <li/> and use the nth:child css  */}
+
+      {data.map((item) => {
+        return (
+          <li key={item.id} className={classes.photoitem}>
+            <img className={classes.middlephoto} src={item.img} alt="failed" />
+            <div className={classes.overlaymiddle}></div>
+          </li>
+        );
+      })}
     </Fragment>
   );
 };
