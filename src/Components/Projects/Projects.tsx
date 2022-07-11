@@ -9,10 +9,8 @@ const Projects = () => {
       <div className={classes.bgblock}></div>
       <div className={classes.row}>
         <div className={classes.col}>
-          <div className={classes.projectcontent}>
-            <ProjectNav />
-            <ProjectImgs />
-          </div>
+          <ProjectNav />
+          <ProjectImgs />
         </div>
       </div>
     </section>

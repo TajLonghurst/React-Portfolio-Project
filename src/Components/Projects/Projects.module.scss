@@ -24,10 +24,6 @@
       @include make-col(lg, 12);
       @include make-col(xl, 12);
       @include make-col(xxl, 12);
-      .projectcontent {
-        position: relative;
-        @include DisplayFlexCenter(row);
-      }
     }
   }
 }

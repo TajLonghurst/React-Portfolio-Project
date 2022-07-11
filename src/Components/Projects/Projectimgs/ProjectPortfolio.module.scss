@@ -1,29 +1,41 @@
 @import "../../../Scss/index";
 
-.photoitem {
-  display: flex;
+.arrowIcon {
+  z-index: 4;
+  width: 32px;
+  height: 32px;
+  padding-inline: 0.1rem;
+  margin-inline: 3.2rem;
+  border-radius: 10px;
+  &:hover {
+    background-color: $LinkHover;
+  }
+}
+.photolist {
   position: relative;
+  padding: 0rem;
+  margin: 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  transition: 2s;
+  .photoitem {
+    display: flex;
+    position: relative;
+    transition-duration: 1s ease;
+  }
+  .photoactive {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+  }
   .middlephoto {
     border-radius: 5px;
-    z-index: 2;
+    z-index: 3;
     width: 55rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-  &:nth-child(1) {
-    z-index: 1;
-    transform: scale(0.9);
-    position: absolute;
-    margin-right: 12rem;
-  }
-  &:nth-child(2) {
-    z-index: 3;
-    position: relative;
-  }
-  &:nth-child(3) {
-    position: absolute;
-    z-index: 1;
-    transform: scale(0.9);
-    margin-left: 12rem;
+    transition-duration: 2s;
   }
 }
