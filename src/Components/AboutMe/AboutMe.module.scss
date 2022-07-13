@@ -13,7 +13,8 @@
 
   .row {
     @include make-row();
-    align-items: center;
+    align-items: flex-start;
+
     @include media-breakpoint-min($breakpoints-xs) {
       & {
         flex-direction: column-reverse;

@@ -4,4 +4,5 @@ export type BorderLessBtnModel = {
   href: string;
   target: string;
   rel: string;
+  color?: string;
 };

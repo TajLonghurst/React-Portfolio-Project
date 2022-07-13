@@ -66,6 +66,7 @@ const ProjectNote2Self = () => {
             </li>
           );
         })}
+        <div className={classes.overlaytext}>NOTE2SELF</div>
       </ul>
       <img
         onClick={nextImg}

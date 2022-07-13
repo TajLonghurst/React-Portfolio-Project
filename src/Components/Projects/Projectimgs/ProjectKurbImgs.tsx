@@ -66,6 +66,7 @@ const ProjectKurbImgs = () => {
             </li>
           );
         })}
+        <div className={classes.overlaytext}>KURB</div>
       </ul>
       <img
         onClick={nextImg}

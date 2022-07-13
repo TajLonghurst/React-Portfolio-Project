@@ -66,6 +66,7 @@ const ProjectProtfolio = () => {
             </li>
           );
         })}
+        <div className={classes.overlaytext}>PORTFOLIO</div>
       </ul>
       <img
         onClick={nextImg}
