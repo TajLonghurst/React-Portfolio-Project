@@ -19,20 +19,24 @@ export const overlaymiddle = {
 export const bgblock = {
   hidden: {
     zIndex: 5,
-    width: "100%",
+    width: "0%",
   },
   visible: {
     zIndex: 5,
-    width: "14rem",
+    width: "100%",
     transition: {
-      duration: 1,
+      type: "spring",
+      damping: "21",
+      stiffness: 100,
     },
   },
   exit: {
     zIndex: 5,
-    width: "100%",
+    width: "0%",
     transition: {
-      duration: 1,
+      type: "spring",
+      damping: "21",
+      stiffness: 100,
     },
   },
 };

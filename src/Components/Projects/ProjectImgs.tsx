@@ -11,29 +11,43 @@ import { bgblock } from "../../Animations/ProjectView";
 
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
+  const [projectAnimation, setProjectAnimation] = useState(false);
+
+  useEffect(() => {
+    if (
+      projectIsActive.UrbanNav ||
+      projectIsActive.KurbNav ||
+      projectIsActive.PortfolioNav ||
+      projectIsActive.Not2SelfNav
+    ) {
+      const timer = setTimeout(() => setProjectAnimation(false), 2000);
+      setProjectAnimation((prevState) => !prevState);
+      return () => clearTimeout(timer);
+    }
+  }, [projectIsActive]);
 
   return (
     <div className={classes.container}>
-      {false && (
-        <motion.div
-          key={2}
-          variants={bgblock}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          className={classes.bgblock}
-        ></motion.div>
-      )}
       <AnimatePresence
-        initial={true}
+        initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {projectIsActive.UrbanNav && <ProjectKurbImgs />}
-        {projectIsActive.KurbNav && <ProjectUrban />}
-        {projectIsActive.PortfolioNav && <ProjectProtfolio />}
-        {projectIsActive.Not2SelfNav && <ProjectNote2Self />}
+        {projectAnimation && (
+          <motion.div
+            variants={bgblock}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className={classes.bgblock}
+          ></motion.div>
+        )}
       </AnimatePresence>
+
+      {projectIsActive.UrbanNav && <ProjectKurbImgs />}
+      {projectIsActive.KurbNav && <ProjectUrban />}
+      {projectIsActive.PortfolioNav && <ProjectProtfolio />}
+      {projectIsActive.Not2SelfNav && <ProjectNote2Self />}
     </div>
   );
 };
