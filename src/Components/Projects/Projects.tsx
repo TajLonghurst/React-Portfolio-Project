@@ -6,12 +6,10 @@ import classes from "./Projects.module.scss";
 const Projects = () => {
   return (
     <section className={classes.container}>
-      <div className={classes.bgblock}></div>
       <div className={classes.row}>
-        <div className={classes.col}>
-          <ProjectNav />
-          <ProjectImgs />
-        </div>
+        {/* <div className={classes.bgblock}></div> */}
+        <ProjectNav />
+        <ProjectImgs />
       </div>
     </section>
   );

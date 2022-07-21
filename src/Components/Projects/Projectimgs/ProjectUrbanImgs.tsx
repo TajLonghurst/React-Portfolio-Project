@@ -4,9 +4,11 @@ import UrbanHome from "../../../Assets/Images/URBAN-Main.png";
 import UrbanLogin from "../../../Assets/Images/URBAN-Login.png";
 import ArrowRightIcon from "../../../Assets/Icons/WebIcons/RightBtnIcon.svg";
 import ArrowLeftIcon from "../../../Assets/Icons/WebIcons/LeftBtnIcon.svg";
-import { Fragment, useState } from "react";
-import Button from "../../UI/Button";
+import { useState, Fragment } from "react";
 import BorderlessBtn from "../../UI/BorderlessBtn";
+import LinkButton from "../../UI/LinkButton";
+import { motion, AnimatePresence } from "framer-motion";
+import { overlaymiddle } from "../../../Animations/ProjectView";
 
 const data = [
   {
@@ -25,6 +27,7 @@ const data = [
 
 const ProjectUrban = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [isHover, setIsHover] = useState(false);
   const length = data.length;
 
   const nextImg = () => {
@@ -39,59 +42,101 @@ const ProjectUrban = () => {
     return null;
   }
   return (
-    <div className={classes.body}>
-      <div className={classes.imgview}>
-        <img
-          onClick={previousImg}
-          className={classes.arrowIcon}
-          src={ArrowLeftIcon}
-          alt="failed"
-        />
-        <ul className={classes.photolist}>
-          {data.map((item, index) => {
-            return (
-              <li
-                key={item.id}
-                className={
-                  index === slideIndex ? classes.photoactive : classes.photoitem
-                }
-              >
-                {index === slideIndex && (
-                  <img
-                    className={classes.middlephoto}
-                    src={item.img}
-                    alt="failed"
-                  />
-                )}
-                <div className={classes.overlaymiddle}></div>
-              </li>
-            );
-          })}
-          <div className={classes.overlaytext}>URBAN</div>
+    <Fragment>
+      <div className={classes.bgblock}></div>
+      <div className={classes.bgblock}></div>
+      <div className={classes.body}>
+        <div className={classes.imgview}>
+          <img
+            onMouseOver={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            onClick={previousImg}
+            className={classes.arrowIcon}
+            src={ArrowLeftIcon}
+            alt="failed"
+          />
+          <ul className={classes.photolist}>
+            {data.map((item, index) => {
+              return (
+                <li
+                  key={item.id}
+                  className={
+                    index === slideIndex
+                      ? classes.photoactive
+                      : classes.photoitem
+                  }
+                >
+                  {index === slideIndex && (
+                    <img
+                      className={classes.middlephoto}
+                      src={item.img}
+                      alt="failed"
+                    />
+                  )}
+                  <AnimatePresence
+                    initial={false}
+                    exitBeforeEnter={false}
+                    onExitComplete={() => null}
+                  >
+                    {!isHover && (
+                      <motion.div
+                        variants={overlaymiddle}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className={classes.overlaymiddle}
+                      ></motion.div>
+                    )}
+                  </AnimatePresence>
+                </li>
+              );
+            })}
+            <AnimatePresence
+              initial={false}
+              exitBeforeEnter={false}
+              onExitComplete={() => null}
+            >
+              {!isHover && (
+                <motion.div
+                  variants={overlaymiddle}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className={classes.overlaytext}
+                >
+                  URBAN
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </ul>
+          <img
+            onMouseOver={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            onClick={nextImg}
+            className={classes.arrowIcon}
+            src={ArrowRightIcon}
+            alt="failed"
+          />
+        </div>
+        <ul className={classes.context}>
+          <li>
+            <LinkButton href="#" target="_blank" rel="noreferrer">
+              GitHub Project
+            </LinkButton>
+          </li>
+          <li>
+            <BorderlessBtn
+              color="#bbbbbb"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live View
+            </BorderlessBtn>
+          </li>
         </ul>
-        <img
-          onClick={nextImg}
-          className={classes.arrowIcon}
-          src={ArrowRightIcon}
-          alt="failed"
-        />
       </div>
-      <ul className={classes.context}>
-        <li>
-          <Button>GitHub Project</Button>
-        </li>
-        <li>
-          <BorderlessBtn
-            color="#bbbbbb"
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Live View
-          </BorderlessBtn>
-        </li>
-      </ul>
-    </div>
+    </Fragment>
   );
 };
 

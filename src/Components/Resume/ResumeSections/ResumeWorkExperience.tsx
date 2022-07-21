@@ -12,7 +12,7 @@ const ResumeWorkExperience = () => {
               className={classes.techlink}
               target="_blank"
               rel="noreferrer"
-              href="https://www.andiamoeatery.co.nz/"
+              href="https://www.andiamoeatery.co.nz"
             >
               Andiamo
             </a>
