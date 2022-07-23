@@ -40,3 +40,21 @@ export const bgblock = {
     },
   },
 };
+
+export const body = {
+  hidden: {
+    display: "none",
+  },
+  visible: {
+    display: "block",
+    transition: {
+      delay: 1,
+    },
+  },
+  exit: {
+    display: "none",
+    transition: {
+      delay: 1,
+    },
+  },
+};

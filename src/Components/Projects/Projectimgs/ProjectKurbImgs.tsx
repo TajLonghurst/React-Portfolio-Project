@@ -8,7 +8,7 @@ import ArrowLeftIcon from "../../../Assets/Icons/WebIcons/LeftBtnIcon.svg";
 import BorderlessBtn from "../../UI/BorderlessBtn";
 import LinkButton from "../../UI/LinkButton";
 import { motion, AnimatePresence } from "framer-motion";
-import { overlaymiddle } from "../../../Animations/ProjectView";
+import { body, overlaymiddle } from "../../../Animations/ProjectView";
 
 const data = [
   {
@@ -44,7 +44,13 @@ const ProjectKurbImgs = () => {
   return (
     <Fragment>
       <div className={classes.bgblock}></div>
-      <div className={classes.body}>
+      <motion.div
+        variants={body}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={classes.body}
+      >
         <div className={classes.imgview}>
           <img
             onMouseOver={() => setIsHover(true)}
@@ -134,7 +140,7 @@ const ProjectKurbImgs = () => {
             </BorderlessBtn>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </Fragment>
   );
 };

@@ -14,15 +14,15 @@ const ProjectImgs = () => {
   const [projectAnimation, setProjectAnimation] = useState(false);
 
   useEffect(() => {
-    if (
-      projectIsActive.UrbanNav ||
-      projectIsActive.KurbNav ||
-      projectIsActive.PortfolioNav ||
-      projectIsActive.Not2SelfNav
-    ) {
-      const timer = setTimeout(() => setProjectAnimation(false), 2000);
+    if (projectIsActive) {
+      const timer = setTimeout(() => {
+        setProjectAnimation(false);
+      }, 1000);
       setProjectAnimation((prevState) => !prevState);
-      return () => clearTimeout(timer);
+      console.log(timer);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, [projectIsActive]);
 
@@ -44,10 +44,34 @@ const ProjectImgs = () => {
         )}
       </AnimatePresence>
 
-      {projectIsActive.UrbanNav && <ProjectKurbImgs />}
-      {projectIsActive.KurbNav && <ProjectUrban />}
-      {projectIsActive.PortfolioNav && <ProjectProtfolio />}
-      {projectIsActive.Not2SelfNav && <ProjectNote2Self />}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {projectIsActive.KurbNav && <ProjectKurbImgs />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {projectIsActive.UrbanNav && <ProjectUrban />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {projectIsActive.PortfolioNav && <ProjectProtfolio />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {projectIsActive.Not2SelfNav && <ProjectNote2Self />}
+      </AnimatePresence>
     </div>
   );
 };

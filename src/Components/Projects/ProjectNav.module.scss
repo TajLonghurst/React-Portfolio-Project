@@ -13,6 +13,7 @@
     margin: 0rem;
     padding: 0rem;
     list-style: none;
+    user-select: none;
     .navitem {
       position: relative;
       padding: 1rem;
@@ -21,7 +22,7 @@
       justify-content: flex-start;
       align-items: center;
       cursor: pointer;
-
+      user-select: none;
       &:hover .dot {
         background-color: #b1b1b1;
       }

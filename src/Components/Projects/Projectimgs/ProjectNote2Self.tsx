@@ -9,6 +9,7 @@ import BorderlessBtn from "../../UI/BorderlessBtn";
 import LinkButton from "../../UI/LinkButton";
 import { motion, AnimatePresence } from "framer-motion";
 import { overlaymiddle } from "../../../Animations/ProjectView";
+import { body } from "../../../Animations/ProjectView";
 
 const data = [
   {
@@ -44,7 +45,13 @@ const ProjectNote2Self = () => {
   return (
     <Fragment>
       <div className={classes.bgblock}></div>
-      <div className={classes.body}>
+      <motion.div
+        variants={body}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={classes.body}
+      >
         <div className={classes.imgview}>
           <img
             onMouseOver={() => setIsHover(true)}
@@ -134,7 +141,7 @@ const ProjectNote2Self = () => {
             </BorderlessBtn>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </Fragment>
   );
 };

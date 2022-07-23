@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./ProjectNav.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../ReduxStore/Index";
@@ -6,7 +6,21 @@ import { uiActions } from "../../ReduxStore/ui-slice";
 
 const ProjectNav = () => {
   const navIsActive = useSelector((state: RootState) => state.ui);
+  const [projectAnimation, setProjectAnimation] = useState(false);
+
   const dispatch = useDispatch();
+  useEffect(() => {
+    if (navIsActive) {
+      const timer = setTimeout(() => {
+        setProjectAnimation(false);
+      }, 1400);
+      setProjectAnimation((prevState) => !prevState);
+      console.log(timer);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [navIsActive]);
 
   // Urban
   const UrbanStyles = navIsActive.UrbanNav
@@ -44,9 +58,11 @@ const ProjectNav = () => {
     dispatch(uiActions.ProjectsClickHandler({ name: name }));
   };
 
+  const style = !projectAnimation ? "visible" : "none";
+
   return (
     <div className={classes.postion}>
-      <ul className={classes.navlist}>
+      <ul style={{ pointerEvents: `${style}` }} className={classes.navlist}>
         <li
           onClick={() => projectBtnOnClickHandler("URBAN")}
           className={UrbanStyles}
