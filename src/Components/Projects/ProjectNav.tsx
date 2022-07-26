@@ -15,7 +15,6 @@ const ProjectNav = () => {
         setProjectAnimation(false);
       }, 1400);
       setProjectAnimation((prevState) => !prevState);
-      console.log(timer);
       return () => {
         clearTimeout(timer);
       };

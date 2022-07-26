@@ -1,15 +1,22 @@
 import React from "react";
 import ProjectImgs from "./ProjectImgs";
+import ProjectImgsMobile from "./ProjectImgsMobile";
 import ProjectNav from "./ProjectNav";
 import classes from "./Projects.module.scss";
+import useWindowSize from "../../Hooks/use-windowSize";
 
 const Projects = () => {
+  const { isSmallDesktopView } = useWindowSize();
+
+  const container = isSmallDesktopView
+    ? classes.container
+    : classes.containermobile;
   return (
-    <section className={classes.container}>
+    <section className={container}>
       <div className={classes.row}>
-        {/* <div className={classes.bgblock}></div> */}
-        <ProjectNav />
-        <ProjectImgs />
+        {!isSmallDesktopView && <ProjectImgsMobile />}
+        {isSmallDesktopView && <ProjectNav />}
+        {isSmallDesktopView && <ProjectImgs />}
       </div>
     </section>
   );

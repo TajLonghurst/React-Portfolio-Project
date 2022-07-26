@@ -11,6 +11,22 @@
     align-items: center;
     flex-direction: row;
     margin-top: 3.5rem;
+    height: 27rem;
+    @include media-breakpoint-min($breakpoints-lg) {
+      & {
+        height: 14rem;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xl) {
+      & {
+        height: 20rem;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xxl) {
+      & {
+        height: 27rem;
+      }
+    }
     .arrowIcon {
       z-index: 4;
       width: 32px;
@@ -20,6 +36,21 @@
       border-radius: 10px;
       &:hover {
         background-color: $LinkHover;
+      }
+      @include media-breakpoint-min($breakpoints-lg) {
+        & {
+          margin-inline: 2.1rem;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xl) {
+        & {
+          margin-inline: 2.9rem;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xxl) {
+        & {
+          margin-inline: 3.2rem;
+        }
       }
     }
     .photolist {
@@ -42,8 +73,24 @@
         border-radius: 5px;
         z-index: 3;
         width: 55rem;
+        height: 100%;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
           rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        @include media-breakpoint-min($breakpoints-lg) {
+          & {
+            width: 32rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xl) {
+          & {
+            width: 42rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xxl) {
+          & {
+            width: 55rem;
+          }
+        }
       }
       .overlaymiddle {
         z-index: 4;
@@ -63,6 +110,21 @@
         color: $PrimaryHeaderColor;
         font-family: $GudeaBold;
         font-size: 3.4rem;
+        @include media-breakpoint-min($breakpoints-lg) {
+          & {
+            font-size: 1.8rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xl) {
+          & {
+            font-size: 2.8rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xxl) {
+          & {
+            font-size: 3.4rem;
+          }
+        }
       }
     }
   }
@@ -76,7 +138,6 @@
     }
   }
 }
-
 .bgblock {
   position: absolute;
   content: "";
@@ -85,4 +146,19 @@
   width: 14rem;
   height: 100%;
   z-index: 0;
+  @include media-breakpoint-min($breakpoints-lg) {
+    & {
+      width: 8rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xl) {
+    & {
+      width: 10rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
+    & {
+      width: 14rem;
+    }
+  }
 }

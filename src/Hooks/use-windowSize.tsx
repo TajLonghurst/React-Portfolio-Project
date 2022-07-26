@@ -17,6 +17,7 @@ const useWindowSize = () => {
 
   const isMobileView = windowWidthSize <= 576;
   const isTabletView = windowWidthSize <= 767;
+  const isSmallDesktopView = windowWidthSize >= 992;
   const isDesktopView = windowWidthSize >= 1200;
 
   return {
@@ -25,6 +26,7 @@ const useWindowSize = () => {
     isTabletView,
     isDesktopView,
     isMobileView,
+    isSmallDesktopView,
   };
 };
 

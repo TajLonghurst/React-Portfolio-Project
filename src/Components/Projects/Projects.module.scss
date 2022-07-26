@@ -1,21 +1,15 @@
 @import "../../Scss/index";
 
+.containermobile {
+  position: relative;
+  margin-bottom: 6rem;
+}
+
 .container {
   position: relative;
   @include DisplayFlexCenter(row);
   height: 100vh;
-  .bgblock {
-    position: absolute;
-    content: "";
-    background: $SecondaryBgColor;
-    top: 50%;
-    left: 22%;
-    transform: translate(-22%, -50%);
-    width: 100%;
-    height: 70%;
-    z-index: 0;
-  }
-  .row {
-    @include make-row();
-  }
+}
+.row {
+  @include make-row();
 }

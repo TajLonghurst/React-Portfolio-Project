@@ -1,0 +1,81 @@
+@import "../../Scss/index";
+
+.container {
+  .imglist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0rem;
+    margin: 0rem;
+    .imgitems {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      .bgblock {
+        position: absolute;
+        margin-right: 38%;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 50%;
+        background-color: $SecondaryBgColor;
+        z-index: 1;
+        border-radius: 4px;
+      }
+      .imgcontainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 85%;
+        margin: 1.4%;
+        .overlay {
+          z-index: 3;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #000000d3;
+          border-radius: 3px;
+          .overlaytext {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $PrimaryHeaderColor;
+            font-size: 1.4rem;
+            font-family: $GudeaBold;
+            @include media-breakpoint-min($breakpoints-xs) {
+              & {
+                font-size: 1.2rem;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-sm) {
+              & {
+                font-size: 1.7rem;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-md) {
+              & {
+                font-size: 2.6rem;
+              }
+            }
+          }
+        }
+        .img {
+          width: 100%;
+          border-radius: 4px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

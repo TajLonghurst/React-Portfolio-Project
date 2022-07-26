@@ -21,6 +21,23 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+      @include media-breakpoint-min($breakpoints-lg) {
+        & {
+          padding: 0.8rem;
+          padding-left: 0.7rem;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xl) {
+        & {
+          padding: 0.9rem;
+          padding-left: 0.8rem;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xxl) {
+        & {
+          padding: 1rem;
+        }
+      }
       cursor: pointer;
       user-select: none;
       &:hover .dot {
@@ -33,7 +50,26 @@
         padding-left: 1rem;
         color: $LinkHover;
         font-family: $GudeaBold;
+        font-size: 1rem;
         transition: color ease-in-out 0.2s;
+        @include media-breakpoint-min($breakpoints-lg) {
+          & {
+            font-size: 0.8rem;
+            padding-left: 0.7rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xl) {
+          & {
+            font-size: 0.9rem;
+            padding-left: 0.8rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xxl) {
+          & {
+            font-size: 1rem;
+            padding-left: 1rem;
+          }
+        }
       }
     }
     .navitemactive {
@@ -48,6 +84,24 @@
       padding-inline: 1rem;
       border-radius: 25px;
       height: 100%;
+      @include media-breakpoint-min($breakpoints-lg) {
+        & {
+          padding: 0.3rem;
+          padding-inline: 0.7rem;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xl) {
+        & {
+          padding: 0.4rem;
+          padding-inline: 0.8rem;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xxl) {
+        & {
+          padding: 0.5rem;
+          padding-inline: 1rem;
+        }
+      }
       width: fit-content;
       cursor: default;
       .activedot {
@@ -57,11 +111,48 @@
         height: 12px;
         background-color: $SecondaryBgColor;
         border-radius: 25px;
+        @include media-breakpoint-min($breakpoints-lg) {
+          & {
+            width: 8px;
+            height: 8px;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xl) {
+          & {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xxl) {
+          & {
+            width: 12px;
+            height: 12px;
+          }
+        }
       }
       .title {
+        font-size: 1rem;
         padding-left: 1rem;
         color: $PrimaryHeaderColor;
         font-family: $GudeaBold;
+        @include media-breakpoint-min($breakpoints-lg) {
+          & {
+            font-size: 0.8rem;
+            padding-left: 0.7rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xl) {
+          & {
+            font-size: 0.9rem;
+            padding-left: 0.8rem;
+          }
+        }
+        @include media-breakpoint-min($breakpoints-xxl) {
+          & {
+            font-size: 1rem;
+            padding-left: 1rem;
+          }
+        }
       }
     }
     .dot {
@@ -71,6 +162,24 @@
       border-radius: 50%;
       background: $LinkHover;
       transition: background-color ease-in-out 0.2s;
+      @include media-breakpoint-min($breakpoints-lg) {
+        & {
+          width: 8px;
+          height: 8px;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xl) {
+        & {
+          width: 10px;
+          height: 10px;
+        }
+      }
+      @include media-breakpoint-min($breakpoints-xxl) {
+        & {
+          width: 12px;
+          height: 12px;
+        }
+      }
     }
   }
 }

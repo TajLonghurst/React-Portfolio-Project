@@ -1,35 +1,17 @@
 import classes from "./ProjectUrbanImgs.module.scss";
-import UrbanAboutUs from "../../../Assets/Images/URBAN-About-Us.png";
-import UrbanHome from "../../../Assets/Images/URBAN-Main.png";
-import UrbanLogin from "../../../Assets/Images/URBAN-Login.png";
 import ArrowRightIcon from "../../../Assets/Icons/WebIcons/RightBtnIcon.svg";
 import ArrowLeftIcon from "../../../Assets/Icons/WebIcons/LeftBtnIcon.svg";
 import { useState, Fragment } from "react";
 import BorderlessBtn from "../../UI/BorderlessBtn";
 import LinkButton from "../../UI/LinkButton";
 import { motion, AnimatePresence } from "framer-motion";
-import { overlaymiddle } from "../../../Animations/ProjectView";
-import { body } from "../../../Animations/ProjectView";
-
-const data = [
-  {
-    id: 2,
-    img: UrbanHome,
-  },
-  {
-    id: 1,
-    img: UrbanAboutUs,
-  },
-  {
-    id: 3,
-    img: UrbanLogin,
-  },
-];
+import { overlaymiddle, body } from "../../../Animations/ProjectView";
+import { ProjectObject } from "../../../Data/ProjectObject";
 
 const ProjectUrban = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
-  const length = data.length;
+  const length = ProjectObject[0].images.length;
 
   const nextImg = () => {
     setSlideIndex(slideIndex === length - 1 ? 0 : slideIndex + 1);
@@ -39,9 +21,10 @@ const ProjectUrban = () => {
     setSlideIndex(slideIndex === 0 ? length - 1 : slideIndex - 1);
   };
 
-  if (data.length <= 0) {
+  if (length <= 0) {
     return null;
   }
+
   return (
     <Fragment>
       <div className={classes.bgblock}></div>
@@ -62,7 +45,7 @@ const ProjectUrban = () => {
             alt="failed"
           />
           <ul className={classes.photolist}>
-            {data.map((item, index) => {
+            {ProjectObject[0].images.map((item, index) => {
               return (
                 <li
                   key={item.id}
