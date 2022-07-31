@@ -8,6 +8,7 @@ export const ProjectObject: ProjectModel[] = [
     projectID: 1,
     label: "URBAN",
     pathID: "URBAN",
+    heroImg: URBANHOME,
     images: [
       {
         id: 1,
@@ -27,6 +28,7 @@ export const ProjectObject: ProjectModel[] = [
     projectID: 2,
     label: "KURB",
     pathID: "KURB",
+    heroImg: URBANHOME,
     images: [
       {
         id: 1,
@@ -46,6 +48,7 @@ export const ProjectObject: ProjectModel[] = [
     projectID: 4,
     label: "PORTFOLIO",
     pathID: "PORTFOLIO",
+    heroImg: URBANHOME,
     images: [
       {
         id: 1,
@@ -65,6 +68,7 @@ export const ProjectObject: ProjectModel[] = [
     projectID: 3,
     label: "NOTE2SELF",
     pathID: "NOTE2SELF",
+    heroImg: URBANHOME,
     images: [
       {
         id: 1,

@@ -58,3 +58,21 @@ export const body = {
     },
   },
 };
+
+export const mobilebody = {
+  hidden: {
+    y: "100vh",
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    y: "100vh",
+    transition: {
+      duration: 1,
+    },
+  },
+};

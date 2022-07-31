@@ -1,6 +1,25 @@
 @import "../../Scss/index";
 
 .container {
+  .header {
+    @include DisplayFlexCenter(row);
+    margin: 0rem;
+    .bulletpoint {
+      content: "";
+      width: 30px;
+      height: 5px;
+      background: $PrimaryPurpleLinear;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+    .title {
+      font-family: $DustinRegular;
+      color: $PrimaryHeaderColor;
+      font-size: $PrimaryHeader-FontSize;
+      letter-spacing: 1px;
+      font-weight: lighter;
+    }
+  }
   .imglist {
     display: flex;
     flex-direction: column;
