@@ -1,0 +1,28 @@
+@import "../../Scss/index";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  .label {
+    color: $PrimaryHeaderColor;
+    font-family: $GudeaBold;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  .input {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2rem;
+    background-color: $PrimaryBgColor;
+    border: none;
+    color: #505050;
+    font-family: $GudeaRegular;
+    font-size: 18px;
+    height: 3rem;
+    border-bottom: 1px solid #fff;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $SecondaryBgColor;
+    }
+  }
+}
