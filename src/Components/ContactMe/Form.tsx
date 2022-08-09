@@ -1,49 +1,25 @@
 import React from "react";
-import Input from "../UI/Input";
-import TextArea from "../UI/TextArea";
+import useEmailJs from "../../Hooks/use-emailJs";
+import { SendEmailJsModal } from "../../Models/SendEmailJsModal";
+import Fields from "./Fields";
 import classes from "./Form.module.scss";
 
 const Form = () => {
+  const { sendEmail } = useEmailJs();
+
+  const sendEmailhandler = (formDetails: SendEmailJsModal) => {
+    sendEmail({
+      firstName: formDetails.firstName,
+      lastName: formDetails.lastName,
+      email: formDetails.email,
+      phoneNumber: formDetails.phoneNumber,
+      message: formDetails.message,
+    });
+  };
+
   return (
     <section className={classes.container}>
-      <div className={classes.form}>
-        <div className={classes.row}>
-          <div className={classes.col}>
-            <Input
-              type="text"
-              placeholder="Enter your first name"
-              label="First Name"
-            />
-          </div>
-          <div className={classes.col}>
-            <Input
-              type="text"
-              placeholder="Enter your last name"
-              label="Last Name"
-            />
-          </div>
-        </div>
-        <div className={classes.row}>
-          <div className={classes.col}>
-            <Input type="email" placeholder="Enter your email" label="Email" />
-          </div>
-          <div className={classes.col}>
-            <Input
-              type="tel"
-              placeholder="Enter your phone number"
-              label="Phone Number"
-            />
-          </div>
-        </div>
-        <div className={classes.row}>
-          <div className={classes.col}>
-            <TextArea
-              placeholder="Enter your message"
-              label="Message"
-            ></TextArea>
-          </div>
-        </div>
-      </div>
+      <Fields sendEmailhandler={sendEmailhandler} />
     </section>
   );
 };

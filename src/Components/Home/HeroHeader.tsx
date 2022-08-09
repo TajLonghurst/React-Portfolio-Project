@@ -19,7 +19,7 @@ const HeroHeader = () => {
         </p>
       </div>
       <div className={classes.btnpostion}>
-        <Button>View Projects</Button>
+        <Button type="button">View Projects</Button>
       </div>
     </Fragment>
   );

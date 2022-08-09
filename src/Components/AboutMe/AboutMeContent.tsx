@@ -90,7 +90,7 @@ const AboutMeContent = () => {
           </a>
         </li>
       </ul>
-      <Button>Contact Me</Button>
+      <Button type="button">Contact Me</Button>
     </div>
   );
 };

@@ -1,0 +1,28 @@
+@import "../../Scss/index";
+
+.form {
+  @include DisplayFlexCenter(column);
+  padding: 1rem;
+  width: 40rem;
+  height: 100%;
+  @include media-breakpoint-min($breakpoints-xs) {
+    width: 80%;
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    width: 40rem;
+  }
+  .row {
+    @include DisplayFlexCenter(row);
+    width: 100%;
+    @include media-breakpoint-min($breakpoints-xs) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-min($breakpoints-md) {
+      flex-direction: row;
+    }
+    .col {
+      width: 100%;
+      margin: 1rem;
+    }
+  }
+}
