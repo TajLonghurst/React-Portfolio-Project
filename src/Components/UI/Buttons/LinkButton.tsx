@@ -1,7 +1,7 @@
 import React from "react";
-import { LinkButtonModel } from "../../Models/LinkButtonModel";
+import { LinkButtonModel } from "../../../Models/LinkButtonModel";
 import classes from "./LinkButton.module.scss";
-import RightArrowIcon from "../../Assets/Icons/WebIcons/RightArrowIcon.svg";
+import RightArrowIcon from "../../../Assets/Icons/WebIcons/RightArrowIcon.svg";
 
 const LinkButton: React.FC<LinkButtonModel> = (props) => {
   return (

@@ -1,4 +1,4 @@
-@import "../../Scss/index";
+@import "../../../Scss/index";
 
 .content {
   display: flex;
@@ -20,6 +20,13 @@
     font-size: 16px;
     border-bottom: 1px solid #fff;
     resize: none;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $SecondaryBgColor;
+    }
+  }
+  .textareaerror {
+    border-bottom: 1px solid red !important;
     &:focus {
       outline: none;
       border-bottom: 1px solid $SecondaryBgColor;

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import NavBar from "./Components/Nav/NavBar";
-import { ModalMobileProject } from "./Components/Modals/ModalMobileProject";
+import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobileProject";
 import { AnimatePresence } from "framer-motion";
 
 function App() {

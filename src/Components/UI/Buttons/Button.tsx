@@ -1,7 +1,7 @@
 import React from "react";
-import { ButtonModel } from "../../Models/ButtonModel";
+import { ButtonModel } from "../../../Models/ButtonModel";
 import classes from "./Button.module.scss";
-import RightArrowIcon from "../../Assets/Icons/WebIcons/RightArrowIcon.svg";
+import RightArrowIcon from "../../../Assets/Icons/WebIcons/RightArrowIcon.svg";
 
 const Button: React.FC<ButtonModel> = (props) => {
   return (

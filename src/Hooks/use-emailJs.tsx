@@ -19,7 +19,12 @@ const useEmailJs = () => {
     };
 
     emailjs
-      .send("service_lo7p2bj", "template_4febh37", config, "I6mnd9aVMJ4JkZ0gs")
+      .send(
+        "service_lo7p2bj",
+        "template_4febh37",
+        config,
+        `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`
+      )
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import BorderlessBtn from "../../UI/BorderlessBtn";
+import BorderlessBtn from "../../UI/Buttons/BorderlessBtn";
 import classes from "./ResumeUdemyCourse.module.scss";
 
 const ResumeUdemyCourse = () => {

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Button from "../UI/Button";
+import Button from "../UI/Buttons/Button";
 import classes from "./HeroHeader.module.scss";
 
 const HeroHeader = () => {

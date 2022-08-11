@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./BorderlessBtn.module.scss";
-import { BorderLessBtnModel } from "../../Models/BorderLessBtnModel";
-import RightPurpleArrowIcon from "../../Assets/Icons/WebIcons/RightPurpleArrowIcon.svg";
-import RightGrayArrowIcon from "../../Assets/Icons/WebIcons/RightGreyArrowIcon.svg";
+import { BorderLessBtnModel } from "../../../Models/BorderLessBtnModel";
+import RightPurpleArrowIcon from "../../../Assets/Icons/WebIcons/RightPurpleArrowIcon.svg";
+import RightGrayArrowIcon from "../../../Assets/Icons/WebIcons/RightGreyArrowIcon.svg";
 
 const BorderlessBtn: React.FC<BorderLessBtnModel> = (props) => {
   const arrowcolor = props.color ? RightGrayArrowIcon : RightPurpleArrowIcon;

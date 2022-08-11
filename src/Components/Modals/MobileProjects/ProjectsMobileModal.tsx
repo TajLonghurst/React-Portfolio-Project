@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import classes from "./ProjectMobileModal.module.scss";
-import XIcon from "../../Assets/Icons/WebIcons/ExitIcon.svg";
+import XIcon from "../../../Assets/Icons/WebIcons/ExitIcon.svg";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { mobilebody } from "../../Animations/ProjectView";
-import { ProjectObject } from "../../Data/ProjectObject";
-import { images } from "../../Models/ProjectModel";
+import { mobilebody } from "../../../Animations/ProjectView";
+import { ProjectObject } from "../../../Data/ProjectObject";
+import { images } from "../../../Models/ProjectModel";
 import { useDispatch } from "react-redux";
-import { uiActions } from "../../ReduxStore/ui-slice";
-import BorderlessBtn from "../UI/BorderlessBtn";
+import { uiActions } from "../../../ReduxStore/ui-slice";
+import BorderlessBtn from "../../UI/Buttons/BorderlessBtn";
 
 const ProjectsMobileModal = () => {
   const navigate = useNavigate();

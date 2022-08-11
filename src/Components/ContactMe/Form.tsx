@@ -1,6 +1,7 @@
 import React from "react";
 import useEmailJs from "../../Hooks/use-emailJs";
 import { SendEmailJsModal } from "../../Models/SendEmailJsModal";
+import { ModalNotificationsContactMe } from "../Modals/Notifications/ModalNotificationsContactMe";
 import Fields from "./Fields";
 import classes from "./Form.module.scss";
 
@@ -20,6 +21,7 @@ const Form = () => {
   return (
     <section className={classes.container}>
       <Fields sendEmailhandler={sendEmailhandler} />
+      <ModalNotificationsContactMe />
     </section>
   );
 };
