@@ -1,14 +1,14 @@
-import { useState } from "react";
 import emailjs from "emailjs-com";
 import { SendEmailJsModal } from "../Models/SendEmailJsModal";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../ReduxStore/ui-slice";
 
 const useEmailJs = () => {
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const sendEmail = (requestConfig: SendEmailJsModal) => {
-    setLoading(false);
-    setError(false);
+    dispatch(uiActions.FormLoading({ isLoading: true }));
+    dispatch(uiActions.FormError({ error: false }));
 
     const config = {
       firstName: requestConfig.firstName,
@@ -28,18 +28,16 @@ const useEmailJs = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
-          setLoading(true);
+          dispatch(uiActions.FormLoading({ isLoading: false }));
         },
         (error) => {
-          console.log("FAILED...", error);
-          setError(true);
+          console.log("FAILED...", error, error.status);
+          dispatch(uiActions.FormError({ error: true }));
         }
       );
   };
 
   return {
-    error,
-    loading,
     sendEmail,
   };
 };

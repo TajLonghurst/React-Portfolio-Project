@@ -12,7 +12,7 @@
       position: relative;
       @include DisplayFlexCenter(row);
       justify-content: flex-start;
-      width: 12rem;
+      width: 14rem;
       height: 2rem;
       background-color: $PrimaryBgColor;
       border-radius: 2px;
@@ -30,7 +30,7 @@
       .img {
         width: 27px;
         height: 27px;
-        padding-right: 0.5rem;
+        padding-right: 1rem;
       }
     }
     .loadingbar {

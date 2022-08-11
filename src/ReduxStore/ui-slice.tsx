@@ -9,6 +9,8 @@ const initialState: uiSliceModal = {
   KurbNav: false,
   PortfolioNav: false,
   Not2SelfNav: false,
+  FormIsLoading: false,
+  FormHasError: false,
 };
 
 const uiSlice = createSlice({
@@ -60,6 +62,12 @@ const uiSlice = createSlice({
         state.Not2SelfNav = false;
         state.PortfolioNav = true;
       }
+    },
+    FormLoading(state, actions: PayloadAction<{ isLoading: boolean }>) {
+      state.FormIsLoading = actions.payload.isLoading;
+    },
+    FormError(state, actions: PayloadAction<{ error: boolean }>) {
+      state.FormHasError = actions.payload.error;
     },
   },
 });

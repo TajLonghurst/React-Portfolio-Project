@@ -71,8 +71,6 @@ const Fields: React.FC<FieldsModel> = (props) => {
       return;
     }
 
-    console.log("onSumbitHandler Worked!!");
-    console.log("Add the onSumitHandler");
     props.sendEmailhandler({
       firstName: nameEntredValue,
       lastName: lastEntredValue,
@@ -80,6 +78,7 @@ const Fields: React.FC<FieldsModel> = (props) => {
       phoneNumber: phoneEntredValue,
       message: messageEntredValue,
     });
+
     nameResetInput();
     lastResetInput();
     emailResetInput();

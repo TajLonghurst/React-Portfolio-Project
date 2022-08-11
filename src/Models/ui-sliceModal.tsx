@@ -7,4 +7,6 @@ export type uiSliceModal = {
   KurbNav: boolean;
   PortfolioNav: boolean;
   Not2SelfNav: boolean;
+  FormIsLoading: boolean;
+  FormHasError: boolean;
 };
