@@ -148,7 +148,9 @@ const Fields: React.FC<FieldsModel> = (props) => {
           />
         </div>
       </div>
-      <Button type="submit">Submit</Button>
+      <div className={classes.btncontent}>
+        <Button type="submit">Submit</Button>
+      </div>
     </form>
   );
 };

@@ -1,19 +1,22 @@
 @import "../../Scss/index";
 
 .contentbody {
+  position: relative;
   @include DisplayFlexCenter(column);
   align-items: flex-start;
   width: 100%;
-  margin-inline: 1rem;
   margin-inline: 10%;
+  height: 100%;
   @include media-breakpoint-min($breakpoints-xs) {
     & {
       margin-inline: 10%;
+      margin-bottom: 8rem;
     }
   }
   @include media-breakpoint-min($breakpoints-sm) {
     & {
       margin-inline: 10%;
+      margin-bottom: 4rem;
     }
   }
   @include media-breakpoint-min($breakpoints-md) {
@@ -24,6 +27,7 @@
   @include media-breakpoint-min($breakpoints-xl) {
     & {
       margin-inline: 0%;
+      margin-bottom: 0rem;
     }
   }
   .header {
@@ -46,37 +50,29 @@
     }
   }
   .content {
+    height: 100%;
     position: relative;
-    height: 11rem;
     overflow: hidden;
+    transition: 1s ease-in-out;
     .aboutmetext {
       margin: 0rem;
       color: $PrimaryTextColor;
       font-size: $PrimaryText-FontSize;
       line-height: 2.125rem;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        background: $ExtenedText-LinearBefore;
-      }
+    }
+    .fade {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background: $ExtenedText-LinearBefore;
     }
   }
-  .contentextended {
-    margin: 0rem;
-    color: $PrimaryTextColor;
-    font-size: $PrimaryText-FontSize;
-    line-height: 2.125rem;
-  }
-  .aboutmeextendedtext {
-    margin: 0rem;
-    color: $PrimaryTextColor;
-    font-size: $PrimaryText-FontSize;
-    line-height: 2.125rem;
+  .contentclosed {
+    height: 11rem;
   }
   .btnpostion {
     @include DisplayFlexCenter(row);
@@ -116,6 +112,7 @@
     list-style: none;
     margin-bottom: 2.3rem;
     margin-left: -3px;
+    margin-top: 2rem;
     .mediaitems {
       margin-right: 1rem;
       .icon {

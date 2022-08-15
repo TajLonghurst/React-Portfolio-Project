@@ -1,11 +1,11 @@
-import React, { useEffect, useState, Fragment } from "react";
-import { AnimatePresence } from "framer-motion";
+import React, { Fragment } from "react";
+// import { AnimatePresence } from "framer-motion";
 import Hero from "../Components/Home/Hero";
-import AboutMe from "../Components/AboutMe/AboutMe";
-import Resume from "../Components/Resume/Resume";
-import Projects from "../Components/Projects/Projects";
-import Form from "../Components/ContactMe/Form";
-import PageLoading from "../Components/LazyLoading/PageLoading";
+// import AboutMe from "../Components/AboutMe/AboutMe";
+// import Resume from "../Components/Resume/Resume";
+// import Projects from "../Components/Projects/Projects";
+// import Form from "../Components/ContactMe/Form";
+// import PageLoading from "../Components/LazyLoading/PageLoading";
 
 // const Hero = React.lazy(() => import("../Components/Home/Hero"));
 // const AboutMe = React.lazy(() => import("../Components/AboutMe/AboutMe"));

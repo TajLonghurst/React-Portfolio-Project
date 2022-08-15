@@ -1,8 +1,8 @@
-import React, { useEffect, useState, Fragment } from "react";
-import { AnimatePresence } from "framer-motion";
+import React, { Fragment } from "react";
+// import { AnimatePresence } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import Projects from "../Components/Projects/Projects";
-import PageLoading from "../Components/LazyLoading/PageLoading";
+// import PageLoading from "../Components/LazyLoading/PageLoading";
 
 const ProjectPage = () => {
   //   const [isAnimated, setIsAnimated] = useState(false);

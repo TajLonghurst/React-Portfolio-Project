@@ -3,4 +3,16 @@
 .container {
   @include Container();
   @include DisplayFlexCenter(column);
+  @include media-breakpoint-min($breakpoints-xs) {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+  }
+  @include media-breakpoint-min($breakpoints-sm) {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
 }

@@ -7,12 +7,19 @@ import ResumeWorkExperience from "./ResumeSections/ResumeWorkExperience";
 import ResumeUdemyCourse from "./ResumeSections/ResumeUdemyCourse";
 import ResumeReferances from "./ResumeSections/ResumeReferances";
 import ResumeSkills from "./ResumeSections/ResumeSkills";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { pageLoadAnimationResume } from "../../Animations/Resume";
 
 const ResumeContent = () => {
   const isActive = useSelector((state: RootState) => state.ui.ResumeList);
   return (
-    <div className={classes.container}>
+    <motion.div
+      variants={pageLoadAnimationResume}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className={classes.container}
+    >
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}
@@ -48,7 +55,7 @@ const ResumeContent = () => {
       >
         {isActive[4].isActive && <ResumeReferances />}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 

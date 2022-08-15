@@ -15,7 +15,7 @@ function App() {
     <Fragment>
       <NavBar />
       <AnimatePresence
-        initial={false}
+        initial={true}
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >

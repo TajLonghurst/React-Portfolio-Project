@@ -8,6 +8,7 @@ import ProjectProtfolio from "./Projectimgs/ProjectProtfolio";
 import ProjectNote2Self from "./Projectimgs/ProjectNote2Self";
 import { AnimatePresence, motion } from "framer-motion";
 import { bgblock } from "../../Animations/ProjectView";
+import { pageLoadAnimation } from "../../Animations/ProjectView";
 
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
@@ -34,7 +35,13 @@ const ProjectImgs = () => {
   }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav]);
 
   return (
-    <div className={classes.container}>
+    <motion.div
+      variants={pageLoadAnimation}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className={classes.container}
+    >
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}
@@ -79,7 +86,7 @@ const ProjectImgs = () => {
       >
         {Not2SelfNav && <ProjectNote2Self />}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 

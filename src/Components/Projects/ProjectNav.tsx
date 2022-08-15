@@ -3,6 +3,8 @@ import classes from "./ProjectNav.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../ReduxStore/Index";
 import { uiActions } from "../../ReduxStore/ui-slice";
+import { motion } from "framer-motion";
+import { pagenavLoadAnimation } from "../../Animations/ProjectView";
 
 const ProjectNav = () => {
   const navIsActive = useSelector((state: RootState) => state.ui);
@@ -65,8 +67,15 @@ const ProjectNav = () => {
   const style = !projectAnimation ? "visible" : "none";
 
   return (
-    <div className={classes.postion}>
-      <ul style={{ pointerEvents: `${style}` }} className={classes.navlist}>
+    <motion.div className={classes.postion}>
+      <motion.ul
+        variants={pagenavLoadAnimation}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        style={{ pointerEvents: `${style}` }}
+        className={classes.navlist}
+      >
         <li
           onClick={() => projectBtnOnClickHandler("URBAN")}
           className={UrbanStyles}
@@ -95,8 +104,8 @@ const ProjectNav = () => {
           <div className={NoteDotStyle}></div>
           <div className={classes.title}>NOTE2SELF</div>
         </li>
-      </ul>
-    </div>
+      </motion.ul>
+    </motion.div>
   );
 };
 

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, Fragment } from "react";
-import { AnimatePresence } from "framer-motion";
+import React, { Fragment } from "react";
+// import { AnimatePresence } from "framer-motion";
 import Form from "../Components/ContactMe/Form";
-import PageLoading from "../Components/LazyLoading/PageLoading";
+// import PageLoading from "../Components/LazyLoading/PageLoading";
 
 const FormPage = () => {
   //   const [isAnimated, setIsAnimated] = useState(false);

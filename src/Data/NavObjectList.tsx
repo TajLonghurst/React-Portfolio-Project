@@ -13,10 +13,10 @@ export const navobjectlist: NavItemModel[] = [
     path: "/",
   },
   {
-    id: "NavTwo",
-    img: AboutMeIcon,
-    label: "About Me",
-    path: "/AboutMe",
+    id: "NavFour",
+    img: ProjectsIcon,
+    label: "Projects",
+    path: "/Projects",
   },
   {
     id: "NavThree",
@@ -25,10 +25,10 @@ export const navobjectlist: NavItemModel[] = [
     path: "/Resume",
   },
   {
-    id: "NavFour",
-    img: ProjectsIcon,
-    label: "Projects",
-    path: "/Projects",
+    id: "NavTwo",
+    img: AboutMeIcon,
+    label: "About Me",
+    path: "/AboutMe",
   },
   {
     id: "NavFive",
