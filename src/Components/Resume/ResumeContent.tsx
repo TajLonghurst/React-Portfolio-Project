@@ -7,16 +7,47 @@ import ResumeWorkExperience from "./ResumeSections/ResumeWorkExperience";
 import ResumeUdemyCourse from "./ResumeSections/ResumeUdemyCourse";
 import ResumeReferances from "./ResumeSections/ResumeReferances";
 import ResumeSkills from "./ResumeSections/ResumeSkills";
+import { AnimatePresence } from "framer-motion";
 
 const ResumeContent = () => {
   const isActive = useSelector((state: RootState) => state.ui.ResumeList);
   return (
     <div className={classes.container}>
-      {isActive[0].isActive && <ResumeEducation />}
-      {isActive[1].isActive && <ResumeWorkExperience />}
-      {isActive[2].isActive && <ResumeSkills />}
-      {isActive[3].isActive && <ResumeUdemyCourse />}
-      {isActive[4].isActive && <ResumeReferances />}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[0].isActive && <ResumeEducation />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[1].isActive && <ResumeWorkExperience />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[2].isActive && <ResumeSkills />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[3].isActive && <ResumeUdemyCourse />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[4].isActive && <ResumeReferances />}
+      </AnimatePresence>
     </div>
   );
 };

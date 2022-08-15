@@ -1,9 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./ResumeReferances.module.scss";
+import { motion } from "framer-motion";
+import { body } from "../../../Animations/Resume";
 
 const ResumeReferances = () => {
   return (
-    <Fragment>
+    <motion.div variants={body} initial="hidden" animate="visible" exit="exit">
       <div className={classes.body}>
         <h1 className={classes.header}>
           Arjinder Singh from (
@@ -23,7 +25,7 @@ const ResumeReferances = () => {
           arjinder.singh@techtorium.ac.nz | 02040204021
         </p>
       </div>
-    </Fragment>
+    </motion.div>
   );
 };
 

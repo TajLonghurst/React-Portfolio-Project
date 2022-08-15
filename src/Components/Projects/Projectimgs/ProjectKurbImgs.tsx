@@ -23,8 +23,6 @@ const ProjectKurbImgs = () => {
     setSlideIndex(slideIndex === 0 ? length - 1 : slideIndex - 1);
   };
 
-  console.log(length);
-
   if (length <= 0) {
     return null;
   }

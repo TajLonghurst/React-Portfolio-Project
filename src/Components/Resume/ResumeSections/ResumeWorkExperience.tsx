@@ -1,9 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./ResumeWorkExperience.module.scss";
+import { motion } from "framer-motion";
+import { body } from "../../../Animations/Resume";
 
 const ResumeWorkExperience = () => {
   return (
-    <Fragment>
+    <motion.div variants={body} initial="hidden" animate="visible" exit="exit">
       <div className={classes.body}>
         <h1 className={classes.header}>
           Kitchen Porter, (
@@ -50,7 +52,7 @@ const ResumeWorkExperience = () => {
           lecturers with teaching various programming tasks.
         </p>
       </div>
-    </Fragment>
+    </motion.div>
   );
 };
 

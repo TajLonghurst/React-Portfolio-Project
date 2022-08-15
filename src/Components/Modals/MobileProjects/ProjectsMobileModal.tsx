@@ -26,7 +26,7 @@ const ProjectsMobileModal = () => {
 
   const onCloseHandler = () => {
     dispatch(uiActions.ProjectMobileView({ isActive: false }));
-    navigate("/");
+    navigate("/Projects");
   };
 
   return (

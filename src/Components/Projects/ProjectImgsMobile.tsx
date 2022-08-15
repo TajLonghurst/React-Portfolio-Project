@@ -24,7 +24,7 @@ const ProjectImgsMobile = () => {
             <Link
               onClick={onClickHandler}
               key={item.projectID}
-              to={`/MobileProject/${item.pathID}`}
+              to={`MobileProject/${item.pathID}`}
             >
               <li className={classes.imgitems}>
                 <div className={classes.bgblock}></div>

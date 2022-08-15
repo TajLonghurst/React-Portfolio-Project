@@ -20,6 +20,18 @@
     font-size: 16px;
     height: 3rem;
     border-bottom: 1px solid #fff;
+    padding: 0rem;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: #505050;
+      -webkit-box-shadow: 0 0 0px 1000px $PrimaryBgColor inset;
+      box-shadow: 0 0 0px 1000px $PrimaryBgColor inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+    &:-webkit-autofill::first-line {
+      font-family: $HindRegular;
+    }
     &:focus {
       outline: none;
       border-bottom: 1px solid $SecondaryBgColor;

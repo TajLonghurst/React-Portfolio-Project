@@ -1,9 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./ResumeEducation.module.scss";
+import { motion } from "framer-motion";
+import { body } from "../../../Animations/Resume";
 
 const ResumeEducation = () => {
   return (
-    <Fragment>
+    <motion.div variants={body} initial="hidden" animate="visible" exit="exit">
       <div className={classes.body}>
         <h1 className={classes.header}>
           Diploma Software Development [Level 6], (
@@ -73,7 +75,7 @@ const ResumeEducation = () => {
           </li>
         </ul>
       </div>
-    </Fragment>
+    </motion.div>
   );
 };
 

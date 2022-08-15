@@ -1,13 +1,25 @@
-@import "../../../Scss/index";
+@import "../../../../Scss/index";
 
 .postion {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1rem;
-  display: block;
-  z-index: 1100;
+  top: 13%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  @include media-breakpoint-min($breakpoints-xs) {
+    z-index: 900;
+    position: fixed;
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
+    top: 93%;
+    left: 90%;
+  }
   .container {
-    position: relative;
+    @include media-breakpoint-min($breakpoints-xs) {
+    }
+    @include media-breakpoint-min($breakpoints-xxl) {
+    }
     .body {
       position: relative;
       @include DisplayFlexCenter(row);
@@ -22,15 +34,24 @@
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      .donticon {
+        position: absolute;
+        right: 0.75rem;
+        margin-top: 0.2rem;
+        padding-right: 0.2rem;
+        width: 24px;
+        height: 24px;
+      }
       .text {
         margin: 0;
         color: $PrimaryNavTextColor;
         font-family: $GudeaRegular;
+        padding-left: 0.25rem;
       }
       .img {
-        width: 27px;
-        height: 27px;
-        padding-right: 1rem;
+        width: 24px;
+        height: 24px;
+        padding-right: 0.75rem;
       }
     }
     .loadingbar {
@@ -41,9 +62,9 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      background-image: $PrimaryPurpleLinear;
+      background-image: $PrimaryRedLinear;
       border-radius: 4px;
-      animation: loadingSlide 2s linear infinite;
+      //   animation: loadingSlide 2s linear infinite;
     }
   }
 }

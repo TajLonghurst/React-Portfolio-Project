@@ -25,16 +25,14 @@ const useEmailJs = () => {
         config,
         `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`
       )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          dispatch(uiActions.FormLoading({ isLoading: false }));
-        },
-        (error) => {
-          console.log("FAILED...", error, error.status);
-          dispatch(uiActions.FormError({ error: true }));
-        }
-      );
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        dispatch(uiActions.FormLoading({ isLoading: false }));
+      })
+      .catch((error) => {
+        console.log("FAILED...", error, error.status);
+        dispatch(uiActions.FormError({ error: true }));
+      });
   };
 
   return {
