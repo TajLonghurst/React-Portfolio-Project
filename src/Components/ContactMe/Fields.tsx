@@ -5,6 +5,8 @@ import Button from "../UI/Buttons/Button";
 import Input from "../UI/Inputs/Input";
 import TextArea from "../UI/Inputs/TextArea";
 import classes from "./Fields.module.scss";
+import { motion } from "framer-motion";
+import { pageLoadAnimation } from "../../Animations/ContactMe";
 
 const Fields: React.FC<FieldsModel> = (props) => {
   const {
@@ -87,70 +89,78 @@ const Fields: React.FC<FieldsModel> = (props) => {
   };
 
   return (
-    <form onSubmit={onSumbitHandler} className={classes.form}>
-      <div className={classes.row}>
-        <div className={classes.col}>
-          <Input
-            type="text"
-            placeholder="Enter your first name"
-            label="First Name"
-            onChange={nameChangeHandler}
-            onBlur={nameBlurHandler}
-            value={nameEntredValue}
-            error={nameHasError}
-          />
+    <form className={classes.form} onSubmit={onSumbitHandler}>
+      <motion.div
+        variants={pageLoadAnimation}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={classes.container}
+      >
+        <div className={classes.row}>
+          <div className={classes.col}>
+            <Input
+              type="text"
+              placeholder="Enter your first name"
+              label="First Name"
+              onChange={nameChangeHandler}
+              onBlur={nameBlurHandler}
+              value={nameEntredValue}
+              error={nameHasError}
+            />
+          </div>
+          <div className={classes.col}>
+            <Input
+              type="text"
+              placeholder="Enter your last name"
+              label="Last Name"
+              onChange={lastChangeHandler}
+              onBlur={lastBlurHandler}
+              value={lastEntredValue}
+              error={lastHasError}
+            />
+          </div>
         </div>
-        <div className={classes.col}>
-          <Input
-            type="text"
-            placeholder="Enter your last name"
-            label="Last Name"
-            onChange={lastChangeHandler}
-            onBlur={lastBlurHandler}
-            value={lastEntredValue}
-            error={lastHasError}
-          />
+        <div className={classes.row}>
+          <div className={classes.col}>
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              label="Email"
+              onChange={emailChangeHandler}
+              onBlur={emailBlurHandler}
+              value={emailEntredValue}
+              error={emailHasError}
+            />
+          </div>
+          <div className={classes.col}>
+            <Input
+              type="tel"
+              placeholder="Phone number XX-XXX-XXXX"
+              label="Phone Number"
+              onChange={phoneChangeHandler}
+              onBlur={phoneBlurHandler}
+              value={phoneEntredValue}
+              error={phoneHasError}
+            />
+          </div>
         </div>
-      </div>
-      <div className={classes.row}>
-        <div className={classes.col}>
-          <Input
-            type="email"
-            placeholder="Enter your email"
-            label="Email"
-            onChange={emailChangeHandler}
-            onBlur={emailBlurHandler}
-            value={emailEntredValue}
-            error={emailHasError}
-          />
+        <div className={classes.row}>
+          <div className={classes.col}>
+            <TextArea
+              placeholder="Enter your message"
+              label="Message"
+              onChange={messageChangeHandler}
+              onBlur={messageBlurHandler}
+              value={messageEntredValue}
+              error={messageHasError}
+            />
+          </div>
         </div>
-        <div className={classes.col}>
-          <Input
-            type="tel"
-            placeholder="Phone number XX-XXX-XXXX"
-            label="Phone Number"
-            onChange={phoneChangeHandler}
-            onBlur={phoneBlurHandler}
-            value={phoneEntredValue}
-            error={phoneHasError}
-          />
+        <div className={classes.btncontent}>
+          <Button type="submit">Submit</Button>
         </div>
-      </div>
-      <div className={classes.row}>
-        <div className={classes.col}>
-          <TextArea
-            placeholder="Enter your message"
-            label="Message"
-            onChange={messageChangeHandler}
-            onBlur={messageBlurHandler}
-            value={messageEntredValue}
-            error={messageHasError}
-          />
-        </div>
-      </div>
-      <div className={classes.btncontent}>
-        <Button type="submit">Submit</Button>
-      </div>
+      </motion.div>
     </form>
   );
 };

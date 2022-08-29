@@ -11,21 +11,26 @@
   @include media-breakpoint-min($breakpoints-md) {
     width: 40rem;
   }
-  .row {
-    @include DisplayFlexCenter(row);
+  .container {
     width: 100%;
-    @include media-breakpoint-min($breakpoints-xs) {
-      flex-direction: column;
-    }
-    @include media-breakpoint-min($breakpoints-md) {
-      flex-direction: row;
-    }
-    .col {
+    .row {
+      @include DisplayFlexCenter(row);
       width: 100%;
-      margin: 1rem;
+      @include media-breakpoint-min($breakpoints-xs) {
+        flex-direction: column;
+      }
+      @include media-breakpoint-min($breakpoints-md) {
+        flex-direction: row;
+      }
+      .col {
+        width: 100%;
+        margin: 1rem;
+      }
     }
-  }
-  .btncontent {
-    margin-top: 2rem;
+    .btncontent {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
   }
 }

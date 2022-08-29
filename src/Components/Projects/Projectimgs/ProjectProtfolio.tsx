@@ -7,8 +7,10 @@ import LinkButton from "../../UI/Buttons/LinkButton";
 import { motion, AnimatePresence } from "framer-motion";
 import { overlaymiddle, body } from "../../../Animations/ProjectView";
 import { ProjectObject } from "../../../Data/ProjectObject";
+import useCursorHover from "../../../Hooks/Cursor/use-cursorHover";
 
 const ProjectProtfolio = () => {
+  const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   const [slideIndex, setSlideIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
   const length = ProjectObject[2].images.length;
@@ -19,6 +21,15 @@ const ProjectProtfolio = () => {
 
   const previousImg = () => {
     setSlideIndex(slideIndex === 0 ? length - 1 : slideIndex - 1);
+  };
+
+  const onMouseOverHandler = () => {
+    setIsHover(true);
+    cursorHoverOver();
+  };
+  const onMouseLeaveHandler = () => {
+    setIsHover(false);
+    cursorHoverLeave();
   };
 
   if (length <= 0) {
@@ -37,8 +48,8 @@ const ProjectProtfolio = () => {
       >
         <div className={classes.imgview}>
           <img
-            onMouseOver={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
+            onMouseOver={onMouseOverHandler}
+            onMouseLeave={onMouseLeaveHandler}
             onClick={previousImg}
             className={classes.arrowIcon}
             src={ArrowLeftIcon}
@@ -99,8 +110,8 @@ const ProjectProtfolio = () => {
             </AnimatePresence>
           </ul>
           <img
-            onMouseOver={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
+            onMouseOver={onMouseOverHandler}
+            onMouseLeave={onMouseLeaveHandler}
             onClick={nextImg}
             className={classes.arrowIcon}
             src={ArrowRightIcon}

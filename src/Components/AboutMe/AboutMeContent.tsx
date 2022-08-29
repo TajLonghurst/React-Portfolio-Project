@@ -3,6 +3,8 @@ import classes from "./AboutMeContent.module.scss";
 import GithuhIcon from "../../Assets/Icons/WebIcons/GithubIcon.svg";
 import LinkinedIcon from "../../Assets/Icons/WebIcons/LinkedinIcon.svg";
 import Button from "../UI/Buttons/Button";
+import { motion } from "framer-motion";
+import { pageLoadAnimation } from "../../Animations/AboutMe";
 // import ExpandMoreIcon from "../../Assets/Icons/WebIcons/ExpandMoreIcon.svg";
 
 const AboutMeContent = () => {
@@ -19,7 +21,13 @@ const AboutMeContent = () => {
   // const contentStyle = expanedText ? classes.null : classes.contentclosed;
 
   return (
-    <div className={classes.contentbody}>
+    <motion.div
+      variants={pageLoadAnimation}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className={classes.contentbody}
+    >
       <div className={classes.header}>
         <span className={classes.bulletpoint}></span>
         <h1 className={classes.title}>About Me</h1>
@@ -76,7 +84,7 @@ const AboutMeContent = () => {
         </li>
       </ul>
       <Button type="button">Contact Me</Button>
-    </div>
+    </motion.div>
   );
 };
 

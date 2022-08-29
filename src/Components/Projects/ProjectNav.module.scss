@@ -21,6 +21,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+      user-select: none;
       @include media-breakpoint-min($breakpoints-lg) {
         & {
           padding: 0.8rem;
@@ -38,8 +39,6 @@
           padding: 1rem;
         }
       }
-      cursor: pointer;
-      user-select: none;
       &:hover .dot {
         background-color: #b1b1b1;
       }
@@ -52,6 +51,14 @@
         font-family: $GudeaBold;
         font-size: 1rem;
         transition: color ease-in-out 0.2s;
+        cursor: pointer;
+        // &:hover {
+        //   color: #b1b1b1;
+        // }
+        // .dot ~ &:hover {
+        //   background-color: #b1b1b1;
+        // }
+
         @include media-breakpoint-min($breakpoints-lg) {
           & {
             font-size: 0.8rem;

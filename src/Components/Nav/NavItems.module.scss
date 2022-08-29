@@ -5,6 +5,7 @@
   margin-inline: 0.5rem;
   text-decoration: none;
   position: relative;
+  border-radius: 10px;
   .navitem {
     position: relative;
     @include DisplayFlexCenter(row);
@@ -24,8 +25,8 @@
     padding-left: 0.3rem;
   }
   &:hover {
+    transition: 0.2s;
     background: $LinkHover;
-    border-radius: 10px;
   }
   &.navlinkactive::after {
     content: "";

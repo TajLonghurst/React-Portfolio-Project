@@ -2,8 +2,10 @@ import React from "react";
 import classes from "./ResumeWorkExperience.module.scss";
 import { motion } from "framer-motion";
 import { body } from "../../../Animations/Resume";
+import useCursorHover from "../../../Hooks/Cursor/use-cursorHover";
 
 const ResumeWorkExperience = () => {
+  const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   return (
     <motion.div variants={body} initial="hidden" animate="visible" exit="exit">
       <div className={classes.body}>
@@ -11,6 +13,8 @@ const ResumeWorkExperience = () => {
           Kitchen Porter, (
           <span>
             <a
+              onMouseOver={cursorHoverOver}
+              onMouseLeave={cursorHoverLeave}
               className={classes.techlink}
               target="_blank"
               rel="noreferrer"
@@ -36,6 +40,8 @@ const ResumeWorkExperience = () => {
           Student Teacher Assistant, (
           <span>
             <a
+              onMouseOver={cursorHoverOver}
+              onMouseLeave={cursorHoverLeave}
               className={classes.techlink}
               target="_blank"
               rel="noreferrer"

@@ -117,3 +117,42 @@ export const pagenavLoadAnimation = {
     },
   },
 };
+
+export const staggerEffectParent = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+export const staggerEffectChild = {
+  hidden: {
+    opacity: 0,
+    y: "-1rem",
+  },
+  visible: {
+    opacity: 1,
+    y: "0rem",
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "1rem",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};

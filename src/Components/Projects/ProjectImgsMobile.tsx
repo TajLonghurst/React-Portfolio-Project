@@ -1,48 +1,49 @@
 import React from "react";
 import classes from "./ProjectImgsMobile.module.scss";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { uiActions } from "../../ReduxStore/ui-slice";
 import { ProjectObject } from "../../Data/ProjectObject";
+import { motion } from "framer-motion";
+import {
+  staggerEffectParent,
+  staggerEffectChild,
+} from "../../Animations/ProjectView";
 
 const ProjectImgsMobile = () => {
-  const dispatch = useDispatch();
-
-  const onClickHandler = () => {
-    dispatch(uiActions.ProjectMobileView({ isActive: true }));
-  };
-
   return (
     <div className={classes.container}>
-      <div className={classes.header}>
+      {/* <div className={classes.header}>
         <span className={classes.bulletpoint}></span>
         <h1 className={classes.title}>My Projects</h1>
-      </div>
-      <ul className={classes.imglist}>
+      </div> */}
+      <motion.ul
+        variants={staggerEffectParent}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={classes.imglist}
+      >
         {ProjectObject.map((item) => {
           return (
-            <Link
-              onClick={onClickHandler}
-              key={item.projectID}
-              to={`MobileProject/${item.pathID}`}
-            >
-              <li className={classes.imgitems}>
-                <div className={classes.bgblock}></div>
-                <div className={classes.imgcontainer}>
-                  <img
-                    className={classes.img}
-                    src={item.heroImg}
-                    alt="Failed to load"
-                  />
-                  <div className={classes.overlay}>
-                    <div className={classes.overlaytext}>{item.label}</div>
+            <motion.div key={item.projectID} variants={staggerEffectChild}>
+              <Link to={`/MobileProject/${item.pathID}`}>
+                <li className={classes.imgitems}>
+                  <div className={classes.bgblock}></div>
+                  <div className={classes.imgcontainer}>
+                    <img
+                      className={classes.img}
+                      src={item.heroImg}
+                      alt="Failed to load"
+                    />
+                    <div className={classes.overlay}>
+                      <div className={classes.overlaytext}>{item.label}</div>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </Link>
+                </li>
+              </Link>
+            </motion.div>
           );
         })}
-      </ul>
+      </motion.ul>
     </div>
   );
 };

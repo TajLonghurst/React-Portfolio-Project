@@ -37,7 +37,6 @@
     }
   }
 }
-
 .navitems {
   position: relative;
   @include DisplayFlexCenter(row);
@@ -46,14 +45,12 @@
   padding-inline: 1.5rem;
   padding-right: 3rem;
   flex-wrap: nowrap;
-  cursor: pointer;
   @include media-breakpoint-max($breakpoints-lg) {
     & {
       padding: 1rem;
     }
   }
 }
-
 .navicon {
   width: 23px;
   height: 23px;
@@ -63,6 +60,7 @@
   margin-left: 1rem;
   color: $PrimaryTextColor;
   user-select: none;
+  cursor: pointer;
   &:hover {
     color: $SecondaryBgColor;
   }

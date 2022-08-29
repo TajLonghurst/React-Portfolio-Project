@@ -1,0 +1,26 @@
+@import "../../../Scss/index";
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid $SecondaryBgColor;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  pointer-events: none;
+  @include media-breakpoint-min($breakpoints-xs) {
+    display: none;
+  }
+  @include media-breakpoint-min($breakpoints-sm) {
+    display: none;
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    display: none;
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    display: block;
+  }
+}

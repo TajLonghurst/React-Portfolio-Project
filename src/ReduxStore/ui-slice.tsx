@@ -4,7 +4,6 @@ import { ResumeNavItems } from "../Data/ResumeObjectList";
 
 const initialState: uiSliceModal = {
   ResumeList: ResumeNavItems,
-  ProjectMobileIsActive: false,
   UrbanNav: true,
   KurbNav: false,
   PortfolioNav: false,
@@ -28,14 +27,6 @@ const uiSlice = createSlice({
         }
         return;
       });
-    },
-    ProjectMobileView(state, actions: PayloadAction<{ isActive: boolean }>) {
-      state.ProjectMobileIsActive = actions.payload.isActive;
-      if (state.ProjectMobileIsActive) {
-        document.body.style.overflowY = "hidden";
-      } else {
-        document.body.style.overflow = "visible";
-      }
     },
     ProjectsClickHandler(state, actions: PayloadAction<{ name: string }>) {
       if (actions.payload.name === "URBAN") {

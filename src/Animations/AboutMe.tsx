@@ -16,3 +16,44 @@ export const switchtext = {
     },
   },
 };
+
+export const pageLoadAnimation = {
+  hidden: {
+    y: "-3vh",
+    opacity: 0,
+  },
+  visible: {
+    y: "0vh",
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    y: "3vh",
+    opacity: 0,
+    transition: {
+      delay: 0.6,
+      duration: 0.5,
+    },
+  },
+};
+
+export const pageimgLoadAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.7,
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};

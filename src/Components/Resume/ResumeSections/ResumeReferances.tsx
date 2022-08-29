@@ -2,8 +2,10 @@ import React from "react";
 import classes from "./ResumeReferances.module.scss";
 import { motion } from "framer-motion";
 import { body } from "../../../Animations/Resume";
+import useCursorHover from "../../../Hooks/Cursor/use-cursorHover";
 
 const ResumeReferances = () => {
+  const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   return (
     <motion.div variants={body} initial="hidden" animate="visible" exit="exit">
       <div className={classes.body}>
@@ -11,6 +13,8 @@ const ResumeReferances = () => {
           Arjinder Singh from (
           <span>
             <a
+              onMouseOver={cursorHoverOver}
+              onMouseLeave={cursorHoverLeave}
               className={classes.techlink}
               target="_blank"
               rel="noreferrer"

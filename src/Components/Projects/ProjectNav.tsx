@@ -5,8 +5,10 @@ import { RootState } from "../../ReduxStore/Index";
 import { uiActions } from "../../ReduxStore/ui-slice";
 import { motion } from "framer-motion";
 import { pagenavLoadAnimation } from "../../Animations/ProjectView";
+import useCursorHover from "../../Hooks/Cursor/use-cursorHover";
 
 const ProjectNav = () => {
+  const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   const navIsActive = useSelector((state: RootState) => state.ui);
   const [projectAnimation, setProjectAnimation] = useState(false);
   const firstRender = useRef(false);
@@ -76,33 +78,49 @@ const ProjectNav = () => {
         style={{ pointerEvents: `${style}` }}
         className={classes.navlist}
       >
-        <li
-          onClick={() => projectBtnOnClickHandler("URBAN")}
-          className={UrbanStyles}
-        >
+        <li className={UrbanStyles}>
           <div className={UrbanDotStyle}></div>
-          <div className={classes.title}>URBAN</div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("URBAN")}
+          >
+            URBAN
+          </div>
         </li>
-        <li
-          onClick={() => projectBtnOnClickHandler("KURB")}
-          className={KurbStyles}
-        >
+        <li className={KurbStyles}>
           <div className={KurbDotStyle}></div>
-          <div className={classes.title}>KURB</div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("KURB")}
+          >
+            KURB
+          </div>
         </li>
-        <li
-          onClick={() => projectBtnOnClickHandler("PORTFOLIO")}
-          className={PortfolioStyles}
-        >
+        <li className={PortfolioStyles}>
           <div className={PortfolioDotStyle}></div>
-          <div className={classes.title}>PORTFOLIO</div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("PORTFOLIO")}
+          >
+            PORTFOLIO
+          </div>
         </li>
-        <li
-          onClick={() => projectBtnOnClickHandler("NOTE2SELF")}
-          className={NoteStyles}
-        >
+        <li className={NoteStyles}>
           <div className={NoteDotStyle}></div>
-          <div className={classes.title}>NOTE2SELF</div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("NOTE2SELF")}
+          >
+            NOTE2SELF
+          </div>
         </li>
       </motion.ul>
     </motion.div>

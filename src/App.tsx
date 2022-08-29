@@ -8,11 +8,13 @@ import FormPage from "./Pages/FormPage";
 import NavBar from "./Components/Nav/NavBar";
 import { AnimatePresence } from "framer-motion";
 import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobileProject";
+import Mouse from "./Components/UI/Cursor/Mouse";
 
 function App() {
   const location = useLocation();
   return (
     <Fragment>
+      <Mouse />
       <NavBar />
       <AnimatePresence
         initial={true}
@@ -23,12 +25,11 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/AboutMe" element={<AboutMePage />} />
           <Route path="/Resume" element={<ResumePage />} />
-          <Route path="/Projects" element={<ProjectPage />}>
-            <Route
-              path="MobileProject/:projectID"
-              element={<ModalMobileProject />}
-            />
-          </Route>
+          <Route path="/Projects" element={<ProjectPage />}></Route>
+          <Route
+            path="MobileProject/:projectID"
+            element={<ModalMobileProject />}
+          />
           <Route path="/Contact" element={<FormPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

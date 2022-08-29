@@ -6,13 +6,10 @@ import { motion } from "framer-motion";
 import { mobilebody } from "../../../Animations/ProjectView";
 import { ProjectObject } from "../../../Data/ProjectObject";
 import { images } from "../../../Models/ProjectModel";
-import { useDispatch } from "react-redux";
-import { uiActions } from "../../../ReduxStore/ui-slice";
 import BorderlessBtn from "../../UI/Buttons/BorderlessBtn";
 
 const ProjectsMobileModal = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const { projectID } = useParams();
   const [imgData, setImgData] = useState<images[]>([]);
 
@@ -25,7 +22,6 @@ const ProjectsMobileModal = () => {
   }, [projectID]);
 
   const onCloseHandler = () => {
-    dispatch(uiActions.ProjectMobileView({ isActive: false }));
     navigate("/Projects");
   };
 

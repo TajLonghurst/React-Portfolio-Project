@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./ProjectImgs.module.scss";
 import ProjectKurbImgs from "./Projectimgs/ProjectKurbImgs";
 import ProjectUrban from "./Projectimgs/ProjectUrbanImgs";
@@ -13,24 +13,19 @@ import { pageLoadAnimation } from "../../Animations/ProjectView";
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
   const [projectAnimation, setProjectAnimation] = useState(false);
-  const firstRender = useRef(false);
 
   const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav } = projectIsActive;
 
   useEffect(() => {
-    if (firstRender.current) {
-      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
-        const timer = setTimeout(() => {
-          setProjectAnimation(false);
-        }, 1000);
-        setProjectAnimation((prevState) => !prevState);
-        //console.log(timer);
-        return () => {
-          clearTimeout(timer);
-        };
-      }
-    } else {
-      firstRender.current = true;
+    if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
+      const timer = setTimeout(() => {
+        setProjectAnimation(false);
+      }, 1000);
+      setProjectAnimation((prevState) => !prevState);
+      //console.log(timer);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav]);
 
@@ -57,7 +52,6 @@ const ProjectImgs = () => {
           ></motion.div>
         )}
       </AnimatePresence>
-
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}

@@ -7,8 +7,10 @@ import LinkButton from "../../UI/Buttons/LinkButton";
 import { motion, AnimatePresence } from "framer-motion";
 import { body, overlaymiddle } from "../../../Animations/ProjectView";
 import { ProjectObject } from "../../../Data/ProjectObject";
+import useCursorHover from "../../../Hooks/Cursor/use-cursorHover";
 
 const ProjectKurbImgs = () => {
+  const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   const [slideIndex, setSlideIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
   const length = ProjectObject[1].images.length;
@@ -23,9 +25,19 @@ const ProjectKurbImgs = () => {
     setSlideIndex(slideIndex === 0 ? length - 1 : slideIndex - 1);
   };
 
+  const onMouseOverHandler = () => {
+    setIsHover(true);
+    cursorHoverOver();
+  };
+  const onMouseLeaveHandler = () => {
+    setIsHover(false);
+    cursorHoverLeave();
+  };
+
   if (length <= 0) {
     return null;
   }
+
   return (
     <Fragment>
       <div className={classes.bgblock}></div>
@@ -38,8 +50,8 @@ const ProjectKurbImgs = () => {
       >
         <div className={classes.imgview}>
           <img
-            onMouseOver={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
+            onMouseOver={onMouseOverHandler}
+            onMouseLeave={onMouseLeaveHandler}
             onClick={previousImg}
             className={classes.arrowIcon}
             src={ArrowLeftIcon}
@@ -100,8 +112,8 @@ const ProjectKurbImgs = () => {
             </AnimatePresence>
           </ul>
           <img
-            onMouseOver={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
+            onMouseOver={onMouseOverHandler}
+            onMouseLeave={onMouseLeaveHandler}
             onClick={nextImg}
             className={classes.arrowIcon}
             src={ArrowRightIcon}

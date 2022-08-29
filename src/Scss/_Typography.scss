@@ -17,6 +17,8 @@ $GTWalsheimBold: "GTWalsheimPro-Bold";
 //PlusJakarta Fonts
 $PlusJakartaBold: "PlusJakarta-Bold";
 $PlusJakartaRegular: "PlusJakarta-Regular";
+//Anton Fonts
+$AntonRegular: "Anton-Regular";
 
 /* ------------------------------ //Font sizes ------------------------------ */
 $Title-FontSize: clamp(2.8rem, 5vw, 4.2rem);
@@ -77,4 +79,8 @@ $SecondaryText-FontSize: 1rem;
   font-family: "PlusJakarta-Regular";
   src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Regular.ttf)
     format("truetype");
+}
+@font-face {
+  font-family: "Anton-Regular";
+  src: url(../Assets/Fonts/Anton/Anton-Regular.ttf) format("truetype");
 }
