@@ -2,15 +2,15 @@ import useEmailJs from "../../Hooks/use-emailJs";
 import { SendEmailJsModal } from "../../Models/SendEmailJsModal";
 import Fields from "./Fields";
 import classes from "./Form.module.scss";
-import { useSelector } from "react-redux";
-import { RootState } from "../../ReduxStore/Index";
+// import { useSelector } from "react-redux";
+// import { RootState } from "../../ReduxStore/Index";
 // import { AnimatePresence } from "framer-motion";
 // import { ModalIsLoadingNotifications } from "../Modals/Notifications/IsLoadingNotifications/ModalIsLoadingNotifications";
 // import { ModalErrorNotifications } from "../Modals/Notifications/ErrorNotifications/ModalErrorNotifications";
 // import useAnimationTimer from "../../Hooks/use-animationTimer";
 
 const Form = () => {
-  const Error = useSelector((state: RootState) => state.ui.FormHasError);
+  // const Error = useSelector((state: RootState) => state.ui.FormHasError);
   // const isLoading = useSelector((state: RootState) => state.ui.FormIsLoading);
   // const { isAnimated } = useAnimationTimer(Error, 3000);
   const { sendEmail } = useEmailJs();

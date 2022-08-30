@@ -55,7 +55,7 @@ const ProjectNote2Self = () => {
             alt="failed"
           />
           <ul className={classes.photolist}>
-            {ProjectObject[2].images.map((item, index) => {
+            {ProjectObject[3].images.map((item, index) => {
               return (
                 <li
                   key={item.id}
@@ -119,7 +119,11 @@ const ProjectNote2Self = () => {
         </div>
         <ul className={classes.context}>
           <li>
-            <LinkButton href="#" target="_blank" rel="noreferrer">
+            <LinkButton
+              href="https://github.com/TajLonghurst/React-Notes-Project"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub Project
             </LinkButton>
           </li>

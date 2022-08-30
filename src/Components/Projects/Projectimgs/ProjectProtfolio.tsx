@@ -56,7 +56,7 @@ const ProjectProtfolio = () => {
             alt="failed"
           />
           <ul className={classes.photolist}>
-            {ProjectObject[3].images.map((item, index) => {
+            {ProjectObject[2].images.map((item, index) => {
               return (
                 <li
                   key={item.id}
@@ -120,7 +120,11 @@ const ProjectProtfolio = () => {
         </div>
         <ul className={classes.context}>
           <li>
-            <LinkButton href="#" target="_blank" rel="noreferrer">
+            <LinkButton
+              href="https://github.com/TajLonghurst/React-Portfolio-Project"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub Project
             </LinkButton>
           </li>

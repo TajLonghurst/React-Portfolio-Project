@@ -2,6 +2,12 @@ import { ProjectModel } from "../Models/ProjectModel";
 import URBANHOME from "../Assets/Images/URBAN-Main.png";
 import URBANLOGIN from "../Assets/Images/URBAN-Login.png";
 import URBANABOUTUS from "../Assets/Images/URBAN-About-Us.png";
+import KURBHOME from "../Assets/Images/KurbHome.png";
+import KURBPRODUCTS from "../Assets/Images/KurbProducts.png";
+import KURBINDVIDUALPRODUCTS from "../Assets/Images/KurbInvidualProducts.png";
+import NOTESHOME from "../Assets/Images/NotesHome.png";
+import NOTESCREATENOTE from "../Assets/Images/NotesCreateNote.png";
+import NOTESVIEWNOTE from "../Assets/Images/NotesViewNote.png";
 
 export const ProjectObject: ProjectModel[] = [
   {
@@ -28,24 +34,24 @@ export const ProjectObject: ProjectModel[] = [
     projectID: 2,
     label: "KURB",
     pathID: "KURB",
-    heroImg: URBANHOME,
+    heroImg: KURBHOME,
     images: [
       {
         id: 1,
-        img: URBANHOME,
+        img: KURBHOME,
       },
       {
         id: 2,
-        img: URBANLOGIN,
+        img: KURBPRODUCTS,
       },
       {
         id: 3,
-        img: URBANABOUTUS,
+        img: KURBINDVIDUALPRODUCTS,
       },
     ],
   },
   {
-    projectID: 4,
+    projectID: 3,
     label: "PORTFOLIO",
     pathID: "PORTFOLIO",
     heroImg: URBANHOME,
@@ -65,22 +71,22 @@ export const ProjectObject: ProjectModel[] = [
     ],
   },
   {
-    projectID: 3,
+    projectID: 4,
     label: "NOTE2SELF",
     pathID: "NOTE2SELF",
-    heroImg: URBANHOME,
+    heroImg: NOTESHOME,
     images: [
       {
         id: 1,
-        img: URBANHOME,
+        img: NOTESHOME,
       },
       {
         id: 2,
-        img: URBANLOGIN,
+        img: NOTESCREATENOTE,
       },
       {
         id: 3,
-        img: URBANABOUTUS,
+        img: NOTESVIEWNOTE,
       },
     ],
   },

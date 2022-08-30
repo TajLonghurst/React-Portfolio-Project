@@ -122,7 +122,11 @@ const ProjectKurbImgs = () => {
         </div>
         <ul className={classes.context}>
           <li>
-            <LinkButton href="#" target="_blank" rel="noreferrer">
+            <LinkButton
+              href="https://github.com/TajLonghurst/React-Products-Project"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub Project
             </LinkButton>
           </li>
