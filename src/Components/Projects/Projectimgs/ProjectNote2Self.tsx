@@ -120,7 +120,7 @@ const ProjectNote2Self = () => {
         <ul className={classes.context}>
           <li>
             <LinkButton
-              href="https://github.com/TajLonghurst/React-Notes-Project"
+              href={ProjectObject[3].githuhLink}
               target="_blank"
               rel="noreferrer"
             >
@@ -130,7 +130,7 @@ const ProjectNote2Self = () => {
           <li>
             <BorderlessBtn
               color="#bbbbbb"
-              href="#"
+              href={ProjectObject[3].liveViewLink}
               target="_blank"
               rel="noreferrer"
             >

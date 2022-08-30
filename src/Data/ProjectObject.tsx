@@ -15,6 +15,8 @@ export const ProjectObject: ProjectModel[] = [
     label: "URBAN",
     pathID: "URBAN",
     heroImg: URBANHOME,
+    githuhLink: "https://github.com/TajLonghurst/React-SignUp-Project",
+    liveViewLink: "",
     images: [
       {
         id: 1,
@@ -35,6 +37,8 @@ export const ProjectObject: ProjectModel[] = [
     label: "KURB",
     pathID: "KURB",
     heroImg: KURBHOME,
+    githuhLink: "https://github.com/TajLonghurst/React-Products-Project",
+    liveViewLink: "",
     images: [
       {
         id: 1,
@@ -55,6 +59,8 @@ export const ProjectObject: ProjectModel[] = [
     label: "PORTFOLIO",
     pathID: "PORTFOLIO",
     heroImg: URBANHOME,
+    githuhLink: "https://github.com/TajLonghurst/React-Portfolio-Project",
+    liveViewLink: "",
     images: [
       {
         id: 1,
@@ -75,6 +81,8 @@ export const ProjectObject: ProjectModel[] = [
     label: "NOTE2SELF",
     pathID: "NOTE2SELF",
     heroImg: NOTESHOME,
+    githuhLink: "https://github.com/TajLonghurst/React-Notes-Project",
+    liveViewLink: "",
     images: [
       {
         id: 1,

@@ -12,11 +12,15 @@ const ProjectsMobileModal = () => {
   const navigate = useNavigate();
   const { projectID } = useParams();
   const [imgData, setImgData] = useState<images[]>([]);
+  const [hrefLink, setHerfLink] = useState<string>();
 
   useEffect(() => {
     for (let i = 0; i < ProjectObject.length; i++) {
       if (projectID === ProjectObject[i].pathID) {
-        return setImgData(ProjectObject[i].images);
+        return (
+          setImgData(ProjectObject[i].images),
+          setHerfLink(ProjectObject[i].githuhLink)
+        );
       }
     }
   }, [projectID]);
@@ -57,7 +61,7 @@ const ProjectsMobileModal = () => {
           color="#bbbbbb"
           target="_blank"
           rel="noreferrer"
-          href="#"
+          href={hrefLink || "#"}
         >
           Github Project
         </BorderlessBtn>

@@ -3,6 +3,8 @@ export type ProjectModel = {
   label: string;
   pathID: string;
   heroImg: string;
+  githuhLink: string;
+  liveViewLink: string;
   images: images[];
 };
 

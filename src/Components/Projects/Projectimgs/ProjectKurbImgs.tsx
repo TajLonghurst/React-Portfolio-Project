@@ -123,7 +123,7 @@ const ProjectKurbImgs = () => {
         <ul className={classes.context}>
           <li>
             <LinkButton
-              href="https://github.com/TajLonghurst/React-Products-Project"
+              href={ProjectObject[1].githuhLink}
               target="_blank"
               rel="noreferrer"
             >
@@ -132,7 +132,7 @@ const ProjectKurbImgs = () => {
           </li>
           <li>
             <BorderlessBtn
-              color="#bbbbbb"
+              color={ProjectObject[1].liveViewLink}
               href="#"
               target="_blank"
               rel="noreferrer"

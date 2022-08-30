@@ -121,7 +121,7 @@ const ProjectUrban = () => {
         <ul className={classes.context}>
           <li>
             <LinkButton
-              href="https://github.com/TajLonghurst/React-SignUp-Project"
+              href={ProjectObject[0].githuhLink}
               target="_blank"
               rel="noreferrer"
             >
@@ -131,7 +131,7 @@ const ProjectUrban = () => {
           <li>
             <BorderlessBtn
               color="#bbbbbb"
-              href="#"
+              href={ProjectObject[0].liveViewLink}
               target="_blank"
               rel="noreferrer"
             >

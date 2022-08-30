@@ -121,7 +121,7 @@ const ProjectProtfolio = () => {
         <ul className={classes.context}>
           <li>
             <LinkButton
-              href="https://github.com/TajLonghurst/React-Portfolio-Project"
+              href={ProjectObject[2].githuhLink}
               target="_blank"
               rel="noreferrer"
             >
@@ -131,7 +131,7 @@ const ProjectProtfolio = () => {
           <li>
             <BorderlessBtn
               color="#bbbbbb"
-              href="#"
+              href={ProjectObject[2].liveViewLink}
               target="_blank"
               rel="noreferrer"
             >
