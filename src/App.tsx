@@ -8,10 +8,12 @@ import FormPage from "./Pages/FormPage";
 import NavBar from "./Components/Nav/NavBar";
 import { AnimatePresence } from "framer-motion";
 import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobileProject";
+import NotificationsIndex from "./Components/Modals/Notifications/NotificationsIndex";
 import Mouse from "./Components/UI/Cursor/Mouse";
 
 function App() {
   const location = useLocation();
+
   return (
     <Fragment>
       <Mouse />
@@ -34,6 +36,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </AnimatePresence>
+      <NotificationsIndex />
     </Fragment>
   );
 }
