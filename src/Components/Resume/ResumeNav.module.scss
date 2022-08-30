@@ -1,70 +1,240 @@
 @import "../../Scss/index";
 
-.navitemsactive {
+.navitem {
   position: relative;
-  @include DisplayFlexCenter(row);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
-  padding: 0.25rem;
-  padding-inline: 1.5rem;
-  padding-right: 3rem;
-  flex-wrap: nowrap;
-  position: relative;
+  align-items: center;
+  user-select: none;
+  @include media-breakpoint-min($breakpoints-lg) {
+    & {
+      padding: 0.8rem;
+      padding-left: 0.7rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xl) {
+    & {
+      padding: 0.9rem;
+      padding-left: 0.8rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
+    & {
+      padding: 1rem;
+    }
+  }
+  &:hover .dot {
+    background-color: #b1b1b1;
+  }
+  &:hover .title {
+    color: #b1b1b1;
+  }
+  .title {
+    padding-left: 1rem;
+    color: $LinkHover;
+    font-family: $GudeaBold;
+    font-size: 1rem;
+    transition: color ease-in-out 0.2s;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include media-breakpoint-min($breakpoints-lg) {
+      & {
+        font-size: 0.8rem;
+        padding-left: 0.7rem;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xl) {
+      & {
+        font-size: 0.9rem;
+        padding-left: 0.8rem;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xxl) {
+      & {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+.navitemactive {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   background-color: $LinkHover;
-  &:before {
-    position: absolute;
-    top: 0;
-    left: -2px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 25px;
+  height: 100%;
+  @include media-breakpoint-min($breakpoints-lg) {
+    & {
+      padding: 0.3rem;
+      padding-inline: 0.7rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xl) {
+    & {
+      padding: 0.4rem;
+      padding-inline: 0.8rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
+    & {
+      padding: 0.5rem;
+      padding-inline: 1rem;
+    }
+  }
+  width: fit-content;
+  cursor: default;
+  .activedot {
+    position: relative;
     content: "";
-    background: $SecondaryBgColor;
-    width: 3px;
-    height: 100%;
+    width: 12px;
+    height: 12px;
+    background-color: $SecondaryBgColor;
+    border-radius: 25px;
+    @include media-breakpoint-min($breakpoints-lg) {
+      & {
+        width: 8px;
+        height: 8px;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xl) {
+      & {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xxl) {
+      & {
+        width: 12px;
+        height: 12px;
+      }
+    }
   }
-  @include media-breakpoint-max($breakpoints-lg) {
+  .title {
+    font-size: 1rem;
+    padding-left: 1rem;
+    color: $PrimaryHeaderColor;
+    font-family: $GudeaBold;
+    text-transform: uppercase;
+    @include media-breakpoint-min($breakpoints-lg) {
+      & {
+        font-size: 0.8rem;
+        padding-left: 0.7rem;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xl) {
+      & {
+        font-size: 0.9rem;
+        padding-left: 0.8rem;
+      }
+    }
+    @include media-breakpoint-min($breakpoints-xxl) {
+      & {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+.dot {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $LinkHover;
+  transition: background-color ease-in-out 0.2s;
+  @include media-breakpoint-min($breakpoints-lg) {
     & {
-      padding: 1rem;
-    }
-    &::before {
-      display: none;
-    }
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0px;
-      content: "";
-      background: $SecondaryBgColor;
-      height: 3px;
-      width: 100%;
+      width: 8px;
+      height: 8px;
     }
   }
-}
-.navitems {
-  position: relative;
-  @include DisplayFlexCenter(row);
-  justify-content: flex-start;
-  padding: 0.25rem;
-  padding-inline: 1.5rem;
-  padding-right: 3rem;
-  flex-wrap: nowrap;
-  @include media-breakpoint-max($breakpoints-lg) {
+  @include media-breakpoint-min($breakpoints-xl) {
     & {
-      padding: 1rem;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-xxl) {
+    & {
+      width: 12px;
+      height: 12px;
     }
   }
 }
-.navicon {
-  width: 23px;
-  height: 23px;
-  user-select: none;
-}
-.navtitle {
-  margin-left: 1rem;
-  color: $PrimaryTextColor;
-  user-select: none;
-  cursor: pointer;
-  &:hover {
-    color: $SecondaryBgColor;
-  }
-  @include media-breakpoint-max($breakpoints-lg) {
-    display: none;
-  }
-}
+
+// .navitemsactive {
+//   position: relative;
+//   @include DisplayFlexCenter(row);
+//   justify-content: flex-start;
+//   padding: 0.25rem;
+//   padding-inline: 1.5rem;
+//   padding-right: 3rem;
+//   flex-wrap: nowrap;
+//   position: relative;
+//   background-color: $LinkHover;
+//   &:before {
+//     position: absolute;
+//     top: 0;
+//     left: -2px;
+//     content: "";
+//     background: $SecondaryBgColor;
+//     width: 3px;
+//     height: 100%;
+//   }
+//   @include media-breakpoint-max($breakpoints-lg) {
+//     & {
+//       padding: 1rem;
+//     }
+//     &::before {
+//       display: none;
+//     }
+//     &::after {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0px;
+//       content: "";
+//       background: $SecondaryBgColor;
+//       height: 3px;
+//       width: 100%;
+//     }
+//   }
+// }
+// .navitems {
+//   position: relative;
+//   @include DisplayFlexCenter(row);
+//   justify-content: flex-start;
+//   padding: 0.25rem;
+//   padding-inline: 1.5rem;
+//   padding-right: 3rem;
+//   flex-wrap: nowrap;
+//   @include media-breakpoint-max($breakpoints-lg) {
+//     & {
+//       padding: 1rem;
+//     }
+//   }
+// }
+// .navicon {
+//   width: 23px;
+//   height: 23px;
+//   user-select: none;
+// }
+// .navtitle {
+//   margin-left: 1rem;
+//   color: $PrimaryTextColor;
+//   user-select: none;
+//   cursor: pointer;
+//   &:hover {
+//     color: $SecondaryBgColor;
+//   }
+//   @include media-breakpoint-max($breakpoints-lg) {
+//     display: none;
+//   }
+// }

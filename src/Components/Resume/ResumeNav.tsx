@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import classes from "./ResumeNav.module.scss";
 import { ResumeNavModel } from "../../Models/ResumeNavModel";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../ReduxStore/ui-slice";
 import useCursorHover from "../../Hooks/Cursor/use-cursorHover";
+import classes from "./ResumeNav.module.scss";
 
 const ResumeNav: React.FC<ResumeNavModel> = (props) => {
   const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
@@ -12,22 +12,22 @@ const ResumeNav: React.FC<ResumeNavModel> = (props) => {
     dispatch(uiActions.ResumeClickHandler({ id: props.id }));
   };
 
-  const isActiveStyle = props.isActive
-    ? classes.navitemsactive
-    : classes.navitems;
+  const Styles = props.isActive ? classes.navitemactive : classes.navitem;
+  const dotStyle = props.isActive ? classes.activedot : classes.dot;
 
   return (
     <Fragment>
-      <li className={isActiveStyle}>
-        <img src={props.icon} className={classes.navicon} alt="Failed" />
-        <p
+      <li className={Styles}>
+        <div className={dotStyle}></div>
+        <div
           onMouseOver={cursorHoverOver}
           onMouseLeave={cursorHoverLeave}
+          className={classes.title}
           onClick={ResumeNavOnClickHandler}
-          className={classes.navtitle}
         >
           {props.label}
-        </p>
+        </div>
+        {/* <img src={props.icon} className={classes.navicon} alt="Failed" /> */}
       </li>
     </Fragment>
   );
