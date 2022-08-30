@@ -8,12 +8,12 @@
   justify-content: flex-start;
   align-items: center;
   user-select: none;
-  @include media-breakpoint-min($breakpoints-lg) {
-    & {
-      padding: 0.8rem;
-      padding-left: 0.7rem;
-    }
-  }
+  // @include media-breakpoint-min($breakpoints-lg) {
+  //   & {
+  //     padding: 0.8rem;
+  //     padding-left: 0.7rem;
+  //   }
+  // }
   @include media-breakpoint-min($breakpoints-xl) {
     & {
       padding: 0.9rem;
@@ -39,12 +39,12 @@
     transition: color ease-in-out 0.2s;
     text-transform: uppercase;
     cursor: pointer;
-    @include media-breakpoint-min($breakpoints-lg) {
-      & {
-        font-size: 0.8rem;
-        padding-left: 0.7rem;
-      }
-    }
+    // @include media-breakpoint-min($breakpoints-lg) {
+    //   & {
+    //     font-size: 0.8rem;
+    //     padding-left: 0.7rem;
+    //   }
+    // }
     @include media-breakpoint-min($breakpoints-xl) {
       & {
         font-size: 0.9rem;
@@ -71,12 +71,12 @@
   padding-inline: 1rem;
   border-radius: 25px;
   height: 100%;
-  @include media-breakpoint-min($breakpoints-lg) {
-    & {
-      padding: 0.3rem;
-      padding-inline: 0.7rem;
-    }
-  }
+  // @include media-breakpoint-min($breakpoints-lg) {
+  //   & {
+  //     padding: 0.3rem;
+  //     padding-inline: 0.7rem;
+  //   }
+  // }
   @include media-breakpoint-min($breakpoints-xl) {
     & {
       padding: 0.4rem;
@@ -98,12 +98,12 @@
     height: 12px;
     background-color: $SecondaryBgColor;
     border-radius: 25px;
-    @include media-breakpoint-min($breakpoints-lg) {
-      & {
-        width: 8px;
-        height: 8px;
-      }
-    }
+    // @include media-breakpoint-min($breakpoints-lg) {
+    //   & {
+    //     width: 8px;
+    //     height: 8px;
+    //   }
+    // }
     @include media-breakpoint-min($breakpoints-xl) {
       & {
         width: 10px;
@@ -123,12 +123,12 @@
     color: $PrimaryHeaderColor;
     font-family: $GudeaBold;
     text-transform: uppercase;
-    @include media-breakpoint-min($breakpoints-lg) {
-      & {
-        font-size: 0.8rem;
-        padding-left: 0.7rem;
-      }
-    }
+    // @include media-breakpoint-min($breakpoints-lg) {
+    //   & {
+    //     font-size: 0.8rem;
+    //     padding-left: 0.7rem;
+    //   }
+    // }
     @include media-breakpoint-min($breakpoints-xl) {
       & {
         font-size: 0.9rem;
@@ -150,12 +150,12 @@
   border-radius: 50%;
   background: $LinkHover;
   transition: background-color ease-in-out 0.2s;
-  @include media-breakpoint-min($breakpoints-lg) {
-    & {
-      width: 8px;
-      height: 8px;
-    }
-  }
+  // @include media-breakpoint-min($breakpoints-lg) {
+  //   & {
+  //     width: 8px;
+  //     height: 8px;
+  //   }
+  // }
   @include media-breakpoint-min($breakpoints-xl) {
     & {
       width: 10px;
@@ -168,6 +168,11 @@
       height: 12px;
     }
   }
+}
+.navicon {
+  width: 23px;
+  height: 23px;
+  user-select: none;
 }
 
 // .navitemsactive {
@@ -220,11 +225,6 @@
 //       padding: 1rem;
 //     }
 //   }
-// }
-// .navicon {
-//   width: 23px;
-//   height: 23px;
-//   user-select: none;
 // }
 // .navtitle {
 //   margin-left: 1rem;
