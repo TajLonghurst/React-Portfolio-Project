@@ -5,6 +5,7 @@ import LinkinedIcon from "../../Assets/Icons/WebIcons/LinkedinIcon.svg";
 import Button from "../UI/Buttons/Button";
 import { motion } from "framer-motion";
 import { pageLoadAnimation } from "../../Animations/AboutMe";
+import { NavLink } from "react-router-dom";
 // import ExpandMoreIcon from "../../Assets/Icons/WebIcons/ExpandMoreIcon.svg";
 
 const AboutMeContent = () => {
@@ -83,7 +84,9 @@ const AboutMeContent = () => {
           </a>
         </li>
       </ul>
-      <Button type="button">Contact Me</Button>
+      <NavLink to="/Contact">
+        <Button type="button">Contact Me</Button>
+      </NavLink>
     </motion.div>
   );
 };

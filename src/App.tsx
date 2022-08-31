@@ -10,13 +10,15 @@ import { AnimatePresence } from "framer-motion";
 import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobileProject";
 import NotificationsIndex from "./Components/Modals/Notifications/NotificationsIndex";
 import Mouse from "./Components/UI/Cursor/Mouse";
+import useWindowSize from "./Hooks/use-windowSize";
 
 function App() {
   const location = useLocation();
+  const { isTabletView } = useWindowSize();
 
   return (
     <Fragment>
-      <Mouse />
+      {!isTabletView && <Mouse />}
       <NavBar />
       <AnimatePresence
         initial={true}
@@ -24,7 +26,10 @@ function App() {
         onExitComplete={() => null}
       >
         <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />}>
+            <Route path="/Home/Linkedin" element={<HomePage />} />
+            <Route path="/Home/Github" element={<HomePage />} />
+          </Route>
           <Route path="/AboutMe" element={<AboutMePage />} />
           <Route path="/Resume" element={<ResumePage />} />
           <Route path="/Projects" element={<ProjectPage />}></Route>

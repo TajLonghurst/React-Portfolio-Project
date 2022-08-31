@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import Button from "../UI/Buttons/Button";
 import classes from "./HeroHeader.module.scss";
 
@@ -19,7 +20,9 @@ const HeroHeader = () => {
         </p>
       </div>
       <div className={classes.btnpostion}>
-        <Button type="button">View Projects</Button>
+        <NavLink to="/Projects">
+          <Button type="button">View Projects</Button>
+        </NavLink>
       </div>
     </Fragment>
   );

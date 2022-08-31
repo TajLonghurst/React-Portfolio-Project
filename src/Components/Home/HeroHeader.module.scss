@@ -17,18 +17,20 @@
       margin-right: 1rem;
     }
     .welcometext {
-      font-size: $Welcome-FontSize;
-      font-family: $DustinRegular;
+      font-family: $HindBold;
+      font-size: 1.1rem;
+      letter-spacing: 0px;
       color: $PrimaryHeaderColor;
       margin: 0rem;
-      letter-spacing: 1px;
-      font-weight: lighter;
     }
   }
   .title {
-    font-size: $Title-FontSize;
-    font-family: $AntonRegular;
+    font-family: $GudeaBold;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+
     color: $PrimaryHeaderColor;
+    font-size: 3rem;
     margin: 0rem;
     margin-top: 1.3rem;
     margin-bottom: 1.3rem;
@@ -36,11 +38,10 @@
     font-weight: lighter;
   }
   .smallheader {
-    font-size: 12px;
-    font-family: $DustinRegular;
-    color: $PrimaryHeaderColor;
+    font-size: 16px;
+    font-family: $HindRegular;
+    color: $PrimaryTextColor;
     font-weight: lighter;
-    letter-spacing: 1px;
     margin: 0rem;
     margin-bottom: 2rem;
   }

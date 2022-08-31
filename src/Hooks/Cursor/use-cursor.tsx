@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import useWindowSize from "../use-windowSize";
 
 const useCursor = () => {
-  const [mouseOnPage, setMouseOnPage] = useState("block");
   const { isTabletView } = useWindowSize();
+  const [mouseOnPage, setMouseOnPage] = useState("block");
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
