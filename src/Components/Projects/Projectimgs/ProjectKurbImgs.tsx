@@ -132,8 +132,8 @@ const ProjectKurbImgs = () => {
           </li>
           <li>
             <BorderlessBtn
-              color={ProjectObject[1].liveViewLink}
-              href="#"
+              color="#bbbbbb"
+              href={ProjectObject[1].liveViewLink}
               target="_blank"
               rel="noreferrer"
             >

@@ -16,7 +16,7 @@ export const ProjectObject: ProjectModel[] = [
     pathID: "URBAN",
     heroImg: URBANHOME,
     githuhLink: "https://github.com/TajLonghurst/React-SignUp-Project",
-    liveViewLink: "",
+    liveViewLink: "https://react-signup-project.firebaseapp.com/",
     images: [
       {
         id: 1,
@@ -38,7 +38,7 @@ export const ProjectObject: ProjectModel[] = [
     pathID: "KURB",
     heroImg: KURBHOME,
     githuhLink: "https://github.com/TajLonghurst/React-Products-Project",
-    liveViewLink: "",
+    liveViewLink: "https://react-product-project.firebaseapp.com/",
     images: [
       {
         id: 1,
