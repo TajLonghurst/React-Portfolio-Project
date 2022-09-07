@@ -82,7 +82,7 @@ export const ProjectObject: ProjectModel[] = [
     pathID: "NOTE2SELF",
     heroImg: NOTESHOME,
     githuhLink: "https://github.com/TajLonghurst/React-Notes-Project",
-    liveViewLink: "",
+    liveViewLink: "https://react-notes-project-bcd48.firebaseapp.com/",
     images: [
       {
         id: 1,

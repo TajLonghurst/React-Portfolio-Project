@@ -7,7 +7,7 @@ export const lazyPageLoader = {
     opacity: 1,
     transition: {
       delay: 1,
-      duration: 1,
+      duration: 2,
     },
   },
   exit: {
@@ -20,18 +20,19 @@ export const lazyPageLoader = {
 
 export const PageLoader = {
   hidden: {
-    x: "-100%",
+    // x: "-100%",
   },
   visible: {
-    x: "0%",
+    // x: "0%",
     transition: {
       duration: 1,
     },
   },
   exit: {
-    x: "100%",
+    // x: "100%",
+    opacity: 0,
     transition: {
-      delay: 0.5,
+      delay: 1.3,
       duration: 1,
     },
   },

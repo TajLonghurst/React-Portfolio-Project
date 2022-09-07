@@ -1,15 +1,21 @@
 import React, { Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Button from "../UI/Buttons/Button";
 import classes from "./HeroHeader.module.scss";
 
 const HeroHeader = () => {
+  const { socialMediaType } = useParams();
+
+  const welcomeText = socialMediaType
+    ? ` Hello, from ${socialMediaType}`
+    : "Welcome";
+
   return (
     <Fragment>
       <div className={classes.headercontainer}>
         <div className={classes.header}>
           <span className={classes.bulletpoint}></span>
-          <p className={classes.welcometext}>Hello, from Linked In</p>
+          <p className={classes.welcometext}>{welcomeText}</p>
         </div>
         <h1 className={classes.title}>
           I'm <span className={classes.titlecolor}>Taj </span>

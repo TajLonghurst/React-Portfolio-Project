@@ -11,6 +11,7 @@ import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobi
 import NotificationsIndex from "./Components/Modals/Notifications/NotificationsIndex";
 import Mouse from "./Components/UI/Cursor/Mouse";
 import useWindowSize from "./Hooks/use-windowSize";
+import PageLoading from "./Components/LazyLoading/PageLoading";
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
     <Fragment>
       {!isTabletView && <Mouse />}
       <NavBar />
+      <PageLoading />
       <AnimatePresence
         initial={true}
         exitBeforeEnter={true}
@@ -27,17 +29,16 @@ function App() {
       >
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<HomePage />}>
-            <Route path="/Home/Linkedin" element={<HomePage />} />
-            <Route path="/Home/Github" element={<HomePage />} />
+            <Route path="/Home/:socialMediaType" element={<HomePage />} />
           </Route>
           <Route path="/AboutMe" element={<AboutMePage />} />
           <Route path="/Resume" element={<ResumePage />} />
-          <Route path="/Projects" element={<ProjectPage />}></Route>
+          <Route path="/Projects" element={<ProjectPage />} />
+          <Route path="/Contact" element={<FormPage />} />
           <Route
             path="MobileProject/:projectID"
             element={<ModalMobileProject />}
           />
-          <Route path="/Contact" element={<FormPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </AnimatePresence>

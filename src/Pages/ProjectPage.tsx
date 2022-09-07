@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { Outlet } from "react-router-dom";
 import Projects from "../Components/Projects/Projects";
+import { Outlet } from "react-router-dom";
 
 const ProjectPage = () => {
   return (

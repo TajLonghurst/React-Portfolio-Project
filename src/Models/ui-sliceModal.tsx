@@ -8,4 +8,5 @@ export type uiSliceModal = {
   Not2SelfNav: boolean;
   FormIsLoading: boolean;
   FormHasError: boolean;
+  intialLoading: boolean;
 };
