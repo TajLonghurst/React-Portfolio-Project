@@ -40,7 +40,7 @@ const PageLoading = () => {
           className={classes.container}
         >
           <div className={classes.content}>
-            <h1 className={classes.text}>Taj Longhurst Porfolio</h1>
+            <h1 className={classes.text}>Taj Longhurst's Porfolio</h1>
             <AnimatePresence
               initial={true}
               exitBeforeEnter={true}

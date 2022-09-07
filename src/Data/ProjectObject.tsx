@@ -6,8 +6,8 @@ import KURBHOME from "../Assets/Images/KurbHome.png";
 import KURBPRODUCTS from "../Assets/Images/KurbProducts.png";
 import KURBINDVIDUALPRODUCTS from "../Assets/Images/KurbInvidualProducts.png";
 import NOTESHOME from "../Assets/Images/NotesHome.png";
-import NOTESCREATENOTE from "../Assets/Images/NotesCreateNote.png";
-import NOTESVIEWNOTE from "../Assets/Images/NotesViewNote.png";
+import NOTESCREATENOTE from "../Assets/Images/Note2SelfAddPage.png";
+import NOTESVIEWNOTE from "../Assets/Images/Note2SelfViewPage.png";
 
 export const ProjectObject: ProjectModel[] = [
   {
