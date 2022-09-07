@@ -1,12 +1,23 @@
 import { useState, useEffect } from "react";
 import useWindowSize from "../use-windowSize";
+import { useCursorModal } from "../../Models/useCursorModal";
+
+//Line 8 to 11 are caluclations of finding the width and height of the page and dividing it in haft to center the custome cursor in the middle of the page on first render.
+// As well as -17px from the width if any of the scroll bars are active.
+
+const scrollbar = window.scrollbars;
+
+const screenWidthY = !scrollbar ? window.innerWidth : window.innerWidth - 17;
+const screenWidthX = window.innerHeight + 10;
+const hotSpotX = screenWidthY / 2;
+const hotSpotY = screenWidthX / 2;
 
 const useCursor = () => {
   const { isTabletView } = useWindowSize();
   const [mouseOnPage, setMouseOnPage] = useState("block");
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
+  const [mousePosition, setMousePosition] = useState<useCursorModal>({
+    x: hotSpotX,
+    y: hotSpotY,
   });
 
   useEffect(() => {
@@ -42,7 +53,6 @@ const useCursor = () => {
       y: mousePosition.y - 15,
       border: "3px solid #6300ff",
       transition: {
-        // duration: 0,
         type: "spring",
         damping: "130",
         stiffness: 1000,
@@ -57,7 +67,6 @@ const useCursor = () => {
       width: 50,
       height: 50,
       transition: {
-        // duration: 0,
         type: "spring",
         damping: "130",
         stiffness: 1000,

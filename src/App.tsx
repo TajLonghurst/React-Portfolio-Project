@@ -10,18 +10,16 @@ import { AnimatePresence } from "framer-motion";
 import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobileProject";
 import NotificationsIndex from "./Components/Modals/Notifications/NotificationsIndex";
 import Mouse from "./Components/UI/Cursor/Mouse";
-import useWindowSize from "./Hooks/use-windowSize";
 import PageLoading from "./Components/LazyLoading/PageLoading";
 
 function App() {
   const location = useLocation();
-  const { isTabletView } = useWindowSize();
 
   return (
     <Fragment>
-      {!isTabletView && <Mouse />}
-      <NavBar />
       <PageLoading />
+      <Mouse />
+      <NavBar />
       <AnimatePresence
         initial={true}
         exitBeforeEnter={true}
