@@ -12,6 +12,10 @@ This is my Protfolio website, using TypeScript and my first understanding of Scs
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" height="40"/>
 </p>
+
+<h3 align="left">Figma Link:</h3>
+
+- https://www.figma.com/file/CgO1jXUKfy0nDnD8YGyHCD/Taj-Longhurst-Portfolio?node-id=0%3A1
   
 <h3 align="left">Third party libarys:</h3>
 
