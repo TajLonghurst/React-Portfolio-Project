@@ -6,8 +6,8 @@
   // background-color: #181818;
   background-color: $PrimaryBgColor;
   width: 100%;
-  height: 100%;
-  z-index: 1000;
+  height: 100vh;
+  z-index: 1001;
   .content {
     position: absolute;
     top: 50%;
@@ -16,6 +16,18 @@
     display: flex;
     flex-direction: column;
     width: 20%;
+    @include media-breakpoint-min($breakpoints-xs) {
+      width: 80%;
+    }
+    @include media-breakpoint-min($breakpoints-sm) {
+      width: 60%;
+    }
+    @include media-breakpoint-min($breakpoints-md) {
+      width: 30%;
+    }
+    @include media-breakpoint-min($breakpoints-md) {
+      width: 20%;
+    }
     .text {
       display: flex;
       justify-content: center;
