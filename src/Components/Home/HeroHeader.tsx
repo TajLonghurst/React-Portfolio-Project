@@ -22,7 +22,7 @@ const HeroHeader = () => {
           Longhurst
         </h1>
         <p className={classes.smallheader}>
-          A self modivated Graduate Developer
+          A self-motivated Graduate Developer
         </p>
       </div>
       <div className={classes.btnpostion}>
