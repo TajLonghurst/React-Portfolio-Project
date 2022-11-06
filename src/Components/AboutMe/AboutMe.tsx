@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./AboutMe.module.scss";
-import AboutMeIcon from "../../Assets/Icons/WebIcons/AboutMeIcon.svg";
 import AboutMeContent from "./AboutMeContent";
 import { pageimgLoadAnimation } from "../../Animations/AboutMe";
+import ProfliePic from "../../Assets/Images/Taj-Longhurst-AboutPage.png";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
@@ -20,11 +20,7 @@ const AboutMe = () => {
             exit="exit"
             className={classes.imgcontainer}
           >
-            <img
-              className={classes.img}
-              src={AboutMeIcon}
-              alt="Img Failed to load"
-            />
+            <img className={classes.img} src={ProfliePic} alt="Img Failed to load" />
             <div className={classes.imgbackground}></div>
           </motion.div>
         </div>

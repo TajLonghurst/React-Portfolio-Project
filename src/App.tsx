@@ -20,11 +20,7 @@ function App() {
       <PageLoading />
       <Mouse />
       <NavBar />
-      <AnimatePresence
-        initial={true}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<HomePage />}>
             <Route path="/Home/:socialMediaType" element={<HomePage />} />
@@ -33,10 +29,7 @@ function App() {
           <Route path="/Resume" element={<ResumePage />} />
           <Route path="/Projects" element={<ProjectPage />} />
           <Route path="/Contact" element={<FormPage />} />
-          <Route
-            path="MobileProject/:projectID"
-            element={<ModalMobileProject />}
-          />
+          <Route path="MobileProject/:projectID" element={<ModalMobileProject />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </AnimatePresence>
