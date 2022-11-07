@@ -7,10 +7,10 @@ const Hero = () => {
   return (
     <section className={classes.container}>
       <div className={classes.row}>
-        <div className={classes.col}>
+        <div className={classes.col_img}>
           <HeroImage />
         </div>
-        <div className={classes.col}>
+        <div className={classes.col_header}>
           <HeroHeader />
         </div>
       </div>

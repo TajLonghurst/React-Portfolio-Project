@@ -1,55 +1,88 @@
 @import "../../Scss/index";
 
+// .imgcontainer {
+//   position: relative;
+//   @include DisplayFlexCenter(row);
+//   justify-content: flex-end;
+//   margin-inline: 1rem;
+//   margin-right: 7rem;
+//   .imgbackground {
+//     content: "";
+//     background-color: $SecondaryBgColor;
+//     width: 12rem;
+//     height: 30rem;
+//     position: relative;
+//   }
+//   .img {
+//     width: 25rem;
+//     height: 25rem;
+//     margin-left: -13rem;
+//     z-index: 1;
+//   }
+//   @include media-breakpoint-min($breakpoints-xs) {
+//     & {
+//       display: none;
+//     }
+//   }
+//   @include media-breakpoint-min($breakpoints-md) {
+//     & {
+//       position: relative;
+//       @include DisplayFlexCenter(row);
+//       justify-content: flex-end;
+//       .imgbackground {
+//         content: "";
+//         background-color: $SecondaryBgColor;
+//         width: 12rem;
+//         height: 30rem;
+//         position: relative;
+//       }
+//       .img {
+//         width: 25rem;
+//         height: 25rem;
+//         margin-left: -13rem;
+//         z-index: 1;
+//       }
+//     }
+//   }
+// }
+
 .imgcontainer {
   position: relative;
-  @include DisplayFlexCenter(row);
-  justify-content: flex-end;
-  margin-inline: 1rem;
-  margin-right: 7rem;
-  .imgbackground {
-    content: "";
-    background-color: $SecondaryBgColor;
-    width: 12rem;
-    height: 30rem;
-    position: relative;
-  }
-  .img {
-    width: 25rem;
-    height: 25rem;
-    margin-left: -13rem;
-    z-index: 1;
-  }
+  width: 100%;
+  height: 100%;
   @include media-breakpoint-min($breakpoints-xs) {
     & {
       display: none;
     }
   }
-  @include media-breakpoint-min($breakpoints-sm) {
-  }
-  @include media-breakpoint-min($breakpoints-md) {
+  @include media-breakpoint-min($breakpoints-xl) {
     & {
-      position: relative;
-      @include DisplayFlexCenter(row);
-      justify-content: flex-end;
-      .imgbackground {
-        content: "";
-        background-color: $SecondaryBgColor;
-        width: 12rem;
-        height: 30rem;
-        position: relative;
-      }
-      .img {
-        width: 25rem;
-        height: 25rem;
-        margin-left: -13rem;
-        z-index: 1;
-      }
+      width: 100%;
+      margin-top: 0%;
     }
   }
   @include media-breakpoint-min($breakpoints-lg) {
-  }
-  @include media-breakpoint-min($breakpoints-xl) {
-  }
-  @include media-breakpoint-min($breakpoints-xxl) {
+    & {
+      @include DisplayFlexCenter(row);
+      justify-content: flex-start;
+      .imgbackground {
+        content: "";
+        position: relative;
+        background-color: $SecondaryBgColor;
+        width: 35%;
+        margin-left: 15%;
+        height: 29.6rem;
+        @include DisplayFlexCenter(row);
+      }
+      .img {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -43%);
+        max-height: 26rem;
+        object-fit: contain;
+      }
+    }
   }
 }

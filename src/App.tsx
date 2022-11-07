@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Fragment>
-      <PageLoading />
+      {/* <PageLoading /> */}
       <Mouse />
       <NavBar />
       <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
