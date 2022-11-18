@@ -37,11 +37,7 @@ const ProjectImgs = () => {
       exit="exit"
       className={classes.container}
     >
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {projectAnimation && (
           <motion.div
             variants={bgblock}
@@ -52,32 +48,16 @@ const ProjectImgs = () => {
           ></motion.div>
         )}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {KurbNav && <ProjectKurbImgs />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {UrbanNav && <ProjectUrban />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {PortfolioNav && <ProjectProtfolio />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {Not2SelfNav && <ProjectNote2Self />}
       </AnimatePresence>
     </motion.div>

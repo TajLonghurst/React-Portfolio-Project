@@ -11,6 +11,7 @@ import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobi
 import NotificationsIndex from "./Components/Modals/Notifications/NotificationsIndex";
 import Mouse from "./Components/UI/Cursor/Mouse";
 import PageLoading from "./Components/LazyLoading/PageLoading";
+import ScrollToTop from "./Hooks/use-scrollTop";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
   return (
     <Fragment>
       {/* <PageLoading /> */}
+      <ScrollToTop />
       <Mouse />
       <NavBar />
       <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
