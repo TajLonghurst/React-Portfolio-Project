@@ -13,7 +13,7 @@ import { pageLoadAnimation } from "../../Animations/ProjectView";
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
   const [projectAnimation, setProjectAnimation] = useState(false);
-  const firstUpdate = useRef(true);
+  const firstUpdate = useRef(false);
 
   const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav } = projectIsActive;
 
@@ -27,7 +27,7 @@ const ProjectImgs = () => {
         setProjectAnimation((prevState) => !prevState);
       }
     } else {
-      firstUpdate.current = false;
+      firstUpdate.current = true;
     }
     return () => {
       clearTimeout(timer);
