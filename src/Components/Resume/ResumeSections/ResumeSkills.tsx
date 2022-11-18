@@ -32,11 +32,12 @@ const ResumeSkills = () => {
           <div className={classes.col}>
             <ul className={classes.list}>
               <li className={classes.itemtitle}>Backend</li>
-              {/* <li className={classes.item}>NodeJs</li>
-            <li className={classes.item}>MongoDB</li>
-            <li className={classes.item}>Express</li>
-            <li className={classes.item}>GraphQL</li> */}
-              <li className={classes.item}>None . . .</li>
+              <li className={classes.item}>NodeJS</li>
+              <li className={classes.item}>Express</li>
+              <li className={classes.item}>MongoDB</li>
+              <li className={classes.item}>Mongoose</li>
+              {/* <li className={classes.item}>GraphQL</li> */}
+              {/* <li className={classes.item}>None . . .</li> */}
             </ul>
           </div>
         </div>
