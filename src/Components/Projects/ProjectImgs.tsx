@@ -12,14 +12,14 @@ import { pageLoadAnimation } from "../../Animations/ProjectView";
 
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
-  const [projectAnimation, setProjectAnimation] = useState(true);
+  const [projectAnimation, setProjectAnimation] = useState(false);
 
   const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav } = projectIsActive;
 
   useEffect(() => {
     if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
       const timer = setTimeout(() => {
-        setProjectAnimation(false);
+        setProjectAnimation(true);
       }, 1000);
       setProjectAnimation((prevState) => !prevState);
       //console.log(timer);
