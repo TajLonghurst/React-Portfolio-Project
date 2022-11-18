@@ -19,7 +19,7 @@ const ProjectImgs = () => {
   useEffect(() => {
     if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
       const timer = setTimeout(() => {
-        setProjectAnimation(true);
+        setProjectAnimation(false);
       }, 1000);
       setProjectAnimation((prevState) => !prevState);
       //console.log(timer);
