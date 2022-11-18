@@ -4,7 +4,6 @@ import ProjectImgsMobile from "./ProjectImgsMobile";
 import ProjectNav from "./ProjectNav";
 import classes from "./Projects.module.scss";
 import useWindowSize from "../../Hooks/use-windowSize";
-import { AnimatePresence } from "framer-motion";
 
 const Projects = () => {
   const { isSmallDesktopView } = useWindowSize();
@@ -15,9 +14,7 @@ const Projects = () => {
       <div className={classes.row}>
         {!isSmallDesktopView && <ProjectImgsMobile />}
         {isSmallDesktopView && <ProjectNav />}
-        <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
-          {isSmallDesktopView && <ProjectImgs />}
-        </AnimatePresence>
+        {isSmallDesktopView && <ProjectImgs />}
       </div>
     </section>
   );
