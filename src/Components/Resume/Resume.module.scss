@@ -32,7 +32,6 @@
   }
   .row {
     @include make-row();
-    // min-height: 20rem;
     .col_3 {
       @include make-col(xs, 12);
       @include make-col(sm, 12);

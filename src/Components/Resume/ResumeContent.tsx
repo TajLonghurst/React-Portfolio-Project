@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./ResumeContent.module.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../ReduxStore/Index";
@@ -20,39 +19,19 @@ const ResumeContent = () => {
       exit="exit"
       className={classes.container}
     >
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {isActive[0].isActive && <ResumeEducation />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {isActive[1].isActive && <ResumeWorkExperience />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {isActive[2].isActive && <ResumeSkills />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {isActive[3].isActive && <ResumeUdemyCourse />}
       </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {isActive[4].isActive && <ResumeReferances />}
       </AnimatePresence>
     </motion.div>

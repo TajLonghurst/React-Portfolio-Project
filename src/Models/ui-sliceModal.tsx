@@ -9,4 +9,6 @@ export type uiSliceModal = {
   FormIsLoading: boolean;
   FormHasError: boolean;
   intialLoading: boolean;
+  mobileResumeTitle: string;
+  mobileResumeNavTitle: string;
 };

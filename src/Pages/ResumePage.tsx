@@ -1,28 +1,17 @@
-import React, { Fragment } from "react";
-// import { AnimatePresence } from "framer-motion";
+import React, { Fragment, useEffect } from "react";
 import Resume from "../Components/Resume/Resume";
-// import PageLoading from "../Components/LazyLoading/PageLoading";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../ReduxStore/ui-slice";
 
 const ResumePage = () => {
-  //   const [isAnimated, setIsAnimated] = useState(false);
+  const dispatch = useDispatch();
 
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => setIsAnimated(false), 2000);
-  //     setIsAnimated(true);
-  //     return () => {
-  //       clearTimeout(timer);
-  //     };
-  //   }, []);
+  useEffect(() => {
+    dispatch(uiActions.mobliePageTitle({ title: "Resume" }));
+  }, [dispatch]);
 
   return (
     <Fragment>
-      {/* <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
-        {isAnimated && <PageLoading />}
-      </AnimatePresence> */}
       <Resume />
     </Fragment>
   );

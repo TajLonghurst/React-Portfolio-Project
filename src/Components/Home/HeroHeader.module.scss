@@ -16,14 +16,6 @@
       text-align: center;
     }
   }
-  // @include media-breakpoint-min($breakpoints-lg) {
-  //   & {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: flex-start;
-  //     margin: 1rem;
-  //   }
-  // }
   .header {
     @include DisplayFlexCenter(row);
     justify-content: flex-start;

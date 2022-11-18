@@ -11,6 +11,8 @@ const initialState: uiSliceModal = {
   FormIsLoading: false,
   FormHasError: false,
   intialLoading: true,
+  mobileResumeTitle: "",
+  mobileResumeNavTitle: "",
 };
 
 const uiSlice = createSlice({
@@ -63,6 +65,18 @@ const uiSlice = createSlice({
     },
     intialLoading(state) {
       state.intialLoading = false;
+    },
+    mobliePageTitle(state, actions: PayloadAction<{ title: string }>) {
+      state.mobileResumeTitle = actions.payload.title;
+    },
+    mobileResumeNavTitle(state) {
+      if (state.mobileResumeTitle === "Resume") {
+        for (let x = 0; x < state.ResumeList.length; x++) {
+          if (state.ResumeList[x].isActive === true) {
+            state.mobileResumeNavTitle = state.ResumeList[x].label;
+          }
+        }
+      }
     },
   },
 });

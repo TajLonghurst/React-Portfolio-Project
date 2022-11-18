@@ -1,28 +1,17 @@
-import React, { Fragment } from "react";
-// import { AnimatePresence } from "framer-motion";
+import React, { Fragment, useEffect } from "react";
 import Form from "../Components/ContactMe/Form";
-// import PageLoading from "../Components/LazyLoading/PageLoading";
+import { uiActions } from "../ReduxStore/ui-slice";
+import { useDispatch } from "react-redux";
 
 const FormPage = () => {
-  //   const [isAnimated, setIsAnimated] = useState(false);
+  const dispatch = useDispatch();
 
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => setIsAnimated(false), 2000);
-  //     setIsAnimated(true);
-  //     return () => {
-  //       clearTimeout(timer);
-  //     };
-  //   }, []);
+  useEffect(() => {
+    dispatch(uiActions.mobliePageTitle({ title: "Contact Me" }));
+  }, [dispatch]);
 
   return (
     <Fragment>
-      {/* <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
-        {isAnimated && <PageLoading />}
-      </AnimatePresence> */}
       <Form />
     </Fragment>
   );

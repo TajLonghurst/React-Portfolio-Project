@@ -6,15 +6,24 @@
   top: 0;
   left: 0;
   z-index: 900;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border-bottom: 1px solid #2b2b2b;
   background-color: $PrimaryBgColor;
   width: 100%;
-  .mobilenavlogo {
-    position: absolute;
-    padding-inline: 1rem;
+  padding-inline: 1rem;
+  .mobilenavpage {
+    position: relative;
     left: 0;
     font-family: $GudeaBold;
-    color: $PrimaryNavTextColor;
+    color: $PrimaryHeaderColor;
+    font-size: 16px;
+  }
+  .mobilennavtitle {
+    position: relative;
+    font-family: $GudeaBold;
+    color: $PrimaryTextColor;
     font-size: 16px;
   }
   .mobilenavbar {
@@ -45,9 +54,9 @@
     width: fit-content;
     padding-inline: 2.2rem;
     border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background-color: $PrimaryBgColor;
   }
   .navlist {

@@ -10,8 +10,10 @@ const ResumeNav: React.FC<ResumeNavModel> = (props) => {
   const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   const { isTabletView } = useWindowSize();
   const dispatch = useDispatch();
+
   const ResumeNavOnClickHandler = () => {
     dispatch(uiActions.ResumeClickHandler({ id: props.id }));
+    dispatch(uiActions.mobileResumeNavTitle());
   };
 
   const Styles = props.isActive ? classes.navitemactive : classes.navitem;
