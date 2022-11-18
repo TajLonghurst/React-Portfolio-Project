@@ -38,7 +38,7 @@ const ProjectImgs = () => {
       className={classes.container}
     >
       <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
-        {/* {projectAnimation && (
+        {projectAnimation && (
           <motion.div
             variants={bgblock}
             initial="hidden"
@@ -46,7 +46,7 @@ const ProjectImgs = () => {
             exit="exit"
             className={classes.bgblock}
           ></motion.div>
-        )} */}
+        )}
       </AnimatePresence>
       <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {KurbNav && <ProjectKurbImgs />}
