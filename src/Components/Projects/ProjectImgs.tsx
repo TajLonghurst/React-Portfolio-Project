@@ -37,7 +37,7 @@ const ProjectImgs = () => {
       exit="exit"
       className={classes.container}
     >
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
         {projectAnimation && (
           <motion.div
             variants={bgblock}
