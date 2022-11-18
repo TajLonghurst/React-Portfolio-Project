@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./Hero.module.scss";
 import HeroHeader from "./HeroHeader";
 import HeroImage from "./HeroImage";

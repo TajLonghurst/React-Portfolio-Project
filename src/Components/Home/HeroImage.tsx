@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./HeroImage.module.scss";
 // import AboutMeIcon from "../../Assets/Icons/WebIcons/AboutMeIcon.svg";
 import Pfp from "../../Assets/Images/Taj-Longhurst-AboutPage.png";

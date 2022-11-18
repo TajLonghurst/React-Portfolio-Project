@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Button from "../UI/Buttons/Button";
 import classes from "./HeroHeader.module.scss";
@@ -27,11 +26,11 @@ const HeroHeader = () => {
           Longhurst
         </h1>
         <p className={classes.smallheader}>A self-motivated Graduate Developer</p>
-      </div>
-      <div className={classes.btnpostion}>
-        <NavLink to="/Projects">
-          <Button type="button">View Projects</Button>
-        </NavLink>
+        <div className={classes.btnpostion}>
+          <NavLink to="/Projects">
+            <Button type="button">View Projects</Button>
+          </NavLink>
+        </div>
       </div>
     </motion.div>
   );

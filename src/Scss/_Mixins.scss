@@ -17,8 +17,6 @@
 
 @mixin Container {
   height: 100vh;
-  min-height: 100vh;
-  min-height: stretch;
   margin-left: 20%;
   margin-right: 20%;
   @include media-breakpoint-min($breakpoints-xs) {
