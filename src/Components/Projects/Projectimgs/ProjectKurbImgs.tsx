@@ -62,18 +62,10 @@ const ProjectKurbImgs = () => {
               return (
                 <li
                   key={item.id}
-                  className={
-                    index === slideIndex
-                      ? classes.photoactive
-                      : classes.photoitem
-                  }
+                  className={index === slideIndex ? classes.photoactive : classes.photoitem}
                 >
                   {index === slideIndex && (
-                    <img
-                      className={classes.middlephoto}
-                      src={item.img}
-                      alt="failed"
-                    />
+                    <img className={classes.middlephoto} src={item.img} alt="failed" />
                   )}
                   <AnimatePresence
                     initial={false}
@@ -93,11 +85,7 @@ const ProjectKurbImgs = () => {
                 </li>
               );
             })}
-            <AnimatePresence
-              initial={false}
-              exitBeforeEnter={false}
-              onExitComplete={() => null}
-            >
+            <AnimatePresence initial={false} exitBeforeEnter={false} onExitComplete={() => null}>
               {!isHover && (
                 <motion.div
                   variants={overlaymiddle}
@@ -122,11 +110,7 @@ const ProjectKurbImgs = () => {
         </div>
         <ul className={classes.context}>
           <li>
-            <LinkButton
-              href={ProjectObject[1].githuhLink}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <LinkButton href={ProjectObject[1].githuhLink} target="_blank" rel="noreferrer">
               GitHub Project
             </LinkButton>
           </li>

@@ -54,6 +54,7 @@ const ProjectUrban = () => {
             className={classes.arrowIcon}
             src={ArrowLeftIcon}
             alt="failed"
+           // onLoad={} for onece the image is finished loading
           />
           <ul className={classes.photolist}>
             {ProjectObject[0].images.map((item, index) => {
