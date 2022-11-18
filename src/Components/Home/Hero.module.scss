@@ -3,6 +3,16 @@
 .container {
   @include DisplayFlexCenter(row);
   @include Container;
+  @include media-breakpoint-min($breakpoints-xs) {
+    & {
+      height: 100%;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-sm) {
+    & {
+      height: 100vh;
+    }
+  }
 }
 .row {
   @include make-row();
