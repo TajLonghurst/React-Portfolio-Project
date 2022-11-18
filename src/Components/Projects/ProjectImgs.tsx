@@ -12,7 +12,7 @@ import { pageLoadAnimation } from "../../Animations/ProjectView";
 
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
-  const [projectAnimation, setProjectAnimation] = useState(false);
+  const [projectAnimation, setProjectAnimation] = useState(true);
 
   const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav } = projectIsActive;
 
@@ -37,8 +37,8 @@ const ProjectImgs = () => {
       exit="exit"
       className={classes.container}
     >
-      <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
-        {projectAnimation && (
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+        {/* {projectAnimation && (
           <motion.div
             variants={bgblock}
             initial="hidden"
@@ -46,7 +46,7 @@ const ProjectImgs = () => {
             exit="exit"
             className={classes.bgblock}
           ></motion.div>
-        )}
+        )} */}
       </AnimatePresence>
       <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {KurbNav && <ProjectKurbImgs />}
