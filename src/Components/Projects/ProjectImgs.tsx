@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import classes from "./ProjectImgs.module.scss";
 import ProjectKurbImgs from "./Projectimgs/ProjectKurbImgs";
 import ProjectUrban from "./Projectimgs/ProjectUrbanImgs";
@@ -13,20 +13,25 @@ import { pageLoadAnimation } from "../../Animations/ProjectView";
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
   const [projectAnimation, setProjectAnimation] = useState(false);
+  const firstUpdate = useRef(true);
 
   const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav } = projectIsActive;
 
   useEffect(() => {
-    if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
-      const timer = setTimeout(() => {
-        setProjectAnimation(false);
-      }, 1000);
-      setProjectAnimation((prevState) => !prevState);
-      //console.log(timer);
-      return () => {
-        clearTimeout(timer);
-      };
+    let timer: any;
+    if (firstUpdate.current === true) {
+      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
+        timer = setTimeout(() => {
+          setProjectAnimation(false);
+        }, 1000);
+        setProjectAnimation((prevState) => !prevState);
+      }
+    } else {
+      firstUpdate.current = false;
     }
+    return () => {
+      clearTimeout(timer);
+    };
   }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav]);
 
   return (
