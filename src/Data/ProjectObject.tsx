@@ -8,6 +8,9 @@ import KURBINDVIDUALPRODUCTS from "../Assets/Images/KurbInvidualProducts.png";
 import NOTESHOME from "../Assets/Images/NotesHome.png";
 import NOTESCREATENOTE from "../Assets/Images/Note2SelfAddPage.png";
 import NOTESVIEWNOTE from "../Assets/Images/Note2SelfViewPage.png";
+import PORTFOLIOSHOME from "../Assets/Images/ProtfolioHome.png";
+import PORTFOLIORESUME from "../Assets/Images/ProtfolioResume.png";
+import PORTFOLIOCONTACT from "../Assets/Images/ProtfolioContact.png";
 
 export const ProjectObject: ProjectModel[] = [
   {
@@ -60,19 +63,19 @@ export const ProjectObject: ProjectModel[] = [
     pathID: "PORTFOLIO",
     heroImg: URBANHOME,
     githuhLink: "https://github.com/TajLonghurst/React-Portfolio-Project",
-    liveViewLink: "",
+    liveViewLink: "https://deploytaj.com/",
     images: [
       {
         id: 1,
-        img: URBANHOME,
+        img: PORTFOLIOSHOME,
       },
       {
         id: 2,
-        img: URBANLOGIN,
+        img: PORTFOLIORESUME,
       },
       {
         id: 3,
-        img: URBANABOUTUS,
+        img: PORTFOLIOCONTACT,
       },
     ],
   },
