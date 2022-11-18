@@ -10,7 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import { ModalMobileProject } from "./Components/Modals/MobileProjects/ModalMobileProject";
 import NotificationsIndex from "./Components/Modals/Notifications/NotificationsIndex";
 import Mouse from "./Components/UI/Cursor/Mouse";
-import PageLoading from "./Components/LazyLoading/PageLoading";
+// import PageLoading from "./Components/LazyLoading/PageLoading";
 import ScrollToTop from "./Hooks/use-scrollTop";
 
 function App() {

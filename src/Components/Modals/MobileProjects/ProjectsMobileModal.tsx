@@ -13,13 +13,15 @@ const ProjectsMobileModal = () => {
   const { projectID } = useParams();
   const [imgData, setImgData] = useState<images[]>([]);
   const [hrefLink, setHerfLink] = useState<string>();
+  const [liveViewLink, setliveViewLink] = useState<string>();
 
   useEffect(() => {
     for (let i = 0; i < ProjectObject.length; i++) {
       if (projectID === ProjectObject[i].pathID) {
         return (
           setImgData(ProjectObject[i].images),
-          setHerfLink(ProjectObject[i].githuhLink)
+          setHerfLink(ProjectObject[i].githuhLink),
+          setliveViewLink(ProjectObject[i].liveViewLink)
         );
       }
     }
@@ -40,12 +42,7 @@ const ProjectsMobileModal = () => {
       <div className={classes.topbar}></div>
       <div className={classes.nav}>
         <h1 className={classes.title}>{projectID}</h1>
-        <img
-          onClick={onCloseHandler}
-          className={classes.exiticon}
-          src={XIcon}
-          alt="X"
-        />
+        <img onClick={onCloseHandler} className={classes.exiticon} src={XIcon} alt="X" />
       </div>
       <ul className={classes.imglist}>
         {imgData.map((item) => {
@@ -57,15 +54,10 @@ const ProjectsMobileModal = () => {
         })}
       </ul>
       <div className={classes.btncontent}>
-        <BorderlessBtn
-          color="#bbbbbb"
-          target="_blank"
-          rel="noreferrer"
-          href={hrefLink || "#"}
-        >
+        <BorderlessBtn color="#bbbbbb" target="_blank" rel="noreferrer" href={hrefLink || "#"}>
           Github Project
         </BorderlessBtn>
-        <BorderlessBtn target="_blank" rel="noreferrer" href="#">
+        <BorderlessBtn target="_blank" rel="noreferrer" href={liveViewLink || "#"}>
           Live View
         </BorderlessBtn>
       </div>
