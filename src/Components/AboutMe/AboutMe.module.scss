@@ -18,8 +18,6 @@
   }
   .row {
     @include make-row();
-    // align-items: flex-start;
-
     @include media-breakpoint-min($breakpoints-xs) {
       & {
         flex-direction: column-reverse;
@@ -47,71 +45,129 @@
       @include make-col(xl, 5);
       @include make-col(xxl, 5);
       @include DisplayFlexCenter(row);
-      justify-content: flex-end;
-      @include media-breakpoint-min($breakpoints-xs) {
-        & {
-          justify-content: center;
-        }
-      }
-      @include media-breakpoint-min($breakpoints-sm) {
-        & {
-          justify-content: center;
-        }
-      }
-      @include media-breakpoint-min($breakpoints-md) {
-        & {
-          justify-content: center;
-        }
-      }
-      @include media-breakpoint-min($breakpoints-xl) {
-        & {
-          justify-content: flex-end;
-        }
-      }
-      .imgcontainer {
+      .imgcontent {
         position: relative;
         width: 100%;
-        height: 100%;
-        @include media-breakpoint-min($breakpoints-xs) {
-          & {
-            width: 70%;
-          }
-        }
-        @include media-breakpoint-min($breakpoints-sm) {
-          & {
-            width: 70%;
-          }
-        }
-        @include media-breakpoint-min($breakpoints-md) {
-          & {
-            width: 50%;
-          }
-        }
-        @include media-breakpoint-min($breakpoints-xl) {
-          & {
-            width: 100%;
-            margin-top: 0%;
-          }
-        }
-        @include DisplayFlexCenter(row);
-        justify-content: flex-end;
-        .imgbackground {
-          content: "";
-          position: relative;
-          background-color: $SecondaryBgColor;
-          width: 50%;
-          height: 29.6rem;
-          @include DisplayFlexCenter(row);
-          align-self: center;
-        }
-        .img {
-          position: absolute;
+        object-fit: contain;
+        .imgcontainer {
           z-index: 1;
+          position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -43%);
-          max-height: 26rem;
-          object-fit: contain;
+          transform: translate(-50%, -32.3%);
+          @include media-breakpoint-min($breakpoints-xs) {
+            & {
+              transform: translate(-50%, -45.7%);
+            }
+          }
+          @include media-breakpoint-min($breakpoints-xl) {
+            & {
+              transform: translate(-50%, -32.3%);
+            }
+          }
+          .img {
+            position: relative;
+            width: 22rem;
+            height: 22rem;
+            object-fit: contain;
+            @include media-breakpoint-min($breakpoints-xs) {
+              & {
+                width: 10rem;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-xl) {
+              & {
+                width: 22rem;
+              }
+            }
+          }
+        }
+        .colorbg {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-end;
+          height: 100%;
+          width: 100%;
+          .imgbackground {
+            content: "";
+            position: relative;
+            background-color: $SecondaryBgColor;
+            width: 50%;
+            height: 29.6rem;
+            @include DisplayFlexCenter(row);
+            align-self: center;
+            @include media-breakpoint-min($breakpoints-xs) {
+              & {
+                height: 17rem;
+                width: 30%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-sm) {
+              & {
+                height: 17rem;
+                width: 30%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-md) {
+              & {
+                height: 17rem;
+                width: 20%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-lg) {
+              & {
+                height: 17rem;
+                width: 15%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-xl) {
+              & {
+                width: 50%;
+                height: 29.6rem;
+              }
+            }
+          }
+          .imgbackgroundfiller {
+            content: "";
+            position: relative;
+            background-color: none;
+            width: 50%;
+            height: 29.6rem;
+            @include DisplayFlexCenter(row);
+            align-self: center;
+            @include media-breakpoint-min($breakpoints-xs) {
+              & {
+                height: 17rem;
+                width: 30%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-sm) {
+              & {
+                height: 17rem;
+                width: 30%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-md) {
+              & {
+                height: 17rem;
+                width: 20%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-lg) {
+              & {
+                height: 17rem;
+                width: 15%;
+              }
+            }
+            @include media-breakpoint-min($breakpoints-xl) {
+              & {
+                width: 50%;
+                height: 29.6rem;
+              }
+            }
+          }
         }
       }
     }

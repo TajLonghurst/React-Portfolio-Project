@@ -18,10 +18,15 @@ const AboutMe = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className={classes.imgcontainer}
+            className={classes.imgcontent}
           >
-            <img className={classes.img} src={ProfliePic} alt="Img Failed to load" />
-            <div className={classes.imgbackground}></div>
+            <div className={classes.imgcontainer}>
+              <img className={classes.img} src={ProfliePic} alt="Img Failed to load" />
+            </div>
+            <div className={classes.colorbg}>
+              <div className={classes.imgbackgroundfiller}></div>
+              <div className={classes.imgbackground}></div>
+            </div>
           </motion.div>
         </div>
       </div>
