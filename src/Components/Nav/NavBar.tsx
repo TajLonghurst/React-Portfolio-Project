@@ -28,16 +28,16 @@ const NavBar = () => {
   return (
     <Fragment>
       {isMobileView && (
-        <div className={classes.moblienavlogopostion}>
+        <nav role="banner" className={classes.moblienavlogopostion}>
           <div className={classes.mobilenavbar}>
             <div className={classes.mobilenavpage}>{pagelabel}</div>
             {resumePageisActive && (
               <div className={classes.mobilennavtitle}>{" / " + resumeNavlabel}</div>
             )}
           </div>
-        </div>
+        </nav>
       )}
-      <nav className={navClasses}>
+      <nav role="banner" className={navClasses}>
         <div className={classes.navbar}>
           <div className={classes.navlogo}>Taj Longhurst</div>
           <ul className={classes.navlist}>
