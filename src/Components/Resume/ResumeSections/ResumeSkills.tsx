@@ -25,8 +25,8 @@ const ResumeSkills = () => {
               <li className={classes.item}>Redux</li>
               <li className={classes.item}>Axois</li>
               <li className={classes.item}>Framer-Motion</li>
-              <li className={classes.item}>React-Router</li>
-              <li className={classes.item}>Email JS</li>
+              <li className={classes.item}>JWT Auth</li>
+              <li className={classes.item}>JOI validation</li>
             </ul>
           </div>
           <div className={classes.col}>

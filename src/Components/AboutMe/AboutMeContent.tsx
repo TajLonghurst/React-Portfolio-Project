@@ -35,18 +35,13 @@ const AboutMeContent = () => {
       </div>
       <div className={classes.content}>
         <p className={classes.aboutmetext}>
-          Madison Blackstone is a director of brand marketing, with experience
-          managing global teams and multi-million-dollar campaigns. Her
-          background in brand strategy, visual design, and account management
-          inform her mindful but competitive approach. Madison Blackstone is a
-          director of brand marketing, with experience managing global teams and
-          multi-million-dollar campaigns. Her background in brand strategy,
-          visual design, and account management inform her mindful but
-          competitive approach. Madison Blackstone is a director of brand
-          marketing, with experience managing global teams and
-          multi-million-dollar campaigns. Her background in brand strategy,
-          visual design, and account management inform her mindful but
-          competitive approach.
+          Hello and thanks for stopping by. After a few years of study, I’m looking now for
+          opportunities to break into the IT industry. More recently, I’ve been skilling up on React
+          and NodeJS, so I can offer a good mix of front and back-end. Everything you see here on my
+          website, I have put together myself. And while I can’t pretend to have a ton of
+          experience, I can tell you that I’m a hard worker, I love problem solving and I enjoy
+          working in a team environment. So, please take a look around. If you like what you see,
+          drop me a line. I’d be keen to catch up for a chat.
         </p>
         {/* <div className={textStyle}></div> */}
       </div>
@@ -71,16 +66,8 @@ const AboutMeContent = () => {
           </a>
         </li>
         <li className={classes.mediaitems}>
-          <a
-            href="https://www.linkedin.com/login"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className={classes.icon}
-              src={LinkinedIcon}
-              alt="Icon Failed"
-            />
+          <a href="https://www.linkedin.com/login" target="_blank" rel="noreferrer">
+            <img className={classes.icon} src={LinkinedIcon} alt="Icon Failed" />
           </a>
         </li>
       </ul>
