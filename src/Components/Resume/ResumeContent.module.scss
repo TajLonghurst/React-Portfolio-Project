@@ -4,9 +4,17 @@
   margin-inline: 2rem;
   position: relative;
   height: 100%;
-  @include media-breakpoint-max($breakpoints-xl) {
+  @include media-breakpoint-min($breakpoints-xs) {
     & {
+      text-align: left;
+      margin-inline: 1.5rem;
       margin-top: 2rem;
+    }
+  }
+  @include media-breakpoint-min($breakpoints-md) {
+    & {
+      margin-top: 0rem;
+      margin-inline: 2rem;
     }
   }
 }

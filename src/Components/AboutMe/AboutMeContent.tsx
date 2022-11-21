@@ -36,12 +36,12 @@ const AboutMeContent = () => {
       <div className={classes.content}>
         <p className={classes.aboutmetext}>
           Hello and thanks for stopping by. After a few years of study, I’m looking now for
-          opportunities to break into the IT industry. More recently, I’ve been skilling up on React
-          and NodeJS, so I can offer a good mix of front and back-end. Everything you see here on my
-          website, I have put together myself. And while I can’t pretend to have a ton of
-          experience, I can tell you that I’m a hard worker, I love problem solving and I enjoy
-          working in a team environment. So, please take a look around. If you like what you see,
-          drop me a line. I’d be keen to catch up for a chat.
+          opportunities to break into the web development industry. I lean towards front-end and my
+          strengths are in React with Redux. More recently, I’ve also skilled up in NodeJS.
+          Everything you see here on my website, I’ve put together myself. And while I can’t pretend
+          to have a ton of experience, I can tell you that I’m a hard worker, I love problem solving
+          and I’m keen to learn. So, please take a look around. If you like what you see, hit me up.
+          I’d be more than happy to talk
         </p>
         {/* <div className={textStyle}></div> */}
       </div>

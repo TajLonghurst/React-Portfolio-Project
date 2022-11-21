@@ -2,7 +2,6 @@
 
 .body {
   margin: 1rem;
-
   .header {
     font-size: 1rem;
     color: $PrimaryHeaderColor;
@@ -19,5 +18,41 @@
     color: $PrimaryTextColor;
     font-family: $HindRegular;
     margin: 0rem;
+  }
+}
+
+@include media-breakpoint-min($breakpoints-xs) {
+  .body {
+    .header {
+      font-size: $MobileTextSize;
+      .techlink {
+        font-size: $MobileTextSize;
+      }
+    }
+    .date {
+      font-size: $MobileTextSize;
+    }
+    .items {
+      font-size: $MobileTextSize;
+    }
+  }
+}
+@include media-breakpoint-min($breakpoints-lg) {
+  .body {
+    .header {
+      font-size: 1rem;
+      .techlink {
+        font-size: 1rem;
+      }
+    }
+    .date {
+      font-size: 1rem;
+    }
+    .list {
+      font-size: 1rem;
+    }
+    .items {
+      font-size: 1rem;
+    }
   }
 }

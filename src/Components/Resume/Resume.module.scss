@@ -3,10 +3,11 @@
 .container {
   @include Container();
   @include DisplayFlexCenter(column);
+
   @include media-breakpoint-max($breakpoints-xl) {
     & {
       justify-content: flex-start;
-      padding-block: 25%;
+      padding-block: 6rem;
       height: fit-content;
     }
   }

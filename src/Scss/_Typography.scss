@@ -28,6 +28,7 @@ $PrimaryHeader-FontSize: 2.3rem;
 $SecondaryHeader-FontSize: 2rem;
 $PrimaryText-FontSize: 1.125rem;
 $SecondaryText-FontSize: 1rem;
+$MobileTextSize: 14px;
 
 //Font-face
 @font-face {
@@ -72,13 +73,11 @@ $SecondaryText-FontSize: 1rem;
 }
 @font-face {
   font-family: "PlusJakarta-Bold";
-  src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Bold.ttf)
-    format("truetype");
+  src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "PlusJakarta-Regular";
-  src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Regular.ttf)
-    format("truetype");
+  src: url(../Assets/Fonts/PlusJakarta/PlusJakartaSans-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "Anton-Regular";
