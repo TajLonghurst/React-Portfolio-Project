@@ -136,7 +136,7 @@ const Fields: React.FC<FieldsModel> = (props) => {
           <div className={classes.col}>
             <Input
               type="tel"
-              placeholder="Phone number XX-XXX-XXXX"
+              placeholder="Phone number XXX-XXX-XXXX"
               label="Phone Number"
               onChange={phoneChangeHandler}
               onBlur={phoneBlurHandler}
