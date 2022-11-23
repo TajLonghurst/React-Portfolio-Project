@@ -101,4 +101,26 @@ export const ProjectObject: ProjectModel[] = [
       },
     ],
   },
+  {
+    projectID: 5,
+    label: "CRUD",
+    pathID: "CRUD",
+    heroImg: NOTESHOME,
+    githuhLink: "https://github.com/TajLonghurst/NodeJS-CRUD-Project",
+    liveViewLink: "https://github.com/TajLonghurst/NodeJS-CRUD-Project",
+    images: [
+      {
+        id: 1,
+        img: NOTESHOME,
+      },
+      {
+        id: 2,
+        img: NOTESCREATENOTE,
+      },
+      {
+        id: 3,
+        img: NOTESVIEWNOTE,
+      },
+    ],
+  },
 ];

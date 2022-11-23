@@ -13,6 +13,7 @@ const initialState: uiSliceModal = {
   intialLoading: true,
   mobileResumeTitle: "",
   mobileResumeNavTitle: "",
+  CRUD: false,
 };
 
 const uiSlice = createSlice({
@@ -37,24 +38,35 @@ const uiSlice = createSlice({
         state.KurbNav = false;
         state.Not2SelfNav = false;
         state.PortfolioNav = false;
+        state.CRUD = false;
       }
       if (actions.payload.name === "KURB") {
         state.UrbanNav = false;
         state.KurbNav = true;
         state.Not2SelfNav = false;
         state.PortfolioNav = false;
+        state.CRUD = false;
       }
       if (actions.payload.name === "NOTE2SELF") {
         state.UrbanNav = false;
         state.KurbNav = false;
         state.Not2SelfNav = true;
         state.PortfolioNav = false;
+        state.CRUD = false;
       }
       if (actions.payload.name === "PORTFOLIO") {
         state.UrbanNav = false;
         state.KurbNav = false;
         state.Not2SelfNav = false;
         state.PortfolioNav = true;
+        state.CRUD = false;
+      }
+      if (actions.payload.name === "CRUD") {
+        state.UrbanNav = false;
+        state.KurbNav = false;
+        state.Not2SelfNav = false;
+        state.PortfolioNav = false;
+        state.CRUD = true;
       }
     },
     FormLoading(state, actions: PayloadAction<{ isLoading: boolean }>) {

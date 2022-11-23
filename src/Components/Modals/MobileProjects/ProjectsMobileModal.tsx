@@ -14,6 +14,9 @@ const ProjectsMobileModal = () => {
   const [imgData, setImgData] = useState<images[]>([]);
   const [hrefLink, setHerfLink] = useState<string>();
   const [liveViewLink, setliveViewLink] = useState<string>();
+  const [ProjectName, setProjectName] = useState<number>();
+
+  const CrudPrjectIsActive = ProjectName === 5 ? false : true;
 
   useEffect(() => {
     for (let i = 0; i < ProjectObject.length; i++) {
@@ -21,7 +24,8 @@ const ProjectsMobileModal = () => {
         return (
           setImgData(ProjectObject[i].images),
           setHerfLink(ProjectObject[i].githuhLink),
-          setliveViewLink(ProjectObject[i].liveViewLink)
+          setliveViewLink(ProjectObject[i].liveViewLink),
+          setProjectName(ProjectObject[i].projectID)
         );
       }
     }
@@ -57,9 +61,11 @@ const ProjectsMobileModal = () => {
         <BorderlessBtn color="#bbbbbb" target="_blank" rel="noreferrer" href={hrefLink || "#"}>
           Github Project
         </BorderlessBtn>
-        <BorderlessBtn target="_blank" rel="noreferrer" href={liveViewLink || "#"}>
-          Live View
-        </BorderlessBtn>
+        {CrudPrjectIsActive && (
+          <BorderlessBtn target="_blank" rel="noreferrer" href={liveViewLink || "#"}>
+            Live View
+          </BorderlessBtn>
+        )}
       </div>
     </motion.div>
   );

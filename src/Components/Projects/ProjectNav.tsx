@@ -31,36 +31,28 @@ const ProjectNav = () => {
   }, [navIsActive]);
 
   // Urban
-  const UrbanStyles = navIsActive.UrbanNav
-    ? classes.navitemactive
-    : classes.navitem;
+  const UrbanStyles = navIsActive.UrbanNav ? classes.navitemactive : classes.navitem;
 
   const UrbanDotStyle = navIsActive.UrbanNav ? classes.activedot : classes.dot;
 
   //Krub
-  const KurbStyles = navIsActive.KurbNav
-    ? classes.navitemactive
-    : classes.navitem;
+  const KurbStyles = navIsActive.KurbNav ? classes.navitemactive : classes.navitem;
 
   const KurbDotStyle = navIsActive.KurbNav ? classes.activedot : classes.dot;
 
   //Protfolio
-  const PortfolioStyles = navIsActive.PortfolioNav
-    ? classes.navitemactive
-    : classes.navitem;
+  const PortfolioStyles = navIsActive.PortfolioNav ? classes.navitemactive : classes.navitem;
 
-  const PortfolioDotStyle = navIsActive.PortfolioNav
-    ? classes.activedot
-    : classes.dot;
+  const PortfolioDotStyle = navIsActive.PortfolioNav ? classes.activedot : classes.dot;
 
   //Note2Self
-  const NoteStyles = navIsActive.Not2SelfNav
-    ? classes.navitemactive
-    : classes.navitem;
+  const NoteStyles = navIsActive.Not2SelfNav ? classes.navitemactive : classes.navitem;
 
-  const NoteDotStyle = navIsActive.Not2SelfNav
-    ? classes.activedot
-    : classes.dot;
+  const NoteDotStyle = navIsActive.Not2SelfNav ? classes.activedot : classes.dot;
+
+  const CRUDStyles = navIsActive.CRUD ? classes.navitemactive : classes.navitem;
+
+  const CRUDDotStyle = navIsActive.CRUD ? classes.activedot : classes.dot;
 
   const projectBtnOnClickHandler = (name: string) => {
     dispatch(uiActions.ProjectsClickHandler({ name: name }));
@@ -120,6 +112,17 @@ const ProjectNav = () => {
             onClick={() => projectBtnOnClickHandler("NOTE2SELF")}
           >
             NOTE2SELF
+          </div>
+        </li>
+        <li className={CRUDStyles}>
+          <div className={CRUDDotStyle}></div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("CRUD")}
+          >
+            CRUD
           </div>
         </li>
       </motion.ul>

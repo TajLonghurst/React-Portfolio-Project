@@ -11,4 +11,5 @@ export type uiSliceModal = {
   intialLoading: boolean;
   mobileResumeTitle: string;
   mobileResumeNavTitle: string;
+  CRUD: boolean;
 };

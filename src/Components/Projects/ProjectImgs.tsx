@@ -9,18 +9,19 @@ import ProjectNote2Self from "./Projectimgs/ProjectNote2Self";
 import { AnimatePresence, motion } from "framer-motion";
 import { bgblock } from "../../Animations/ProjectView";
 import { pageLoadAnimation } from "../../Animations/ProjectView";
+import ProjectCRUD from "./Projectimgs/ProjectCRUD";
 
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
   const [projectAnimation, setProjectAnimation] = useState(false);
   const firstUpdate = useRef(false);
 
-  const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav } = projectIsActive;
+  const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, CRUD } = projectIsActive;
 
   useEffect(() => {
     let timer: any;
     if (firstUpdate.current === true) {
-      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav) {
+      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav || CRUD) {
         timer = setTimeout(() => {
           setProjectAnimation(false);
         }, 1000);
@@ -32,7 +33,7 @@ const ProjectImgs = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav]);
+  }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, CRUD]);
 
   return (
     <motion.div
@@ -64,6 +65,9 @@ const ProjectImgs = () => {
       </AnimatePresence>
       <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
         {Not2SelfNav && <ProjectNote2Self />}
+      </AnimatePresence>
+      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+        {CRUD && <ProjectCRUD />}
       </AnimatePresence>
     </motion.div>
   );
