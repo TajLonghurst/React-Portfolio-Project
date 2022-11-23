@@ -25,9 +25,7 @@ const ResumeReferances = () => {
           </span>
           ) Trainer/Teacher
         </h1>
-        <p className={classes.items}>
-          arjinder.singh@techtorium.ac.nz | 02040204021
-        </p>
+        <p className={classes.items}>arjinder.singh@techtorium.ac.nz | 02040204021</p>
       </div>
     </motion.div>
   );

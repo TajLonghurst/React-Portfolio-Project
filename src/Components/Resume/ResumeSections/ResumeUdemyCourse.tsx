@@ -11,17 +11,13 @@ const ResumeUdemyCourse = () => {
         <h1 className={classes.header}>
           React - The Complete Guide (incl Hooks, React Router, Redux)
         </h1>
-        <p className={classes.date}>
-          J A N U A R Y 2 0 2 2 — M A R C H 2 0 2 2
-        </p>
+        <p className={classes.date}>J A N U A R Y 2 0 2 2 — M A R C H 2 0 2 2</p>
 
         <ul className={classes.list}>
           <li className={classes.items}>48 hours on-demand video</li>
           <li className={classes.items}>50 articles</li>
           <li className={classes.items}>92 downloadable resources</li>
-          <li className={classes.items}>
-            By Maximilian Schwarzmüller, Academind
-          </li>
+          <li className={classes.items}>By Maximilian Schwarzmüller, Academind</li>
         </ul>
         <BorderlessBtn
           target="_blank"
@@ -40,9 +36,7 @@ const ResumeUdemyCourse = () => {
           <li className={classes.items}>40.5 hours on-demand video</li>
           <li className={classes.items}>63 articles</li>
           <li className={classes.items}>499 downloadable resources</li>
-          <li className={classes.items}>
-            By Maximilian Schwarzmüller, Academind
-          </li>
+          <li className={classes.items}>By Maximilian Schwarzmüller, Academind</li>
         </ul>
         <BorderlessBtn
           target="_blank"

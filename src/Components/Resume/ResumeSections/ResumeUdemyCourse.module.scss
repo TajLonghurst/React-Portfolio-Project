@@ -43,7 +43,7 @@
     }
   }
 }
-@include media-breakpoint-min($breakpoints-lg) {
+@include media-breakpoint-min($breakpoints-md) {
   .body {
     .header {
       font-size: 1rem;
