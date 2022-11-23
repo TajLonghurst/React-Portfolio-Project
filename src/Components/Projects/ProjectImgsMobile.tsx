@@ -3,10 +3,7 @@ import classes from "./ProjectImgsMobile.module.scss";
 import { Link } from "react-router-dom";
 import { ProjectObject } from "../../Data/ProjectObject";
 import { motion } from "framer-motion";
-import {
-  staggerEffectParent,
-  staggerEffectChild,
-} from "../../Animations/ProjectView";
+import { staggerEffectParent, staggerEffectChild } from "../../Animations/ProjectView";
 
 const ProjectImgsMobile = () => {
   return (
@@ -29,11 +26,7 @@ const ProjectImgsMobile = () => {
                 <li className={classes.imgitems}>
                   <div className={classes.bgblock}></div>
                   <div className={classes.imgcontainer}>
-                    <img
-                      className={classes.img}
-                      src={item.heroImg}
-                      alt="Failed to load"
-                    />
+                    <img className={classes.img} src={item.heroImg} alt="Failed to load" />
                     <div className={classes.overlay}>
                       <div className={classes.overlaytext}>{item.label}</div>
                     </div>
