@@ -11,6 +11,9 @@ import NOTESVIEWNOTE from "../Assets/Images/Note2SelfViewPage.png";
 import PORTFOLIOSHOME from "../Assets/Images/ProtfolioHome.png";
 import PORTFOLIORESUME from "../Assets/Images/ProtfolioResume.png";
 import PORTFOLIOCONTACT from "../Assets/Images/ProtfolioContact.png";
+import CRUDIMG1 from "../Assets/Images/CURDAPILOGIN.png";
+import CRUDIMG2 from "../Assets/Images/CRUDAPIUSER.png";
+import CRUDIMG3 from "../Assets/Images/CRUDAPIPOST.png";
 
 export const ProjectObject: ProjectModel[] = [
   {
@@ -111,15 +114,15 @@ export const ProjectObject: ProjectModel[] = [
     images: [
       {
         id: 1,
-        img: NOTESHOME,
+        img: CRUDIMG1,
       },
       {
         id: 2,
-        img: NOTESCREATENOTE,
+        img: CRUDIMG2,
       },
       {
         id: 3,
-        img: NOTESVIEWNOTE,
+        img: CRUDIMG3,
       },
     ],
   },
