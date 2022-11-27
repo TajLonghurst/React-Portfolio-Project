@@ -64,7 +64,7 @@ export const ProjectObject: ProjectModel[] = [
     projectID: 3,
     label: "PORTFOLIO",
     pathID: "PORTFOLIO",
-    heroImg: URBANHOME,
+    heroImg: PORTFOLIOSHOME,
     githuhLink: "https://github.com/TajLonghurst/React-Portfolio-Project",
     liveViewLink: "https://deploytaj.com/",
     images: [
