@@ -25,7 +25,7 @@ const HeroHeader = () => {
           I'm <span className={classes.titlecolor}>Taj </span>
           Longhurst
         </h1>
-        <p className={classes.smallheader}>A self-motivated Graduate Developer</p>
+        <p className={classes.smallheader}>A Self-motivated Graduate Developer</p>
         <div className={classes.btnpostion}>
           <NavLink to="/Projects">
             <Button type="button">View Projects</Button>

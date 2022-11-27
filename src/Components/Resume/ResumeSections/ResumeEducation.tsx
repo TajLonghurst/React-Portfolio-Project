@@ -23,7 +23,7 @@ const ResumeEducation = () => {
               Techtorium
             </a>
           </span>
-          ) New Zealand Institute Of Information Technology, Auckland, Auckland
+          ) New Zealand Institute Of Information Technology, Auckland
         </h1>
         <p className={classes.date}>J A N U A R Y  2 0 2 1 — D E C E M B E R  2 0 2 1</p>
         <ul className={classes.list}>
@@ -52,7 +52,7 @@ const ResumeEducation = () => {
               Techtorium
             </a>
           </span>
-          ) New Zealand Institute Of Information Technology, Auckland, Auckland
+          ) New Zealand Institute Of Information Technology, Auckland
         </h1>
         <p className={classes.date}>J A N U A R Y  2 0 2 0 — D E C E M B E R  2 0 2 0</p>
         <ul className={classes.list}>

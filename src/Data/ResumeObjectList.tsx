@@ -33,7 +33,7 @@ export const ResumeNavItems: ResumeNavModel[] = [
   {
     id: "nav5",
     icon: ReferancesIcon,
-    label: "Referances",
+    label: "References",
     isActive: false,
   },
 ];
