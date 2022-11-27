@@ -21,7 +21,7 @@ const ResumeSkills = () => {
           </div>
           <div className={classes.col}>
             <ul className={classes.list}>
-              <li className={classes.itemtitle}>Libarys</li>
+              <li className={classes.itemtitle}>Package's</li>
               <li className={classes.item}>Redux</li>
               <li className={classes.item}>Axois</li>
               <li className={classes.item}>Framer-Motion</li>
