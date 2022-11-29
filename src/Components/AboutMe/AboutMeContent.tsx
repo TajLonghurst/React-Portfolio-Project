@@ -66,7 +66,7 @@ const AboutMeContent = () => {
           </a>
         </li>
         <li className={classes.mediaitems}>
-          <a href="https://www.linkedin.com/login" target="_blank" rel="noreferrer">
+          <a href="https://nz.linkedin.com/in/tajlonghurst" target="_blank" rel="noreferrer">
             <img className={classes.icon} src={LinkinedIcon} alt="Icon Failed" />
           </a>
         </li>
