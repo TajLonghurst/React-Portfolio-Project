@@ -41,7 +41,7 @@ const AboutMeContent = () => {
           Everything you see here on my website, I’ve put together myself. And while I can’t pretend
           to have a ton of experience, I can tell you that I’m a hard worker, I love problem solving
           and I’m keen to learn. So, please take a look around. If you like what you see, hit me up.
-          I’d be more than happy to talk
+          I’d be more than happy to talk.
         </p>
         {/* <div className={textStyle}></div> */}
       </div>
