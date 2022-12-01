@@ -21,7 +21,7 @@ const useInput = (validateType: string) => {
     validity = emailRegex.test(entredValue);
   }
   if (validateType === "phoneNumber") {
-    validity = phoneNumberRegex.test(entredValue);
+    validity = entredValue.trim() !== "";
   }
   if (validateType === "message") {
     validity = entredValue.trim() !== "";
