@@ -25,7 +25,7 @@ const ResumeWorkExperience = () => {
           </span>
           ) Bar & Restaurant, Auckland
         </h1>
-        <p className={classes.date}>J A N U A R Y 2 0 2 1 — J A N U A R Y 2 0 2 2</p>
+        <p className={classes.date}>F E B R U A R Y  2 0 2 1 — M A R C H  2 0 2 2</p>
         <p className={classes.items}>
           Providing quick and efficient service, delivering dishes to customers in a friendly and
           timely manner. Liaising with chefs and management, setting up tables, cleaning/preparing
@@ -49,7 +49,7 @@ const ResumeWorkExperience = () => {
           </span>
           ) , Auckland
         </h1>
-        <p className={classes.date}>J U LY 2 0 2 0 — J U LY 2 0 2 0</p>
+        <p className={classes.date}>J U L Y  2 0 2 0 — J U L Y  2 0 2 0</p>
         <p className={classes.items}>
           Providing support during college student induction workshops. Assisted lecturers with
           teaching various programming tasks.
