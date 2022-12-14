@@ -35,7 +35,7 @@ const AboutMeContent = () => {
       </div>
       <div className={classes.content}>
         <p className={classes.aboutmetext}>
-          Hello and thanks for stopping by. After a few years of study, I’m looking now for
+          Hello and thanks for stopping by. After a few years of study, I’m now looking for
           opportunities to break into the web development industry. I lean towards front-end and my
           strengths are in React with Redux. More recently, I’ve also skilled up in NodeJS.
           Everything you see here on my website, I’ve put together myself. And while I can’t pretend
