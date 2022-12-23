@@ -37,6 +37,7 @@ const ResumeSkills = () => {
               <li className={classes.item}>MongoDB</li>
               <li className={classes.item}>Mongoose</li>
               <li className={classes.item}>GraphQL</li>
+              <li className={classes.item}>Prisma</li>
             </ul>
           </div>
         </div>
