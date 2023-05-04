@@ -11,10 +11,11 @@ const ResumeSkills = () => {
           <div className={classes.col}>
             <ul className={classes.list}>
               <li className={classes.itemtitle}>Frontend</li>
-              <li className={classes.item}>React</li>
-              <li className={classes.item}>Javascript</li>
+              <li className={classes.item}>ReactJS</li>
+              <li className={classes.item}>NextJS</li>
               <li className={classes.item}>Typescript</li>
               <li className={classes.item}>Scss</li>
+              <li className={classes.item}>Tailwind Css</li>
               <li className={classes.item}>Bootstrap</li>
               <li className={classes.item}>Figma</li>
             </ul>
@@ -25,6 +26,7 @@ const ResumeSkills = () => {
               <li className={classes.item}>Redux</li>
               <li className={classes.item}>Axois</li>
               <li className={classes.item}>Framer-Motion</li>
+              <li className={classes.item}>Next-Auth</li>
               <li className={classes.item}>JWT Auth</li>
               <li className={classes.item}>JOI validation</li>
             </ul>
@@ -35,7 +37,7 @@ const ResumeSkills = () => {
               <li className={classes.item}>NodeJS</li>
               <li className={classes.item}>Express</li>
               <li className={classes.item}>MongoDB</li>
-              <li className={classes.item}>Mongoose</li>
+              <li className={classes.item}>PostgreSQL</li>
               <li className={classes.item}>GraphQL</li>
               <li className={classes.item}>Prisma</li>
             </ul>
