@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import classes from "./ProjectCRUD.module.scss";
+import classes from "./ProjectAirbnb.module.scss";
 import ArrowRightIcon from "../../../Assets/Icons/WebIcons/RightBtnIcon.svg";
 import ArrowLeftIcon from "../../../Assets/Icons/WebIcons/LeftBtnIcon.svg";
 // import BorderlessBtn from "../../UI/Buttons/BorderlessBtn";
@@ -8,8 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { body, overlaymiddle } from "../../../Animations/ProjectView";
 import { ProjectObject } from "../../../Data/ProjectObject";
 import useCursorHover from "../../../Hooks/Cursor/use-cursorHover";
+import BorderlessBtn from "../../UI/Buttons/BorderlessBtn";
 
-const ProjectCRUD = () => {
+const ProjectAirbnb = () => {
   const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   const [slideIndex, setSlideIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
@@ -62,10 +63,18 @@ const ProjectCRUD = () => {
               return (
                 <li
                   key={item.id}
-                  className={index === slideIndex ? classes.photoactive : classes.photoitem}
+                  className={
+                    index === slideIndex
+                      ? classes.photoactive
+                      : classes.photoitem
+                  }
                 >
                   {index === slideIndex && (
-                    <img className={classes.middlephoto} src={item.img} alt="failed" />
+                    <img
+                      className={classes.middlephoto}
+                      src={item.img}
+                      alt="failed"
+                    />
                   )}
                   <AnimatePresence
                     initial={false}
@@ -85,7 +94,11 @@ const ProjectCRUD = () => {
                 </li>
               );
             })}
-            <AnimatePresence initial={false} exitBeforeEnter={false} onExitComplete={() => null}>
+            <AnimatePresence
+              initial={false}
+              exitBeforeEnter={false}
+              onExitComplete={() => null}
+            >
               {!isHover && (
                 <motion.div
                   variants={overlaymiddle}
@@ -94,7 +107,7 @@ const ProjectCRUD = () => {
                   exit="exit"
                   className={classes.overlaytext}
                 >
-                  CRUD
+                  AIRBNB CLONE
                 </motion.div>
               )}
             </AnimatePresence>
@@ -110,11 +123,15 @@ const ProjectCRUD = () => {
         </div>
         <ul className={classes.context}>
           <li>
-            <LinkButton href={ProjectObject[4].githuhLink} target="_blank" rel="noreferrer">
+            <LinkButton
+              href={ProjectObject[4].githuhLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub Project
             </LinkButton>
           </li>
-          {/* <li>
+          <li>
             <BorderlessBtn
               color="#bbbbbb"
               href={ProjectObject[4].liveViewLink}
@@ -123,11 +140,11 @@ const ProjectCRUD = () => {
             >
               Live View
             </BorderlessBtn>
-          </li> */}
+          </li>
         </ul>
       </motion.div>
     </Fragment>
   );
 };
 
-export default ProjectCRUD;
+export default ProjectAirbnb;

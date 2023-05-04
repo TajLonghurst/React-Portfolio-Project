@@ -14,9 +14,6 @@ const ProjectsMobileModal = () => {
   const [imgData, setImgData] = useState<images[]>([]);
   const [hrefLink, setHerfLink] = useState<string>();
   const [liveViewLink, setliveViewLink] = useState<string>();
-  const [ProjectName, setProjectName] = useState<number>();
-
-  const CrudPrjectIsActive = ProjectName === 5 ? false : true;
 
   useEffect(() => {
     for (let i = 0; i < ProjectObject.length; i++) {
@@ -24,8 +21,7 @@ const ProjectsMobileModal = () => {
         return (
           setImgData(ProjectObject[i].images),
           setHerfLink(ProjectObject[i].githuhLink),
-          setliveViewLink(ProjectObject[i].liveViewLink),
-          setProjectName(ProjectObject[i].projectID)
+          setliveViewLink(ProjectObject[i].liveViewLink)
         );
       }
     }
@@ -46,7 +42,12 @@ const ProjectsMobileModal = () => {
       <div className={classes.topbar}></div>
       <div className={classes.nav}>
         <h1 className={classes.title}>{projectID}</h1>
-        <img onClick={onCloseHandler} className={classes.exiticon} src={XIcon} alt="X" />
+        <img
+          onClick={onCloseHandler}
+          className={classes.exiticon}
+          src={XIcon}
+          alt="X"
+        />
       </div>
       <ul className={classes.imglist}>
         {imgData.map((item) => {
@@ -58,14 +59,21 @@ const ProjectsMobileModal = () => {
         })}
       </ul>
       <div className={classes.btncontent}>
-        <BorderlessBtn color="#bbbbbb" target="_blank" rel="noreferrer" href={hrefLink || "#"}>
+        <BorderlessBtn
+          color="#bbbbbb"
+          target="_blank"
+          rel="noreferrer"
+          href={hrefLink || "#"}
+        >
           Github Project
         </BorderlessBtn>
-        {CrudPrjectIsActive && (
-          <BorderlessBtn target="_blank" rel="noreferrer" href={liveViewLink || "#"}>
-            Live View
-          </BorderlessBtn>
-        )}
+        <BorderlessBtn
+          target="_blank"
+          rel="noreferrer"
+          href={liveViewLink || "#"}
+        >
+          Live View
+        </BorderlessBtn>
       </div>
     </motion.div>
   );

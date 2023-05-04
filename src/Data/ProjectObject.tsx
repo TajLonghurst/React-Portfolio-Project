@@ -11,9 +11,9 @@ import NOTESVIEWNOTE from "../Assets/Images/Note2SelfViewPage.png";
 import PORTFOLIOSHOME from "../Assets/Images/ProtfolioHome.png";
 import PORTFOLIORESUME from "../Assets/Images/ProtfolioResume.png";
 import PORTFOLIOCONTACT from "../Assets/Images/ProtfolioContact.png";
-import CRUDIMG1 from "../Assets/Images/CURDAPILOGIN.png";
-import CRUDIMG2 from "../Assets/Images/CRUDAPIUSER.png";
-import CRUDIMG3 from "../Assets/Images/CRUDAPIPOST.png";
+import AirbnbHome from "../Assets/Images/AirBnbHome.png";
+import AirbnbFilter from "../Assets/Images/AirBnbFilter.png";
+import AirbnbIndvidual from "../Assets/Images/AirbnbIndvidual.png";
 
 export const ProjectObject: ProjectModel[] = [
   {
@@ -106,23 +106,23 @@ export const ProjectObject: ProjectModel[] = [
   },
   {
     projectID: 5,
-    label: "CRUD",
-    pathID: "CRUD",
-    heroImg: CRUDIMG1,
-    githuhLink: "https://github.com/TajLonghurst/NodeJS-CRUD-Project",
-    liveViewLink: "https://github.com/TajLonghurst/NodeJS-CRUD-Project",
+    label: "AIRBNB",
+    pathID: "AIRBNB",
+    heroImg: AirbnbHome,
+    githuhLink: "https://github.com/TajLonghurst/Nextjs-Airbnb-Project",
+    liveViewLink: "https://nextjs-bnbair-project.vercel.app/",
     images: [
       {
         id: 1,
-        img: CRUDIMG1,
+        img: AirbnbHome,
       },
       {
         id: 2,
-        img: CRUDIMG2,
+        img: AirbnbIndvidual,
       },
       {
         id: 3,
-        img: CRUDIMG3,
+        img: AirbnbFilter,
       },
     ],
   },

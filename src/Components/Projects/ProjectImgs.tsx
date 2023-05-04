@@ -9,19 +9,20 @@ import ProjectNote2Self from "./Projectimgs/ProjectNote2Self";
 import { AnimatePresence, motion } from "framer-motion";
 import { bgblock } from "../../Animations/ProjectView";
 import { pageLoadAnimation } from "../../Animations/ProjectView";
-import ProjectCRUD from "./Projectimgs/ProjectCRUD";
+import ProjectAirbnb from "./Projectimgs/ProjectAirbnb";
 
 const ProjectImgs = () => {
   const projectIsActive = useSelector((state: RootState) => state.ui);
   const [projectAnimation, setProjectAnimation] = useState(false);
   const firstUpdate = useRef(false);
 
-  const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, CRUD } = projectIsActive;
+  const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, AirBnb } =
+    projectIsActive;
 
   useEffect(() => {
     let timer: any;
     if (firstUpdate.current === true) {
-      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav || CRUD) {
+      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav || AirBnb) {
         timer = setTimeout(() => {
           setProjectAnimation(false);
         }, 1000);
@@ -33,7 +34,7 @@ const ProjectImgs = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, CRUD]);
+  }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, AirBnb]);
 
   return (
     <motion.div
@@ -43,7 +44,11 @@ const ProjectImgs = () => {
       exit="exit"
       className={classes.container}
     >
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {projectAnimation && (
           <motion.div
             variants={bgblock}
@@ -54,20 +59,40 @@ const ProjectImgs = () => {
           ></motion.div>
         )}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {KurbNav && <ProjectKurbImgs />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {UrbanNav && <ProjectUrban />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {PortfolioNav && <ProjectProtfolio />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {Not2SelfNav && <ProjectNote2Self />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
-        {CRUD && <ProjectCRUD />}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {AirBnb && <ProjectAirbnb />}
       </AnimatePresence>
     </motion.div>
   );
