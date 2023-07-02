@@ -58,3 +58,20 @@
     @content;
   }
 }
+
+@mixin media-height-breakpoint-max($breakpoints) {
+  @media (max-height: $breakpoints) {
+    @content;
+  }
+}
+
+// @if $breakpoint == xs {
+//   @media (max-width: $breakpoints-sm) {
+//     @for $num from 1 through $grid-columns {
+//       @if $size == $num {
+//         flex: 0 0 auto;
+//         width: percentage($size / $grid-columns);
+//       }
+//     }
+//   }
+// }

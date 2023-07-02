@@ -3,7 +3,6 @@
 .container {
   @include Container();
   @include DisplayFlexCenter(column);
-
   @include media-breakpoint-max($breakpoints-xl) {
     & {
       justify-content: flex-start;
@@ -33,6 +32,17 @@
   }
   .row {
     @include make-row();
+    margin-top: 0rem;
+    @include media-height-breakpoint-max(744px) {
+      & {
+        margin-top: 8rem;
+      }
+    }
+    @include media-breakpoint-max($breakpoints-xl) {
+      & {
+        margin-top: 0rem;
+      }
+    }
     .col_3 {
       @include make-col(xs, 12);
       @include make-col(sm, 12);
