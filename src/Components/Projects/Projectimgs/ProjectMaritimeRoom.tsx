@@ -1,5 +1,5 @@
-import React, { useState, Fragment } from "react";
-import classes from "./ProjectNote2Self.module.scss";
+import { useState, Fragment } from "react";
+import classes from "./ProjectMaritimeRoom.module.scss";
 import ArrowRightIcon from "../../../Assets/Icons/WebIcons/RightBtnIcon.svg";
 import ArrowLeftIcon from "../../../Assets/Icons/WebIcons/LeftBtnIcon.svg";
 import BorderlessBtn from "../../UI/Buttons/BorderlessBtn";
@@ -9,7 +9,7 @@ import { overlaymiddle, body } from "../../../Animations/ProjectView";
 import { ProjectObject } from "../../../Data/ProjectObject";
 import useCursorHover from "../../../Hooks/Cursor/use-cursorHover";
 
-const ProjectNote2Self = () => {
+const ProjectMaritimeRoom = () => {
   const { cursorHoverOver, cursorHoverLeave } = useCursorHover();
   const [slideIndex, setSlideIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
@@ -103,7 +103,7 @@ const ProjectNote2Self = () => {
                   exit="exit"
                   className={classes.overlaytext}
                 >
-                  NOTE2SELF
+                  MARITIMEROOM
                 </motion.div>
               )}
             </AnimatePresence>
@@ -119,13 +119,15 @@ const ProjectNote2Self = () => {
         </div>
         <ul className={classes.context}>
           <li>
-            <LinkButton
-              href={ProjectObject[3].githuhLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub Project
-            </LinkButton>
+            {ProjectObject[3].githuhLink && (
+              <LinkButton
+                href={ProjectObject[3].githuhLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub Project
+              </LinkButton>
+            )}
           </li>
           <li>
             <BorderlessBtn
@@ -143,4 +145,4 @@ const ProjectNote2Self = () => {
   );
 };
 
-export default ProjectNote2Self;
+export default ProjectMaritimeRoom;

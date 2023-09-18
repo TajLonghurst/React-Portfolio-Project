@@ -53,12 +53,12 @@ const ProjectNav = () => {
     ? classes.activedot
     : classes.dot;
 
-  //Note2Self
-  const NoteStyles = navIsActive.Not2SelfNav
+  //MaritimeRoom
+  const MaritimeStyles = navIsActive.MaritimeRoomNav
     ? classes.navitemactive
     : classes.navitem;
 
-  const NoteDotStyle = navIsActive.Not2SelfNav
+  const MaritimeDotStyle = navIsActive.MaritimeRoomNav
     ? classes.activedot
     : classes.dot;
 
@@ -117,15 +117,15 @@ const ProjectNav = () => {
             PORTFOLIO
           </div>
         </li>
-        <li className={NoteStyles}>
-          <div className={NoteDotStyle}></div>
+        <li className={MaritimeStyles}>
+          <div className={MaritimeDotStyle}></div>
           <div
             onMouseOver={cursorHoverOver}
             onMouseLeave={cursorHoverLeave}
             className={classes.title}
-            onClick={() => projectBtnOnClickHandler("NOTE2SELF")}
+            onClick={() => projectBtnOnClickHandler("MARITIMEROOM")}
           >
-            NOTE2SELF
+            MARITIMEROOM
           </div>
         </li>
         <li className={AirbnbStyles}>

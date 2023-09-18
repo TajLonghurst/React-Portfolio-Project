@@ -7,7 +7,7 @@ const initialState: uiSliceModal = {
   UrbanNav: true,
   KurbNav: false,
   PortfolioNav: false,
-  Not2SelfNav: false,
+  MaritimeRoomNav: false,
   FormIsLoading: false,
   FormHasError: false,
   intialLoading: true,
@@ -36,35 +36,35 @@ const uiSlice = createSlice({
       if (actions.payload.name === "URBAN") {
         state.UrbanNav = true;
         state.KurbNav = false;
-        state.Not2SelfNav = false;
+        state.MaritimeRoomNav = false;
         state.PortfolioNav = false;
         state.AirBnb = false;
       }
       if (actions.payload.name === "KURB") {
         state.UrbanNav = false;
         state.KurbNav = true;
-        state.Not2SelfNav = false;
+        state.MaritimeRoomNav = false;
         state.PortfolioNav = false;
         state.AirBnb = false;
       }
-      if (actions.payload.name === "NOTE2SELF") {
+      if (actions.payload.name === "MARITIMEROOM") {
         state.UrbanNav = false;
         state.KurbNav = false;
-        state.Not2SelfNav = true;
+        state.MaritimeRoomNav = true;
         state.PortfolioNav = false;
         state.AirBnb = false;
       }
       if (actions.payload.name === "PORTFOLIO") {
         state.UrbanNav = false;
         state.KurbNav = false;
-        state.Not2SelfNav = false;
+        state.MaritimeRoomNav = false;
         state.PortfolioNav = true;
         state.AirBnb = false;
       }
       if (actions.payload.name === "AIRBNB") {
         state.UrbanNav = false;
         state.KurbNav = false;
-        state.Not2SelfNav = false;
+        state.MaritimeRoomNav = false;
         state.PortfolioNav = false;
         state.AirBnb = true;
       }

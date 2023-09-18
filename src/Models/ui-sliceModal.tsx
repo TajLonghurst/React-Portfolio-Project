@@ -5,7 +5,7 @@ export type uiSliceModal = {
   UrbanNav: boolean;
   KurbNav: boolean;
   PortfolioNav: boolean;
-  Not2SelfNav: boolean;
+  MaritimeRoomNav: boolean;
   FormIsLoading: boolean;
   FormHasError: boolean;
   intialLoading: boolean;

@@ -5,7 +5,7 @@ import ProjectUrban from "./Projectimgs/ProjectUrbanImgs";
 import { useSelector } from "react-redux";
 import { RootState } from "../../ReduxStore/Index";
 import ProjectProtfolio from "./Projectimgs/ProjectProtfolio";
-import ProjectNote2Self from "./Projectimgs/ProjectNote2Self";
+import ProjectMaritimeRoom from "./Projectimgs/ProjectMaritimeRoom";
 import { AnimatePresence, motion } from "framer-motion";
 import { bgblock } from "../../Animations/ProjectView";
 import { pageLoadAnimation } from "../../Animations/ProjectView";
@@ -16,8 +16,13 @@ const ProjectImgs = () => {
   const [projectAnimation, setProjectAnimation] = useState(false);
   const firstUpdate = useRef(false);
 
-  const { UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, AirBnb } =
-    projectIsActive;
+  const {
+    UrbanNav,
+    KurbNav,
+    PortfolioNav,
+    MaritimeRoomNav: Not2SelfNav,
+    AirBnb,
+  } = projectIsActive;
 
   useEffect(() => {
     let timer: any;
@@ -85,7 +90,7 @@ const ProjectImgs = () => {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {Not2SelfNav && <ProjectNote2Self />}
+        {Not2SelfNav && <ProjectMaritimeRoom />}
       </AnimatePresence>
       <AnimatePresence
         initial={false}

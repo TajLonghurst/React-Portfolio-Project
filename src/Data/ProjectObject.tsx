@@ -5,15 +5,15 @@ import URBANABOUTUS from "../Assets/Images/URBAN-About-Us.png";
 import KURBHOME from "../Assets/Images/KurbHome.png";
 import KURBPRODUCTS from "../Assets/Images/KurbProducts.png";
 import KURBINDVIDUALPRODUCTS from "../Assets/Images/KurbInvidualProducts.png";
-import NOTESHOME from "../Assets/Images/NotesHome.png";
-import NOTESCREATENOTE from "../Assets/Images/Note2SelfAddPage.png";
-import NOTESVIEWNOTE from "../Assets/Images/Note2SelfViewPage.png";
 import PORTFOLIOSHOME from "../Assets/Images/ProtfolioHome.png";
 import PORTFOLIORESUME from "../Assets/Images/ProtfolioResume.png";
 import PORTFOLIOCONTACT from "../Assets/Images/ProtfolioContact.png";
 import AirbnbHome from "../Assets/Images/AirBnbHome.png";
 import AirbnbFilter from "../Assets/Images/AirBnbFilter.png";
 import AirbnbIndvidual from "../Assets/Images/AirbnbIndvidual.png";
+import MaritimeRoomHome from "../Assets/Images/MaritimeHomePage.png";
+import MaritimeRoomMeetings from "../Assets/Images/MaritimeMeetingsPage.png";
+import MaritimeRoomContact from "../Assets/Images/maritimeContactPage.png";
 
 export const ProjectObject: ProjectModel[] = [
   {
@@ -84,23 +84,23 @@ export const ProjectObject: ProjectModel[] = [
   },
   {
     projectID: 4,
-    label: "NOTE2SELF",
-    pathID: "NOTE2SELF",
-    heroImg: NOTESHOME,
-    githuhLink: "https://github.com/TajLonghurst/React-Notes-Project",
-    liveViewLink: "https://react-notes-project-bcd48.firebaseapp.com/",
+    label: "MARITIMEROOM",
+    pathID: "MARITIMEROOM",
+    heroImg: MaritimeRoomHome,
+    githuhLink: "",
+    liveViewLink: "https://www.maritimeroom.co.nz/",
     images: [
       {
         id: 1,
-        img: NOTESHOME,
+        img: MaritimeRoomHome,
       },
       {
         id: 2,
-        img: NOTESCREATENOTE,
+        img: MaritimeRoomMeetings,
       },
       {
         id: 3,
-        img: NOTESVIEWNOTE,
+        img: MaritimeRoomContact,
       },
     ],
   },
