@@ -103,7 +103,7 @@ const ProjectMaritimeRoom = () => {
                   exit="exit"
                   className={classes.overlaytext}
                 >
-                  MARITIMEROOM
+                  MARITIME ROOM
                 </motion.div>
               )}
             </AnimatePresence>

@@ -84,7 +84,7 @@ export const ProjectObject: ProjectModel[] = [
   },
   {
     projectID: 4,
-    label: "MARITIMEROOM",
+    label: "MARITIME ROOM",
     pathID: "MARITIMEROOM",
     heroImg: MaritimeRoomHome,
     githuhLink: "",

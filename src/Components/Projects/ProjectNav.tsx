@@ -125,7 +125,7 @@ const ProjectNav = () => {
             className={classes.title}
             onClick={() => projectBtnOnClickHandler("MARITIMEROOM")}
           >
-            MARITIMEROOM
+            MARITIME ROOM
           </div>
         </li>
         <li className={AirbnbStyles}>

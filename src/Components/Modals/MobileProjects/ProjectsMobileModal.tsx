@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./ProjectMobileModal.module.scss";
 import XIcon from "../../../Assets/Icons/WebIcons/ExitIcon.svg";
 import { useNavigate, useParams } from "react-router-dom";
@@ -14,9 +14,10 @@ const ProjectsMobileModal = () => {
   const [imgData, setImgData] = useState<images[]>([]);
   const [hrefLink, setHerfLink] = useState<string>();
   const [liveViewLink, setliveViewLink] = useState<string>();
-  const [ProjectName, setProjectName] = useState<number>();
+  const [ProjectName, setProjectName] = useState<string>();
 
-  const MaritimeProjectIsActive = ProjectName === 4 ? false : true;
+  const MaritimeProjectIsActive =
+    ProjectName === "MARITIME ROOM" ? false : true;
 
   useEffect(() => {
     for (let i = 0; i < ProjectObject.length; i++) {
@@ -25,7 +26,7 @@ const ProjectsMobileModal = () => {
           setImgData(ProjectObject[i].images),
           setHerfLink(ProjectObject[i].githuhLink),
           setliveViewLink(ProjectObject[i].liveViewLink),
-          setProjectName(ProjectObject[i].projectID)
+          setProjectName(ProjectObject[i].label)
         );
       }
     }
@@ -45,7 +46,7 @@ const ProjectsMobileModal = () => {
     >
       <div className={classes.topbar}></div>
       <div className={classes.nav}>
-        <h1 className={classes.title}>{projectID}</h1>
+        <h1 className={classes.title}>{ProjectName}</h1>
         <img
           onClick={onCloseHandler}
           className={classes.exiticon}
