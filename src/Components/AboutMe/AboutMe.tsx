@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./AboutMe.module.scss";
 import AboutMeContent from "./AboutMeContent";
 import { pageimgLoadAnimation } from "../../Animations/AboutMe";
@@ -21,7 +20,11 @@ const AboutMe = () => {
             className={classes.imgcontent}
           >
             <div className={classes.imgcontainer}>
-              <img className={classes.img} src={ProfliePic} alt="Img Failed to load" />
+              <img
+                className={classes.img}
+                src={ProfliePic}
+                alt="Img Failed to load"
+              />
             </div>
             <div className={classes.colorbg}>
               <div className={classes.imgbackgroundfiller}></div>

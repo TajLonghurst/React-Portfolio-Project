@@ -7,7 +7,9 @@ import { opacityLoadAnimationHomeSecond } from "../../Animations/Home";
 const HeroHeader = () => {
   const { socialMediaType } = useParams();
 
-  const welcomeText = socialMediaType ? ` Hello, from ${socialMediaType}` : "Welcome";
+  const welcomeText = socialMediaType
+    ? ` Hello, from ${socialMediaType}`
+    : "Welcome";
 
   return (
     <motion.div
@@ -25,7 +27,7 @@ const HeroHeader = () => {
           I'm <span className={classes.titlecolor}>Taj </span>
           Longhurst
         </h1>
-        <p className={classes.smallheader}>A Self-motivated Graduate Developer</p>
+        <p className={classes.smallheader}>A Self-motivated Junior Developer</p>
         <div className={classes.btnpostion}>
           <NavLink to="/Projects">
             <Button type="button">View Projects</Button>
