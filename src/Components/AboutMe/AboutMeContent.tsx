@@ -35,13 +35,14 @@ const AboutMeContent = () => {
       </div>
       <div className={classes.content}>
         <p className={classes.aboutmetext}>
-          Hello and thanks for stopping by. After a few years of study, I’m now looking for
-          opportunities to break into the web development industry. I lean towards front-end and my
-          strengths are in React with Redux. More recently, I’ve also skilled up in NodeJS.
-          Everything you see here on my website, I’ve put together myself. And while I can’t pretend
-          to have a ton of experience, I can tell you that I’m a hard worker, I love problem solving
-          and I’m keen to learn. So, please take a look around. If you like what you see, hit me up.
-          I’d be more than happy to talk.
+          Hello and thanks for stopping by. After a several years of study, I’m
+          excited to be putting my skills to good use in the web development
+          industry. I lean towards front-end and my strengths are in React and
+          NextJS. I’m also familiar with backend frameworks like NodeJS.
+          Everything you see here on my website, I’ve put together myself. I’m a
+          hard worker, I love problem solving and I’m always keen to learn
+          something new. So, please take a look around. If you like what you
+          see, hit me up. I’d be more than happy to talk.
         </p>
         {/* <div className={textStyle}></div> */}
       </div>
@@ -66,8 +67,16 @@ const AboutMeContent = () => {
           </a>
         </li>
         <li className={classes.mediaitems}>
-          <a href="https://nz.linkedin.com/in/tajlonghurst" target="_blank" rel="noreferrer">
-            <img className={classes.icon} src={LinkinedIcon} alt="Icon Failed" />
+          <a
+            href="https://nz.linkedin.com/in/tajlonghurst"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className={classes.icon}
+              src={LinkinedIcon}
+              alt="Icon Failed"
+            />
           </a>
         </li>
       </ul>
