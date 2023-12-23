@@ -7,15 +7,15 @@ import { ResumeNavModel } from "../Models/ResumeNavModel";
 
 export const ResumeNavItems: ResumeNavModel[] = [
   {
-    id: "nav1",
-    icon: EducationIcon,
-    label: "Education",
-    isActive: true,
-  },
-  {
     id: "nav2",
     icon: WorkIcon,
     label: "Work Experience",
+    isActive: true,
+  },
+  {
+    id: "nav1",
+    icon: EducationIcon,
+    label: "Education",
     isActive: false,
   },
   {

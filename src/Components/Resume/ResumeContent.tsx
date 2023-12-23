@@ -19,19 +19,39 @@ const ResumeContent = () => {
       exit="exit"
       className={classes.container}
     >
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
-        {isActive[0].isActive && <ResumeEducation />}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[1].isActive && <ResumeEducation />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
-        {isActive[1].isActive && <ResumeWorkExperience />}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {isActive[0].isActive && <ResumeWorkExperience />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {isActive[2].isActive && <ResumeSkills />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {isActive[3].isActive && <ResumeUdemyCourse />}
       </AnimatePresence>
-      <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {isActive[4].isActive && <ResumeReferances />}
       </AnimatePresence>
     </motion.div>
