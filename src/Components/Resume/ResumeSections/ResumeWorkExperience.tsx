@@ -10,6 +10,29 @@ const ResumeWorkExperience = () => {
     <motion.div variants={body} initial="hidden" animate="visible" exit="exit">
       <div className={classes.body}>
         <h1 className={classes.header}>
+          Contracted Junior Frontend Developer (
+          <span>
+            <a
+              onMouseOver={cursorHoverOver}
+              onMouseLeave={cursorHoverLeave}
+              className={classes.techlink}
+              target="_blank"
+              rel="noreferrer"
+              href="https://datapoints.co.nz/"
+            >
+              Datapoints
+            </a>
+          </span>
+          ) Auckland · Remote
+        </h1>
+        <p className={classes.date}>N O V  2 0 2 3 — C U R R E N T L Y</p>
+        <p className={classes.items}>
+          Developing React / Nextjs applications and creating UI/UX website
+          designs with Figma for solutions with AI capabilities.
+        </p>
+      </div>
+      <div className={classes.body}>
+        <h1 className={classes.header}>
           Contracted Junior Developer (
           <span>
             <a
@@ -58,29 +81,6 @@ const ResumeWorkExperience = () => {
           in a friendly and timely manner. Liaising with chefs and management,
           setting up tables, cleaning/preparing eating utensils and general
           restaurant duties.
-        </p>
-      </div>
-      <div className={classes.body}>
-        <h1 className={classes.header}>
-          Student Teacher Assistant (
-          <span>
-            <a
-              onMouseOver={cursorHoverOver}
-              onMouseLeave={cursorHoverLeave}
-              className={classes.techlink}
-              target="_blank"
-              rel="noreferrer"
-              href="https://techtorium.ac.nz/"
-            >
-              Techtorium
-            </a>
-          </span>
-          ) , Auckland
-        </h1>
-        <p className={classes.date}>J U L Y  2 0 2 0 — J U L Y  2 0 2 0</p>
-        <p className={classes.items}>
-          Providing support during college student induction workshops. Assisted
-          lecturers with teaching various programming tasks.
         </p>
       </div>
     </motion.div>
