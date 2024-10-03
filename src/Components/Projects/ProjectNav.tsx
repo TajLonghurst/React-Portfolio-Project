@@ -84,6 +84,28 @@ const ProjectNav = () => {
         style={{ pointerEvents: `${style}` }}
         className={classes.navlist}
       >
+        <li className={MaritimeStyles}>
+          <div className={MaritimeDotStyle}></div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("MARITIMEROOM")}
+          >
+            MARITIME ROOM
+          </div>
+        </li>
+        <li className={AirbnbStyles}>
+          <div className={AirbnbDotStyle}></div>
+          <div
+            onMouseOver={cursorHoverOver}
+            onMouseLeave={cursorHoverLeave}
+            className={classes.title}
+            onClick={() => projectBtnOnClickHandler("AIRBNB")}
+          >
+            AIRBNB
+          </div>
+        </li>
         <li className={UrbanStyles}>
           <div className={UrbanDotStyle}></div>
           <div
@@ -115,28 +137,6 @@ const ProjectNav = () => {
             onClick={() => projectBtnOnClickHandler("PORTFOLIO")}
           >
             PORTFOLIO
-          </div>
-        </li>
-        <li className={MaritimeStyles}>
-          <div className={MaritimeDotStyle}></div>
-          <div
-            onMouseOver={cursorHoverOver}
-            onMouseLeave={cursorHoverLeave}
-            className={classes.title}
-            onClick={() => projectBtnOnClickHandler("MARITIMEROOM")}
-          >
-            MARITIME ROOM
-          </div>
-        </li>
-        <li className={AirbnbStyles}>
-          <div className={AirbnbDotStyle}></div>
-          <div
-            onMouseOver={cursorHoverOver}
-            onMouseLeave={cursorHoverLeave}
-            className={classes.title}
-            onClick={() => projectBtnOnClickHandler("AIRBNB")}
-          >
-            AIRBNB
           </div>
         </li>
       </motion.ul>

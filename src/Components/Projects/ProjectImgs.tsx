@@ -16,18 +16,13 @@ const ProjectImgs = () => {
   const [projectAnimation, setProjectAnimation] = useState(false);
   const firstUpdate = useRef(false);
 
-  const {
-    UrbanNav,
-    KurbNav,
-    PortfolioNav,
-    MaritimeRoomNav: Not2SelfNav,
-    AirBnb,
-  } = projectIsActive;
+  const { MaritimeRoomNav, AirBnb, UrbanNav, KurbNav, PortfolioNav } =
+    projectIsActive;
 
   useEffect(() => {
     let timer: any;
     if (firstUpdate.current === true) {
-      if (UrbanNav || KurbNav || PortfolioNav || Not2SelfNav || AirBnb) {
+      if (MaritimeRoomNav || AirBnb || UrbanNav || KurbNav || PortfolioNav) {
         timer = setTimeout(() => {
           setProjectAnimation(false);
         }, 1000);
@@ -39,7 +34,7 @@ const ProjectImgs = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [UrbanNav, KurbNav, PortfolioNav, Not2SelfNav, AirBnb]);
+  }, [UrbanNav, KurbNav, PortfolioNav, MaritimeRoomNav, AirBnb]);
 
   return (
     <motion.div
@@ -69,6 +64,20 @@ const ProjectImgs = () => {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
+        {MaritimeRoomNav && <ProjectMaritimeRoom />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {AirBnb && <ProjectAirbnb />}
+      </AnimatePresence>
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
         {KurbNav && <ProjectKurbImgs />}
       </AnimatePresence>
       <AnimatePresence
@@ -84,20 +93,6 @@ const ProjectImgs = () => {
         onExitComplete={() => null}
       >
         {PortfolioNav && <ProjectProtfolio />}
-      </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
-        {Not2SelfNav && <ProjectMaritimeRoom />}
-      </AnimatePresence>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
-        {AirBnb && <ProjectAirbnb />}
       </AnimatePresence>
     </motion.div>
   );

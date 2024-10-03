@@ -4,10 +4,10 @@ import { ResumeNavItems } from "../Data/ResumeObjectList";
 
 const initialState: uiSliceModal = {
   ResumeList: ResumeNavItems,
-  UrbanNav: true,
+  UrbanNav: false,
   KurbNav: false,
   PortfolioNav: false,
-  MaritimeRoomNav: false,
+  MaritimeRoomNav: true,
   FormIsLoading: false,
   FormHasError: false,
   intialLoading: true,
